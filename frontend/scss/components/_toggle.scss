@@ -1,0 +1,15 @@
+.toggle {
+  float: left;
+  width: 25px;
+  position: relative;
+  display: block;
+  z-index: 50;
+  cursor: pointer;
+
+  &__line {
+    display: block;
+    height: 4px;
+    background-color: $red-color;
+    margin-bottom: 4px;
+  }
+}

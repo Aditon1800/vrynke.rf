@@ -1,0 +1,35 @@
+//- Input
+mixin inputBlock(inputClass, inputType, inputName, inputPlaceholder)
+  input.input(class=inputClass, type=inputType name=inputName, placeholder=inputPlaceholder)
+
+//- Checkbox
+mixin checkBox(checkboxId, text)
+  .checkbox
+    input.checkbox__input(type="checkbox" id=checkboxId)
+    label.checkbox__label(for=checkboxId)=text
+
+//- crumbsLink
+mixin crumbsLink(crumbsLinkClass, crumbsAddress, crumbsTitle, crumbsSlash)
+  .crumbs__block
+    a(class=crumbsLinkClass, href=crumbsAddress)=crumbsTitle
+      span.crumbs__link-slash=crumbsSlash
+
+//- navLink
+mixin navLink(navLinkClass, navAddress, navTitle, navModActive)
+  .crumbs__nav-block(class=navModActive)
+    a(class=navLinkClass, href=navAddress)=navTitle
+
+//- navLinkCounter
+mixin navLinkCounter(navCountClass, navLinkClass, navAddress, navTitle, navCount, navModActive)
+  .crumbs__nav-block(class=navModActive)
+    a(class=navLinkClass, href=navAddress)=navTitle
+    span(class=navCountClass)=navCount
+
+//- News
+mixin newsBlock(imgUrl, title, date)
+  .news__block
+    a.news__img-link(href="#~")
+      .news__img-block(style="background-image: url('../img/news/#{imgUrl}.jpg');")
+    .news__desc
+      a.news__title(href="#~")=title
+      titme.news__date=date

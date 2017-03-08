@@ -1,0 +1,91 @@
+'use strict';
+
+var gulp = require('gulp'),
+        watch = require('gulp-watch'),
+        sass = require('gulp-sass'),
+        jade = require('gulp-jade'),
+        autoprefixer = require('gulp-autoprefixer'),
+        sourcemaps = require('gulp-sourcemaps'),
+        concat = require('gulp-concat'),
+        browserSync = require('browser-sync'),
+        plumber = require('gulp-plumber'),
+        notify  = require('gulp-notify'),
+        reload = browserSync.reload;
+
+// Jade
+gulp.task('jade', function() {
+  return gulp.src('frontend/jade/*.jade')
+                .pipe(plumber({
+                  errorHandler: notify.onError(function(err) {
+                    return {
+                      title: 'Jade Error',
+                      message: err.message
+                    };
+                  })
+                }))
+                .pipe(jade({pretty: true}))
+                .pipe(gulp.dest('dist/'))
+                .pipe(notify('Done'))
+});
+
+// Sass
+gulp.task('sass', function() {
+  return gulp.src('frontend/scss/style.scss')
+                .pipe(plumber({
+                  errorHandler: notify.onError(function(err) {
+                    return {
+                      title: 'Scss Error',
+                      message: err.message                      
+                    };
+                  })
+                }))
+                .pipe(sass({ noCache: true }))
+                .pipe(autoprefixer({
+                          browsers: ['last 5 versions'],
+                          cascade: false
+                }))
+                .pipe(gulp.dest('dist/css'))
+                .pipe(sourcemaps.write('sourcemaps'))
+                .pipe(reload({stream: true}))
+                .pipe(notify('Done'))
+});
+
+// JS
+gulp.task('js', function () {
+  return gulp.src('frontend/js/**/*.js')
+                .pipe(plumber({
+                  errorHandler: notify.onError(function (err) {
+                    return {
+                      title: 'JS Error',
+                      message: err.message
+                    };
+                  })
+                }))
+                .pipe(gulp.dest('dist/js'))
+                .pipe(reload({stream: true}))
+                .pipe(notify('Done'))
+});
+
+// Watch
+gulp.task('watch', function() {
+  gulp.watch('frontend/scss/**/**/*.scss', ['sass']);
+  gulp.watch('frontend/jade/**/*.jade', ['jade']);
+  gulp.watch('frontend/js/**/*.js', ['js']);
+  gulp.watch('frontend/img/*', ['imgminify']);
+  gulp.watch('frontend/fonts/**/*.{eot,ttf,woff,otf,woff2}', ['fonts']);
+});
+
+// Server 
+gulp.task('browserSync', function () {
+  browserSync({
+    server: {
+      baseDir: "dist",
+    },
+    port: 3222,
+    notify: false
+  });
+
+  browserSync.watch('dist/*').on('change', browserSync.reload);
+});
+
+gulp.task('default', ['browserSync',  'jade', 'sass', 'js', 'watch']);

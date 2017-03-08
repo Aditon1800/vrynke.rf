@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+    style.
+      .main-content {
+        min-height: 650px;
+      }
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        include partials/nav
+        .row.row-inline
+          //- Inputs
+          //- .col-sm-4
+          //-   form
+          //-     +inputBlock("","text", "name", "Введите ваше имя?*")
+          //-     button Send
+          //- .col-sm-4
+          //-   form
+          //-     +inputBlock("","text", "name", "Введите ваше имя?*")
+          //-     button Send
+          //- .col-sm-4
+          //-   form
+          //-     +inputBlock("","text", "name", "Введите ваше имя?*")
+          //-     button Send
+          //- News
+          .col-md-3.col-sm-4
+            +newsBlock('news-img1', 'Россияне привезут из Швеции новые профессии', '12 декабря 2016')
+          .col-md-3.col-sm-4
+            +newsBlock('news-img2', 'Большинство работодателей повысят зарплату сотрудникам', '12 декабря 2016')
+          .col-md-3.col-sm-4
+            +newsBlock('news-img3', 'Бедный мой бухгалтер', '12 декабря 2016')
+          .col-md-3.col-sm-4
+            +newsBlock('news-img4', 'Пассажиров метро научать искать работу', '12 декабря 2016')
+
+      //- Crumbs
+      include components/crumbs
+      section.main-content
+        .container
+          //- Titles
+          h1 Заголовок
+          h2 Заголовок
+          h3 Заголовок
+          h4 Заголовок
+
+          //- Buttons
+          a.button.button--more Узнать больше
+          a.button.button--main--sup Я - поставщик
+          a.button.button--main--agent Я - агент
+          a.button.button--reg Зарегистрироваться сейчас
+          a.button.button--confirm-reg Подтвердить регистрацию
+          a.button.button--green Отправить заявку на заказ
+          a.button.button--green--md Продолжить
+          a.button.button--green--lg Предпросмотр и публикация
+          a.button.button--add Добавить заказ
+
+          .question &#63;
+            span.question__tooltip Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, illum ut ipsam quasi porro numquam aut ratione facilis eveniet, recusandae quia perspiciatis at dolorem aspernatur expedita earum eum, molestiae quidem.
+
+          +checkBox('firstCheckbox', 'Заказать что-то')
+          //- Paginator
+          include components/paginator
+
+      //- Footer
+      include partials/footer
+
+    //Scripts
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    script(src="js/script.js")
+    script(src="js/project/nav-toggle.js")
+    script.
+      function clickTitle() {
+        $('.js-footer-title').each(function(index, elem) {
+            $(elem).on('click',function() {
+              $(this).next().toggle();
+            });
+        });
+      }
+
+        clickTitle();
+
+
+      $(window).resize(function() {
+        if($(this).width() > 767) {
+          $('.js-footer-title').each(function(index, elem) {
+              $(this).next().removeAttr('style');
+          });
+        }
+      });
+
+
+
+

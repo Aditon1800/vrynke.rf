@@ -1,0 +1,141 @@
+.button {
+  $button-radius: 4px;
+
+  display: inline-block;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  font-family: inherit;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    border: none;
+    outline: none;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: $gray-color;
+  }
+
+  // I am supplier
+  &--main--sup {
+    width: 100%;
+    max-width: 352px;
+    height: 60px;
+    background-color: $orange-color;
+    border-radius: $button-radius;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: $white-color;
+  }
+
+  // I am agent buton
+
+  &--main--agent {
+    @extend .button--main--sup;
+    background-color: $green-color;
+  }
+
+  // Confirm registration button
+
+  &--confirm-reg {
+    @extend .button--main--sup;
+    max-width: inherit;
+    background-color: $button-blue-color;
+  }
+
+  // Green button
+
+  &--green {
+    @extend .button--confirm-reg;
+    background-color: $button-green-color;
+    font-weight: 700;
+  }
+
+  // Green medium
+
+  &--green--md {
+    width: 188px;
+    height: 40px;
+    background-color: $button-green-color;
+    border-radius: $button-radius;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 40px;
+    color: $white-color;
+  }
+
+  &--green--lg {
+    @extend .button--green--md;
+    width: 296px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+
+  // Add button
+
+  &--add {
+    position: relative;
+    width: 175px;
+    height: 30px;
+    background-color: $button-green-color;
+    border-radius: $button-radius;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 30px;
+    color: $white-color;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      background-image: url('../img/button-plus.png');
+      background-repeat: no-repeat;
+    }
+  }
+
+  // Button more
+
+  &--more {
+    width: 100%;
+    max-width: 205px;
+    height: 50px;
+    border: 2px solid $red-color;
+    border-radius: 25px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $red-color;
+    line-height: 50px;
+    
+    &:hover {
+      border: 2px solid;
+    }
+  }
+
+  // Registration button
+
+  &--reg {
+    @extend .button--more;
+    max-width: 365px;
+    background-color: $red-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white-color;
+
+    &:hover {
+      border: 2px solid $red-color;
+    }
+  }
+}

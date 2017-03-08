@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        include partials/nav
+
+      //- Crumbs
+      .crumbs
+
+      section.news-post
+        .container
+          article.news
+            h2.news__block-title Новости
+            .row
+              .col-md-3.col-sm-4
+                +newsBlock('news-img1', 'Россияне привезут из Швеции новые профессии', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img2', 'Большинство работодателей повысят зарплату сотрудникам', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img3', 'Бедный мой бухгалтер', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img4', 'Пассажиров метро научать искать работу', '12 декабря 2016')
+
+              .col-md-3.col-sm-4
+                +newsBlock('news-img1', 'Россияне привезут из Швеции новые профессии', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img2', 'Большинство работодателей повысят зарплату сотрудникам', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img3', 'Бедный мой бухгалтер', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img4', 'Пассажиров метро научать искать работу', '12 декабря 2016')
+
+              .col-md-3.col-sm-4
+                +newsBlock('news-img1', 'Россияне привезут из Швеции новые профессии', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img2', 'Большинство работодателей повысят зарплату сотрудникам', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img3', 'Бедный мой бухгалтер', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img4', 'Пассажиров метро научать искать работу', '12 декабря 2016')
+
+              .col-md-3.col-sm-4
+                +newsBlock('news-img1', 'Россияне привезут из Швеции новые профессии', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img2', 'Большинство работодателей повысят зарплату сотрудникам', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img3', 'Бедный мой бухгалтер', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img4', 'Пассажиров метро научать искать работу', '12 декабря 2016')
+
+          include components/paginator
+
+        // Footer
+      include partials/footer
+      include partials/scripts

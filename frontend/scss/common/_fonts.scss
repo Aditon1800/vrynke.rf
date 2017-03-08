@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:700');
+@font-face {
+  font-family: 'GilroyTypefamily';
+  font-weight: 800;
+  src: url('../fonts/Gilroy-ExtraBold.otf') format('opentype'),
+          url('../fonts/Gilroy-ExtraBold.woff') format('woff'),
+          url('../fonts/Gilroy-ExtraBold.woff2') format('woff2');
+}
+
+h1 {
+  font-size: 4.2em;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 2.8em;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.main-content__title {
+  font-size: 3.2em;
+}

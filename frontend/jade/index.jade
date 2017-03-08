@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        include partials/nav
+      header.main-header
+        .container
+
+          // Main title
+          h1.main-header__title ПЛАТФОРМА РЕГИОНАЛЬНЫХ ПРОДАЖ 
+            br
+            | ТОВАРОВ И УСЛУГ
+          p.main-header__desc Поставщикам – новые рынки сбыта,
+            br
+            | вам – новые возможности для заработка
+
+          // Button block
+          .main-header__button-block
+            .main-header__button-wrap
+              a.button.button--main--sup(href="#~") Я - поставщик
+              .main-header__button-desc Открыть новые рынки сбыта моих
+                br
+                | товаров или услуг.
+            .main-header__button-wrap
+              a.button.button--main--agent(href="#~") Я - агент
+              .main-header__button-desc Продвигать товары и услуги в своём регионе
+                br
+                | и получать вознаграждение с каждой продажи
+
+      section.main
+          // Video block
+          .main__video-block
+            video.main__video(poster="img/main/main-video-poster.jpg")
+              sourse(src="")
+            button.button.main__video-button
+
+        .container
+          p.main__firm-desc #[strong.logo-text #[span.logo-text__char в]рынке] – платформа,
+            br
+            | объединяющая поставщиков товаров и услуг и торговых агентов напрямую для организации прямых продаж в различных регионах
+          .row.main__content
+            .col-sm-6.main__col--first
+              h2.main__list-title Для поставщика
+              p.main__list-desc увеличьте регионы и объёмы распространение
+
+              // List block
+              ul.list-block
+                li.list-block__item Врынке поможет найти ваших прямых торговых агентов по стране.
+                  span 1
+                li.list-block__item Врынке поможет обучить торговых агентов и научить, как рассказать о товаре и услуге правильно, чтобы покупатель остался доволен и вернулся.
+                  span 2
+                li.list-block__item Вам помогают рассказать о постоянных или текущих предложениях напрямую своим потенциальным клиентам.
+                  span 3
+                li.list-block__item Вы экономите на создании офисов прямых продаж.
+                  span 4
+                li.list-block__item Вы честно платите только за свою свершившуюся продажу.
+                  span 5
+
+              // button more
+              a.button.button--more Узнать больше
+            .col-sm-6.main__img-block.main__img-block--right
+            .col-sm-6.main__img-block.main__img-block--left
+            .col-sm-6.main__col--fourth
+              h2.main__list-title Для торговых агентов
+              p.main__list-desc зарабатывайте больше
+
+              // List block
+              ul.list-block
+                li.list-block__item Врынке поможет найти тот товар или услугу, которая близка вам и вы понимаете, что при вашей активной поддержке, вы можете рассказать о нем другим компаниям или людям.
+                  span 1
+                li.list-block__item Врынке обучит вас и поможет как это сделать правильно.
+                  span 2
+                li.list-block__item Вы объединяете тех, кому очень что-то нужно купить и тех, кто что-то хочет продать или оказать какую-то услугу.
+                  span 3
+                li.list-block__item Кто-то получит нужный товар или услугу, производитель делает такой товар или услугу доступней, а вы получаете вознаграждение за свой труд.
+                  span 4
+
+              // button more
+              a.button.button--more Узнать больше
+          article.news.main__news-block
+            h2.main__news-block__title Новости
+            .row
+              .col-md-3.col-sm-4
+                +newsBlock('news-img1', 'Россияне привезут из Швеции новые профессии', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img2', 'Большинство работодателей повысят зарплату сотрудникам', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img3', 'Бедный мой бухгалтер', '12 декабря 2016')
+              .col-md-3.col-sm-4
+                +newsBlock('news-img4', 'Пассажиров метро научать искать работу', '12 декабря 2016')
+            .main__news-block__button-block
+              a.button.button--more Другие новости
+
+        // Footer
+      include partials/footer
+      include partials/scripts

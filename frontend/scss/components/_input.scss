@@ -1,0 +1,16 @@
+.input {
+  $input-color: $gray-color;
+  width: 100%;
+  font-family: 'Arial';
+  font-weight: 400;
+  line-height: 1.45;
+  color: $black-color;
+  font-size: 1.4em;
+  border: 1px solid $input-color;
+  padding: 9px 14px;
+  margin-bottom: 20px;
+
+  &::placeholder {
+    color: darken($input-color, 25%);
+  }
+}

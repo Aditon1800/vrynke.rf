@@ -1,0 +1,31 @@
+
+// normalize
+@import 'common/normalize';
+
+// mixins and variables
+@import 'helpers/mixin';
+@import 'helpers/variables'; 
+
+// common
+@import 'common/fonts';
+@import 'common/grid';
+
+// project components
+@import 'components/logo';
+@import 'components/input';
+@import 'components/form';
+@import 'components/checkbox';
+@import 'components/toggle';
+@import 'components/list-block';
+@import 'components/button';
+@import 'components/crumbs';
+@import 'components/news';
+@import 'components/question';
+@import 'components/paginator';
+
+// project layouts
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// pages
+@import 'pages/index';

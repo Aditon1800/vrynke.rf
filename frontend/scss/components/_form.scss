@@ -1,0 +1,51 @@
+// Title
+.form-title {
+  font-size: 3.2rem;
+  text-align: center;
+  margin: 40px auto;
+}
+
+// login in
+
+.login-in {
+  text-align: center;
+  margin-bottom: 120px;
+
+  &__form {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+
+  &__acc-block {
+    border-top: 1px solid $gray-color;
+    padding-top: 25px;
+
+    span {
+      font-size: 1.6em;
+      padding-right: 5px;
+    }
+  }
+
+  &__password,
+  &__reg {
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 1;
+    border-bottom: 1px dotted rgba($blue-color, .3);
+    color: $button-blue-color;
+    padding-bottom: 1px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  &__reg {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,10 @@
+.logo-text {
+  font-family: $gilroy;
+  font-size: inherit;
+  font-weight: 700;
+  color: $black-color;
+
+  &__char {
+    color: $red-color;
+  }
+}

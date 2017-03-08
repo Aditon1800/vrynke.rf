@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        include partials/nav
+      .crumbs
+      section.main-content.login-in
+        .container
+          h1.form-title.login-in__title Вход
+          .login-in__form
+            form(action="" method="" id="")
+              +inputBlock("","text", "yourName", "Адрес эл. почты или ID")
+              +inputBlock("","password", "password", "Пароль")
+              button.button.button--confirm-reg Войти
+              a.password.login-in__password Забыли пароль?
+              .login-in__acc-block
+                span Ещё нет акканта?
+                a.login-in__reg Зарегистрироваться
+
+        // Footer
+      include partials/footer
+      include partials/scripts
