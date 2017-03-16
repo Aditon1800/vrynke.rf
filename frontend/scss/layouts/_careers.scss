@@ -1,0 +1,59 @@
+// Careers
+.career {
+
+  &__block {
+    border-bottom: 1px dotted $dark-gray-color;
+    margin-top: 25px;
+    padding-bottom: 25px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__block-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $black-color;
+    margin-bottom: 25px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: $dark-gray-color;
+    }
+  }
+
+  &__block-pay,
+  &__block-exp,
+  &__block-town {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: $dark-gray-color;
+  }
+
+  &__block-name {
+    padding-right: 5px;
+  }
+
+  &__block-link {
+    @extend .login-in__reg;
+    margin-top: 25px;
+  }
+
+  &__special-block {
+    margin-top: 40px;
+  }
+
+  &__list-item {
+    @extend .person__list-item;
+    margin-bottom: 0;
+
+  }
+}

@@ -8,32 +8,25 @@
       width: 17px;
       height: 17px;
 
-    /* Это для всех браузеров, кроме совсем старых, которые не поддерживают
-    селекторы с плюсом. Показываем, что label кликабелен. */
+
     & + label {
       cursor: pointer;
     }
 
-    /* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
-    Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
-    в них все нижеследующие стили не сработают. */
-
-    /* Прячем оригинальный чекбокс. */
     &:not(checked) {
       position: absolute;
       opacity: 0;
     }
 
     &:not(checked) + label {
-      position: relative; /* будем позиционировать псевдочекбокс относительно label */
+      position: relative;
       font-family: inherit;
       font-size: 1.6rem;
       font-weight: 300;
       color: $black-color;
-      padding: 0 0 0 46px; /* оставляем слева от label место под псевдочекбокс */
+      padding: 0 0 0 46px;
     }
 
-    /* Оформление первой части чекбокса в выключенном состоянии (фон). */
     &:not(checked) + label:before {
       content: '';
       display: block;
@@ -48,7 +41,6 @@
       transition: all .2s;
     }
 
-    /* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
     &:not(checked) + label:after {
       content: '';
       position: absolute;
@@ -59,23 +51,19 @@
       border-radius: 10px;
       background: $gray-color;
       box-shadow: 0 2px 5px rgba(0,0,0,.2);
-      transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+      transition: all .2s;
     }
 
-    /* Меняем фон чекбокса, когда он включен. */
     &:checked + label:before {
       background: $checkbox-color;
     }
 
-    /* Сдвигаем переключатель чекбокса, когда он включен. */
     &:checked + label:after {
       left: 19px;
       background-color: $checkbox-button-color;
     }
 
-    /* Показываем получение фокуса. */
     &:focus + label:before {
-      // box-shadow: 0 0 0 3px rgba(255,255,0,.5);
     }
   }
 }

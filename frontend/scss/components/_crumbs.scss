@@ -40,7 +40,7 @@
     font-size: 14px;
     line-height: 1;
     color: $white-color;
-    padding-left: 5px;
+    padding-left: 2px;
     padding-bottom: 1px;
     vertical-align: middle;
   }
@@ -50,6 +50,22 @@
     padding-left: 10;
     padding-right: 10px;
 
+    &--training {
+      position: relative;
+      padding-right: 18px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        right: 0;
+        width: 14px;
+        height: 12px;
+        background: url('../img/training-icon.png') 0 no-repeat;
+      }
+    }
+
     &:hover {
       text-decoration: none;
     }
@@ -57,6 +73,10 @@
     &__nav-link.crumbs__block--active {
       padding-right: 25px;
     }
+  }
+
+  &__link-slash {
+    padding-left: 5px;
   }
 
   &__nav-counter {

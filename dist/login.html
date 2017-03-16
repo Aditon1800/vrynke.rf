@@ -40,7 +40,8 @@
         </nav>
       </div>
       <div class="crumbs"></div>
-      <section class="main-content login-in">
+      <!-- Login in-->
+      <section hidden="hidden" class="main-content login-in">
         <div class="container">
           <h1 class="form-title login-in__title">Вход</h1>
           <div class="login-in__form">
@@ -49,6 +50,33 @@
                   <input type="password" name="password" placeholder="Пароль" class="input"/>
               <button class="button button--confirm-reg">Войти</button><a class="password login-in__password">Забыли пароль?</a>
               <div class="login-in__acc-block"><span>Ещё нет акканта?</span><a class="login-in__reg">Зарегистрироваться</a></div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Recover your password-->
+      <section hidden="hidden" class="main-content">
+        <div class="container">
+          <h1 class="form-title login-in__title">Восстановление пароля</h1>
+          <div class="login-in__form">
+            <form action="" method="" id="">
+                  <input type="text" name="yourName" placeholder="Адрес эл. почты или ID" class="input"/>
+              <button class="button button--confirm-reg">Войти</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- New password-->
+      <section class="main-content">
+        <div class="container">
+          <h1 class="form-title login-in__title">Новый пароль</h1>
+          <div class="login-in__form">
+            <form action="" method="" id="">
+                  <input type="password" name="newPassword" placeholder="Введите новый пароль" class="input"/>
+              <p class="input-check"></p>
+                  <input type="password" name="newPasswordCopy" placeholder="Повторите новый пароль" class="input"/>
+              <p class="input-check"></p>
+              <button class="button button--confirm-reg">Отправить</button>
             </form>
           </div>
         </div>
@@ -100,6 +128,7 @@
       <script src="js/script.js"></script>
       <script src="js/project/nav-toggle.js"></script>
       <script src="js/project/footer-link.js"></script>
+      <script src="js/project/account-block.js"></script>
     </div>
   </body>
 </html>

@@ -47,7 +47,9 @@ a {
   color: inherit;
 }
 a:active,
-a:hover {
+a:hover,
+a:focus {
+  text-decoration: none;
   outline: 0;
 }
 abbr[title] {
@@ -93,6 +95,8 @@ sub {
 }
 img {
   border: 0;
+  width: auto;
+  max-width: 100%;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -226,14 +230,6 @@ textarea {
 }
 a {
   text-decoration: none;
-}
-a:hover,
-a:focus {
-  text-decoration: underline;
-}
-a:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
 }
 figure {
   margin: 0;

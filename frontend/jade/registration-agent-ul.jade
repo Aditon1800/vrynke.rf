@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+    style.
+      .main-content {
+        min-height: 650px;
+      }
+  body
+    .person
+      include helpers/mixin
+      .container-fluid
+        .container
+          //- Header
+          include partials/nav
+        .crumbs
+
+        // Registration
+        section.registration
+          .container
+            h1.main-title Регистрация
+            .form.form__agent-ul
+              form(action="" method="" id="")
+                h2 Info
+                .row
+                  .col-md-8.col-sm-12
+                    +inputBlock('', 'text', 'someName', 'Щдупефус')
+                  .col-md-4.col-sm-4
+                    +inputBlock('', 'text', 'someName', 'неоченьЩдупефус')
+                  .col-md-4.col-sm-4
+                    +inputBlock('', 'text', 'someName', 'как-быЩдупефус')
+                  .col-md-4.col-sm-4
+                    +inputBlock('', 'text', 'someName', 'как-быЩдупефус')
+

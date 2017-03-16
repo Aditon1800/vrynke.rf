@@ -1,4 +1,5 @@
-.input {
+.input,
+.textarea {
   $input-color: $gray-color;
   width: 100%;
   font-family: 'Arial';
@@ -13,4 +14,21 @@
   &::placeholder {
     color: darken($input-color, 25%);
   }
+
+  &--lg {
+    max-width: 750px;
+  }
+
+  &--md {
+    max-width: 360px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.textarea {
+  height: 170px;
+  resize: none;
 }

@@ -1,0 +1,27 @@
+// Regions list
+.regions-list {
+
+  &__block-wrap {
+    @include cf();
+  }
+
+  &__block {
+    @media (max-width: $md-screen - 1) {
+      width: 50%;
+    }
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+    float: left;
+    width: 25%;
+  }
+
+  &__item {
+    margin-bottom: 8px;
+
+    a {
+      @extend .login-in__reg;
+    }
+  }
+}

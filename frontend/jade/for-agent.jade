@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    .person
+      include helpers/mixin
+      .container-fluid
+        .container
+          //- Header
+          include partials/nav
+        header.person__header
+          .container
+            h1.person__header-title Врынке
+              br
+              | для торговых
+              br
+              | агентов
+            .person__header-img(style="background-image: url('img/person-header.png');")
+        .person__content
+            //Why us
+          section.person__whyus
+            .container
+              h2.person__block-title.person__whyus-title.person__block-title--center Почему врынке?
+              .row
+                .col-lg-3.col-md-3.col-sm-6.person__block-wrap
+                  .person__whyus-block
+                    .person__whyus-img
+                      img(src="img/agent/block-icon-1.png")
+                    p #[strong врынке] - площадка, объединяющая поставщиков товаров и услуг и торговых агентов в регионах
+                .col-lg-3.col-md-3.col-sm-6.person__block-wrap
+                  .person__whyus-block
+                    .person__whyus-img
+                      img(src="img/agent/block-icon-2.png")
+                    p #[strong врынке] помогает получить основной или дополнительный доход
+                .col-lg-3.col-md-3.col-sm-6.person__block-wrap
+                  .person__whyus-block
+                    .person__whyus-img
+                      img(src="img/agent/block-icon-3.png")
+                    p #[strong врынке] помагает найти товар или услугу, которая ближе вам по опыту или образованию 
+                .col-lg-3.col-md-3.col-sm-6.person__block-wrap
+                  .person__whyus-block
+                    .person__whyus-img
+                      img(src="img/agent/block-icon-4.png")
+                    p #[strong врынке] поможет научиться как правильно представлять себя, товар или услугу
+
+            // person working
+          section.person__working
+            .container
+              h2.person__block-title Как работает врынке?
+              .row
+                .person__text-block
+                  p.person__block-untitle После регистрации вы:
+                  ul.person__block-list
+                    li.person__list-item Видите в системе товары и услуги и процент вознаграждения за организацию их продаж
+
+                    li.person__list-item Выбираете близкую вам товар или услугу
+
+                    li.person__list-item Получаете необходимую информацию о товаре или услуге
+
+                    li.person__list-item Связываетесь при необходимости для получения дополнительных данных
+
+                    li.person__list-item Находите покупателя товара или услуги
+
+                    li.person__list-item Организуете заключение договора
+
+                    li.person__list-item Помогаете при коммуникации / сопровождаете сделку
+
+                    li.person__list-item Получаете вознаграждение за свершившийся факт продажи (после сделки)
+                .person__img-block
+                  img(src="img/agent/vrynke-icon.png" alt="vrynke.rf")
+
+            // person line
+          section.person__line
+            .container
+              h2.person__block-title.person__block-title--center Нужно ли мне выкупать товар перед его распространением?
+              .person__vector
+              .row
+                .person__line-block
+                  p.person__par.person__par--lg #[strong врынке] не поддерживает такую систему продаж (только если вы решили купить его для себя лично и воспользоваться скидкой)
+                .person__line-block
+                  p.person__par.person__par--lg Основная идея врынке – представление интересов поставщиков в регионах и организация/сопровождение продаж
+
+            // person Platform info
+          section.person__platform-info
+            .container
+              .row
+                .person__img-block
+                    img(src="img/agent/reg-icon.png" alt="vrynke.rf platform")
+                .person__text-block
+                  h2.person__block-title Как воспользоваться платформой врынке?
+                  ul.person__block-list 
+                    li.person__list-item Регистрируйтесь в системе
+
+                    li.person__list-item Получаете подтверждение регистрации и уникальный номер
+
+                    li.person__list-item Если вы хотите получить статус подтвержденного торгового агента, необходимо сделать дополнительные действия и к вам отнесутся по особенному
+
+                    li.person__list-item Выбираете товар или услугу (или несколько), которые вы считаете вам лучше всего удастся продвигать
+
+                    li.person__list-item Подписываете с поставщиком товаром или услуг договор об услугах по продвижению или воспользуйтесь услугой «гарантированное вознаграждение» (см. подробную информацию здесь)
+
+                    li.person__list-item Задаете уточняющие вопросы поставщику о товаре, ценах, скидках и т.п.
+
+                    li.person__list-item Заключаете договоры
+
+                    li.person__list-item Отслеживаете поставку товара или услуги
+
+                    li.person__list-item Получаете вознаграждение и продолжаете развиваться при помощи врынке
+
+            // person info block
+          section.person__info-block
+            .container
+              .row
+                .col-sm-6.col-xs-12
+                  h2.person__block-title Сколько стоит регистрация в системе врынке?
+                  h3.person__block-title--lg Торговый агент не оплачивает регистрацию в системе
+                  p.person__block-untitle По желанию торгового агента оплачиваются дополнительные услуги, такие как:
+                  ul.list-block
+                    li.list-block__item Получение статуса подтвержденного торгового агента
+                      span 1
+
+                    li.list-block__item Обучение
+                      span 2
+
+                    li.list-block__item Содействие платформы в гарантированном получении вознаграждения
+                      span 3
+
+                    li.list-block__item Другие платные услуги платформы
+                      span 4
+
+                .col-sm-6.col-xs-12
+                  h2.person__block-title Как научиться правильно рассказать о товаре или услуге?
+                  ul.list-block
+                    li.list-block__item Изучите максимум необходимой информации о товаре
+                      span 1
+
+                    li.list-block__item Пройдите обучение по продажам
+                      span 2
+
+                    li.list-block__item Читайте новостную информацию
+                      span 3
+
+                    li.list-block__item Задавайте уточняющие вопросы поставщикам о товаре, ценах, скидках и т.п.
+                      span 4
+
+            // person Platform info
+          section.person__platform-info
+            .container
+              .row
+                .person__img-block
+                    img(src="img/agent/reward-icon.png" alt="vrynke.rf reward")
+                .person__text-block
+                  h2.person__block-title Как убедиться, что после поставки вознаграждение будет уплачено?
+                  p.person__block-untitle воспользоваться услугой врынке «гарантированное вознаграждение»:
+                  ul.person__block-list
+                    li.person__list-item сумма вознаграждения (с учетом налогов) и стоимость такой услуги переводится на счет врынке
+
+                    li.person__list-item торговому агенту направляется сообщение о поступлении суммы вознаграждения на счет врынке
+
+                    li.person__list-item торговый агент организует заключение договора
+
+                    li.person__list-item после получения подтверждения о поставке товара или оказании услуги вознаграждение перечисляется конкретному торговому агенту за минусом причитающихся налогов (см. подробную информацию здесь)
+
+                    li.person__list-item стоимость услуги: 10% от суммы вознаграждения; подлежит оплате в пользу врынке
+
+                    li.person__list-item в иных случаях врынке не несет ответственности за получение торговым агентом вознаграждения
+
+
+            // person line
+          section.person__line
+            .container
+              h2.person__block-title.person__block-title--center Что если торговый агент выполнил свою работу, 
+                br
+                | а вознаграждение не выплачено?
+              .person__vector
+              .row
+                .person__line-block
+                  p.person__par.person__par--lg Если торговый агент не воспользовался услугой «гарантированное вознаграждение», то врынке не несет ответственности за неисполнение поставщиком товара или услуги своих обязательств, так как в данном случае врынке исполняет роль площадки, где встречаются поставщик и торговый агент и договариваются между собой самостоятельно
+                .person__line-block
+                  p.person__par.person__par--lg Однако в случае если поставщик не выплатил торговому агенту причитающееся ему вознаграждение, торговый агент должен сообщить об этом специалистам врынке и указать детали совершенной операции, чтобы врынке обратила внимание на такого поставщика и предприняла соответствующие меры в отношении такого недобросовестного пользователя
+
+          section.person__reg-block
+            .container
+              h2.person__reg-title Мы создаем среду и любой активный человек
+                br
+                | может честно получить основной или дополнительный
+                br
+                | заработок, а товар или услуга может быть в нужном
+                br
+                | месте в нужное время.
+              .person__button-block
+                a.button.button--reg Зарегистрироваться сейчас
+
+          // Footer
+      include partials/footer
+      include partials/scripts

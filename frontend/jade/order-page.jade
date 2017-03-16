@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        nav.header__nav
+          .toggle.header__toggle.js-toggle
+            span.toggle__line
+            span.toggle__line
+            span.toggle__line
+          .logo.header__logo
+            a.header__logo-link
+              img.logo-img.header__logo-img(src="img/logo.png" alt="врынке.рф")
+          .header__list.js-header__list
+            button.button.header__list-button.js-list-button
+            .header__nav-list
+              .header__nav-item.header__nav-item--active
+                a(href="#~") Я — агент
+              .header__nav-item
+                a(href="#~") Я — поставщик
+              .header__nav-item
+                a(href="#~") Каталог предложений
+              .header__nav-item
+                a(href="#~") Регионы
+            .header__nav-list.header__nav-list--mobile
+              .header__nav-item
+                a(href="#~") О платформе
+              .header__nav-item
+                a(href="#~") Работать у нас
+              .header__nav-item
+                a(href="#~") Новости
+              .header__nav-item
+                a(href="#~") Связаться с нами
+          .header__sign-in
+            a.button.header__button-account.js-button-account(href="#~")
+               img(src="img/account-icon.png" alt="account-logo")
+              .header__account-block.js-account-block
+                ul.header__account-list
+                  li.header__account-item
+                    a(href="#~") Редактировать профиль
+                  li.header__account-item
+                    a(href="#~") Сообщения
+                  li.header__account-item
+                    a(href="#~") Выйти
+
+      // Crumbs
+      .crumbs
+        .container
+          +navLink("crumbs__nav-link crumbs__nav-link", "index.html", "Профиль", "crumbs__block--active")
+          +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "index.html", "Сообщения", '25')
+          +navLink("crumbs__nav-link", "index.html", "Избранное")
+          +navLink("crumbs__nav-link crumbs__nav-link--training", "index.html", "Обучение")
+          +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "index.html", "Мои заказы", '10')
+      
+
+      section.main-content
+        .container
+          .main-content__title-block
+            h1.main-content__title Заказ &#8470; #[span.order__this-number 000000000001]
+            a.main-content__link-back(href="#~") Вернуться к списку заказов
+
+          // Order block status
+          .order__block.order__about-block
+            .order__block-category
+              span.order__order-status Статус заказа: 
+              span.order__order-name Подтверждён
+            .order__block-category
+              span.order__order-reward Гарантированное вознаграждение:
+              span.order__order-name Да
+                .question &#63;
+                  .question__tooltip Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, illum ut ipsam quasi porro numquam aut ratione facilis eveniet, recusandae quia perspiciatis at dolorem aspernatur expedita earum eum, molestiae quidem.
+          
+          // Order block
+          
+          .order__block
+            h2.order__block-title.order__block-title--border-title Подробности заказа
+            .order__block-category
+              span.order__category-name Товар / услуга:
+              span.order__category-attr Композитный состав CERAMET ANTICOR  [ID-P000000001-00123]
+            .order__block-category
+              span.order__category-name Поставщик:
+              span.order__category-attr ООО Ромашка, Москва
+            .order__block-category
+              span.order__category-name Колличество:
+              span.order__category-attr 5 000 кг
+            .order__block-category
+              span.order__category-name Дополнительная информация:
+              span.order__category-attr Необходима доставка в кратчайшие сроки.
+
+          // Order block
+          
+          .order__block
+            h2.order__block-title Плательщик / Покупатель
+            .order__block-category
+              span.order__category-name Наименование:
+              span.order__category-attr ООО Ромашка
+            .order__block-category
+              span.order__category-name ИНН:
+              span.order__category-attr 732000000000
+            .order__block-category
+              span.order__category-name КПП:
+              span.order__category-attr 123456789
+            .order__block-category
+              span.order__category-name Код ОКПО:
+              span.order__category-attr -
+            .order__block-category
+              span.order__category-name Адрес местонахождения:
+              span.order__category-attr 125000, Московская область, Истра, Водянова улица, дом 5, офис 314
+            .order__block-category
+              span.order__category-name Банковские реквизиты:
+              span.order__category-attr Р/сч: 40702810638050013199
+                br
+                | Банк: ПАО "Сбербанк России", город Истра
+                br
+                | К/сч: 30101810400000000225
+                br
+                | БИК: 044525225
+
+          // Order block
+          
+          .order__block
+            h2.order__block-title Информация о доставке
+            .order__block-category
+              span.order__category-name Наименование:
+              span.order__category-attr ООО Ромашка
+            .order__block-category
+              span.order__category-name ИНН:
+              span.order__category-attr 732000000000
+            .order__block-category
+              span.order__category-name КПП:
+              span.order__category-attr 123456789
+            .order__block-category
+              span.order__category-name Код ОКПО:
+              span.order__category-attr -
+            .order__block-category
+              span.order__category-name Адрес доставки:
+              span.order__category-attr 125000, Московская область, Истра, Водянова улица, дом 5, офис 314
+
+          // Button
+          button.button.button--green--lg Связаться с агентом
+
+
+
+
+        // Footer
+      include partials/footer
+      include partials/scripts

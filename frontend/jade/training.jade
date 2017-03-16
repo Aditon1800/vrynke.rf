@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        include partials/nav
+      .crumbs
+
+      // Training
+      section.main-content.training
+        .container
+          h1.main-content__title Обучение
+          ul.training__tab-list
+            li.training__tab-item.js-tab-item.training__tab-item--active Все материалы 
+            li.training__tab-item.js-tab-item Семинары
+            li.training__tab-item.js-tab-item Вебинары
+            li.training__tab-item.js-tab-item Прочие мероприятия
+            li.training__tab-item.js-tab-item Презентации
+            li.training__tab-item.js-tab-item Статьи
+          .row
+              .col-md-3.col-sm-4
+                .training__block
+                  a.training__img-link(href="#~")
+                    .training__img-block(style="background-image: url('../img/training/training-img1.jpg');")
+                    .training__category-block
+                      span.training__category.training__category--web Вэбинар
+                      span.training__category.training__category--free Бесплатно
+                    
+                  .training__desc
+                    a.training__title(href="#~") Активные продажи по телефону и холожные звонки
+                    titme.training__date Начало: 12.12.2016 17:00
+
+              .col-md-3.col-sm-4
+                .training__block
+                  a.training__img-link(href="#~")
+                    .training__img-block(style="background-image: url('../img/training/training-img2.jpg');")
+                    .training__category-block
+                      span.training__category.training__category--sem Семинар
+                    
+                  .training__desc
+                    a.training__title(href="#~") Организация отдела продаж
+                    titme.training__date Начало: 12.12.2016 17:00
+
+
+              .col-md-3.col-sm-4
+                .training__block
+                  a.training__img-link(href="#~")
+                    .training__img-block(style="background-image: url('../img/training/training-img3.jpg');")
+                    .training__category-block
+                      span.training__category.training__category--sec Статьи
+                    
+                  .training__desc
+                    a.training__title(href="#~") Выгоды и недостатки отдела продаж
+                    titme.training__date 12.12.2016
+
+
+              .col-md-3.col-sm-4
+                .training__block
+                  a.training__img-link(href="#~")
+                    .training__img-block(style="background-image: url('../img/training/training-img4.jpg');")
+                    .training__category-block
+                      span.training__category.training__category--pres Презентиция
+                    
+                  .training__desc
+                    a.training__title(href="#~") 5 секретов успехов для собственников
+                    titme.training__date 12.12.2016
+
+              // =================
+
+              .col-md-3.col-sm-4
+                .training__block
+                  a.training__img-link(href="#~")
+                    .training__img-block(style="background-image: url('../img/training/training-img5.jpg');")
+                    .training__category-block
+                      span.training__category.training__category--pres Презентация
+                    
+                  .training__desc
+                    a.training__title(href="#~") VIII ежегодная конференция B2B basis
+                    titme.training__date Начало: 12.12.2016 17:00
+
+              .col-md-3.col-sm-4
+                .training__block
+                  a.training__img-link(href="#~")
+                    .training__img-block(style="background-image: url('../img/training/training-img6.jpg');")
+                    .training__category-block
+                      span.training__category.training__category--sem Семинар
+                    
+                  .training__desc
+                    a.training__title(href="#~") 4 системы найма и подбора персонала
+                    titme.training__date 12.12.2016
+
+
+              .col-md-3.col-sm-4
+                .training__block
+                  a.training__img-link(href="#~")
+                    .training__img-block(style="background-image: url('../img/training/training-img7.jpg');")
+                    .training__category-block
+                      span.training__category.training__category--web Вебинар
+                    
+                  .training__desc
+                    a.training__title(href="#~") Как внедрить CRM самостоятельно
+                    titme.training__date 12.12.2016
+
+
+              .col-md-3.col-sm-4
+                .training__block
+                  a.training__img-link(href="#~")
+                    .training__img-block(style="background-image: url('../img/training/training-img8.jpg');")
+                    .training__category-block
+                      span.training__category.training__category--web Вебинар
+                    
+                  .training__desc
+                    a.training__title(href="#~") Как увеличить продажи с сайта
+                    titme.training__date 12.12.2016
+
+
+
+          include components/paginator
+
+      // Footer
+      include partials/footer
+      include partials/scripts
+
+      script.
+        $('.js-tab-item').each(function(index, elem) {
+            $(elem).on('click',function() {
+              $(this).addClass('training__tab-item--active').siblings().removeClass('training__tab-item--active');
+            });
+        });

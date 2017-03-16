@@ -3,6 +3,7 @@
 var gulp = require('gulp'),
         watch = require('gulp-watch'),
         sass = require('gulp-sass'),
+        mmq = require('gulp-merge-media-queries'),
         jade = require('gulp-jade'),
         autoprefixer = require('gulp-autoprefixer'),
         sourcemaps = require('gulp-sourcemaps'),
@@ -44,10 +45,19 @@ gulp.task('sass', function() {
                           browsers: ['last 5 versions'],
                           cascade: false
                 }))
+                .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
                 .pipe(gulp.dest('dist/css'))
                 .pipe(sourcemaps.write('sourcemaps'))
                 .pipe(reload({stream: true}))
                 .pipe(notify('Done'))
+});
+
+gulp.task('mmq', function () {
+  return gulp.src('dist/css/style.css')
+    .pipe(mmq({
+      log: true
+    }))
+    .pipe(gulp.dest('dist/css'));
 });
 
 // JS

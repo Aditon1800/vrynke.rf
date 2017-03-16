@@ -9,6 +9,7 @@
 // common
 @import 'common/fonts';
 @import 'common/grid';
+@import 'common/global';
 
 // project components
 @import 'components/logo';
@@ -20,12 +21,20 @@
 @import 'components/button';
 @import 'components/crumbs';
 @import 'components/news';
+@import 'components/training';
 @import 'components/question';
 @import 'components/paginator';
+@import 'components/order';
 
 // project layouts
 @import 'layouts/header';
 @import 'layouts/footer';
+@import 'layouts/person';
+@import 'layouts/careers';
+@import 'layouts/account';
 
 // pages
 @import 'pages/index';
+@import 'pages/about';
+@import 'pages/regions-list';
+

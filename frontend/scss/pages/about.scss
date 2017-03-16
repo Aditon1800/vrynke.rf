@@ -1,0 +1,35 @@
+.about {
+
+  &__whyus {
+    background-color: lighten($gray-color, 18%);
+  }
+
+  .person__whyus-block {
+
+    &:after {
+      background-color: lighten($gray-color, 18%);
+    }
+  }
+
+  .person__whyus-number {
+    @extend .person__whyus-img;
+    top: -36%;
+
+    span {
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      width: 63px;
+      height: 63px;
+      background-color: #ed1c24;
+      border-radius: 50%;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      color: #fff;
+      padding-top: 13px;
+      margin: 0 auto;
+    }
+  } 
+}

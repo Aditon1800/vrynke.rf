@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        include partials/nav
+      .crumbs
+        .container
+          +crumbsLink('crumbs__link', '#~', 'Работать у нас', '/')
+          +crumbsLink('crumbs__link', '#~', 'Макетолог', '/')
+          +crumbsLink('crumbs__link', '#~', 'PR менеджер', '/')
+          +crumbsLink('crumbs__link', '#~', 'офис менеджер', '')
+
+      section.main-content.career
+        .container
+          h1.main-content__title Маркетолог /PR менеджер/офис менеджер
+
+          // Career block
+          article.career__page-block
+            .career__block-pay
+              span.career__block-name Зарплата:
+              span.career__block-arg от 33 000 до 33 000 руб
+            .career__block-exp
+              span.career__block-name Опыт работы:
+              span.career__block-arg 1-3 года
+            .career__block-town
+              span.career__block-name Город:
+              span.career__block-arg Москва
+
+            .career__special-block
+              h2.career__block-title Обязанности:
+
+              ul.career__list
+                li.career__list-item Общение в социальных сетях для получения обратной связи.
+                li.career__list-item Общение со СМИ.
+                li.career__list-item Работа с сайтом компании с целью его популяризации
+                li.career__list-item Обработка текстовой/цифровой информации.
+                li.career__list-item Написание писем и обращений. Корректура писем и обращений, написанных другими людьми.
+                li.career__list-item Поиск информации в интернете.
+                li.career__list-item Составление конкурсных (тендерных) заявок
+                li.career__list-item Офис-менеджер
+
+            .career__special-block
+              h2.career__block-title(href="#~") Требования:
+
+              ul.career__list
+                li.career__list-item Высшее или незаконченное высшее. Указать в резюме средний балл аттестата о среднем образовании и средний балл диплома о высшем образовании. Желательно специализированное журналистское образование. Желателен опыт работы в электронных СМИ.
+                li.career__list-item Умение работать с соц. сетями.
+
+                li.career__list-item Желательно знание платформы wordpres и аналогичных платформ.
+
+                li.career__list-item Инициативность, креативность, ответственность, пунктуальность, грамотность.
+
+                li.career__list-item Дополнительно – хорошее воспитание и речь, грамотность в письме, отличное знание ПК и различных коммуникационных программ и ресурсов. Знание технологий размещения различного контента в сети интернет.
+
+                li.career__list-item Указать ссылки на Ваши публикации (форумы, социальные сети, живые журналы, газеты и т.п.), если таковые имеются.
+
+            .career__special-block
+              h2.career__block-title Условия
+
+              ul.career__list
+                li.career__list-item Работа преимущественно в офисе, за ПК.
+                li.career__list-item Рабочий день с 8.30 до 17.30. Обед с 12.30 до 13.30 ежедневно в итальянском ресторане за счет компании
+                li.career__list-item Претендентам обязательно указать контакты возможных рекомендателей (преподавателей ВУЗа, прежних работодателей)
+                li.career__list-item Указать средний балл диплома о среднем и высшем (среднем специальном) образовании.
+                li.career__list-item К резюме приложить скан диплома о высшем (среднем специальном) образовании
+                li.career__list-item Указать ссылки на имеющиеся у Вас аккаунты в социальных сетях, а также любые другие упоминания о Вас в сети интернет.
+
+                li.career__list-item Приложить фотографию
+
+                li.career__list-item Резюме направлять на электронную почту компании.
+                li.career__list-item В резюме просьба отразить соответствие каждому пункту требований и мысли относительно предлагаемого круга обязанностей.
+
+
+      //- Footer
+      include partials/footer
+      include partials/scripts

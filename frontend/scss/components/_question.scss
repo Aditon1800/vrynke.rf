@@ -7,9 +7,10 @@
   border-radius: 50%;
   font-size: 12px;
   font-weight: 700;
-  padding: 1px 5px;
+  padding: 2px 5px;
   color: $white-color;
   vertical-align: middle;
+  cursor: pointer;
 
   &__tooltip {
     position: absolute;

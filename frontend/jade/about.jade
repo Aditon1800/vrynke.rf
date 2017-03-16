@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    .person.about
+      include helpers/mixin
+      .container-fluid
+        .container
+          //- Header
+          include partials/nav
+        header.person__header
+          .container
+            h1.person__header-title О платформе 
+              br
+              | региональных продаж
+              br
+              | товаров и услуг 
+              br
+              | &#34;ВРЫНКЕ&#34;
+            .person__header-img(style="background-image: url('img/about/vrynke-main.png');")
+        .about__contant
+            //Why us
+          section.about__whyus
+            .container
+              h2.person__block-title.person__whyus-title.person__block-title--center &#171;#[strong.logo-text#[span.logo-text__char в]рынке]&#187; - это:
+              .row
+                .col-lg-3.col-md-3.col-sm-6.person__block-wrap
+                  .person__whyus-block
+                    .person__whyus-number
+                      span 1
+                    p #[strong врынке] - площадка, объединяющая поставщиков товаров и услуг и торговых агентов в регионах
+                .col-lg-3.col-md-3.col-sm-6.person__block-wrap
+                  .person__whyus-block
+                    .person__whyus-number
+                      span 2
+                    p #[strong врынке] помогает получить основной или дополнительный доход
+                .col-lg-3.col-md-3.col-sm-6.person__block-wrap
+                  .person__whyus-block
+                    .person__whyus-number
+                      span 3
+                    p #[strong врынке] помагает найти товар или услугу, которая ближе вам по опыту или образованию 
+                .col-lg-3.col-md-3.col-sm-6.person__block-wrap
+                  .person__whyus-block
+                    .person__whyus-number
+                      span 4
+                    p #[strong врынке] поможет научиться как правильно представлять себя, товар или услугу
+
+            // person working
+          section.person__working
+            .container
+              h2.person__block-title Как работает врынке?
+              .row
+                .person__text-block
+                  p.person__block-untitle После регистрации вы:
+                  ul.person__block-list
+                    li.person__list-item Видите в системе товары и услуги и процент вознаграждения за организацию их продаж
+
+                    li.person__list-item Выбираете близкую вам товар или услугу
+
+                    li.person__list-item Получаете необходимую информацию о товаре или услуге
+
+                    li.person__list-item Связываетесь при необходимости для получения дополнительных данных
+
+                    li.person__list-item Находите покупателя товара или услуги
+
+                    li.person__list-item Организуете заключение договора
+
+                    li.person__list-item Помогаете при коммуникации / сопровождаете сделку
+
+                    li.person__list-item Получаете вознаграждение за свершившийся факт продажи (после сделки)
+                .person__img-block
+                  img(src="img/about/vrynke-icon.png" alt="vrynke.rf")
+
+            // person info block
+          section.person__info-block
+            .container
+              .row
+                .col-sm-12
+                  h2.person__block-title Полезная информация
+
+                  ul.list-block
+                    li.list-block__item 
+                      a(href="#~") Работа у нас
+                      span 1
+
+                    li.list-block__item
+                      a(href="#~") Сотрудничество с нами
+                      span 2
+
+                    li.list-block__item
+                      a(href="#~") Юридическая информация и реквизиты
+                      span 3
+
+                    li.list-block__item
+                      a(href="#~") Новости
+                      span 4
+
+                    li.list-block__item
+                      a(href="#~") Связаться с нами
+                      span 5
+
+          // Footer
+      include partials/footer
+      include partials/scripts

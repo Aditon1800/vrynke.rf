@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    .contuct-us
+      include helpers/mixin
+      .container-fluid
+        .container
+          //- Header
+          include partials/nav
+        .crumbs
+
+        // Contact us 
+        section.main-content
+          .container
+            h1.main-title Связаться с нами
+            .form
+              form(action="" method="" id="")
+                .row
+                  .col-md-4.col-sm-6.col-xs-12
+                    +inputBlock('', 'text', 'name', 'Введите ваше имя? *')
+                  .col-md-4.col-sm-6.col-xs-12
+                    +inputBlock('', 'text', 'email', 'Эл. почта *')
+                  .col-md-4.col-sm-6.col-xs-12
+                    +inputBlock('', 'text', 'phone', 'Телефон *')
+                  .col-md-4.col-sm-6.col-xs-12
+                    select.input()
+                      option(disable) Выберите отдел
+                      option Отдел 1
+                      option Отдел 2
+                      option Отдел 3
+                      option Отдел 4
+                      option Отдел  5
+                  .col-xs-12
+                    textarea.textarea(name="message" placeholder="Текст сообщения")
+                  .col-xs-4
+                    .reCupcha-block
+                      img(src="img/reCupcha.png")
+                    button.button.button--confirm-reg Отправить
+
+          // Footer
+      include partials/footer
+      include partials/scripts

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        include partials/nav
+      .crumbs
+
+      section.main-content.main-content--404
+        .container
+          .main-content__404-block
+            h1.main-content__title Извините, вы заблудились
+            a.button.button--back(href="#~") Вернуться на главную
+
+      .prefooter.prefooter--404
+        picture
+          source.prefooter__img-block(srcset="img/footer-img-404-mob.png" media="(max-width: 991px)")
+          img.prefooter__img-block(src="img/footer-img-404.png", alt="footer-img")
+
+      footer.footer
+        .container
+          .row
+            .col-sm-4
+              .footer__content-wrap
+                .logo.footer__logo
+                  img(src="img/footer-logo.png" alt="врынке.рф")
+                p.footer__copy &copy; Врынке, 2017. Все права защищены.
+                .footer__social
+                  a.footer__social-icon.footer__social-vk(href="#~")
+                  a.footer__social-icon.footer__social-inst(href="#~")
+                  a.footer__social-icon.footer__social-facebook(href="#~")
+                .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
+            .col-sm-4
+              .footer__content-wrap
+                h2.footer__title.js-footer-title Врынке
+                ul.footer__list
+                  li.footer__list-item
+                    a.footer__list-link(href="#~") О платформе
+                  li.footer__list-item
+                    a.footer__list-link(href="#~") Работать у нас
+                  li.footer__list-item
+                    a.footer__list-link(href="#~") Сотрудничать с нами
+                  li.footer__list-item
+                    a.footer__list-link(href="#~") Юридическая информация
+            .col-sm-4
+              .footer__content-wrap
+                h2.footer__title.js-footer-title Информация и поддержка
+                ul.footer__list
+                  li.footer__list-item
+                    a.footer__list-link(href="#~") Политика конфиденциальности
+                  li.footer__list-item
+                    a.footer__list-link(href="#~") Публичная оферта
+                  li.footer__list-item
+                    a.footer__list-link(href="#~") Новости
+                  li.footer__list-item
+                    a.footer__list-link(href="#~") Связаться с нами
+      include partials/scripts

@@ -1,0 +1,80 @@
+.main-content {
+  @media (min-height: 900px) {
+   min-height: 400px; 
+  }
+  @media (min-height: 1100px) {
+   min-height: 720px; 
+  }
+  min-height: 460px;
+  padding-top: 50px;
+
+  &--404 {
+    @media (min-height: 900px) {
+     min-height: 390px; 
+    }
+    @media (min-height: 1100px) {
+     min-height: 745px; 
+    }
+    min-height: auto;
+    text-align: center;
+  }
+
+  &__404-block {
+    @media (max-width: $sm-screen - 1) {
+      margin-bottom: 0;
+
+      .main-content__title {
+        font-size: 2rem;
+        margin-bottom: 25px;
+      }
+    }
+    margin-bottom: -65px;
+  }
+
+  &__title {
+    font-size: 3.2em;
+    color: $black-color;
+    margin-bottom: 50px;
+  }
+
+  &__title-block {
+    @include cf();
+
+    .main-content__title {
+      float: left;
+    }
+  }
+
+  &__link-back {
+    float: right;
+    font-size: 12px;
+    font-weight: 400;
+    background: url('../img/link-arrow.png') left 12px no-repeat;
+    color: lighten($dark-gray-color, 42%);
+    padding-left: 25px;
+    padding-top: 8px;
+  }
+
+}
+
+ .main-title {
+  margin-bottom: 50px;
+  line-height: 1;
+  color: $dark-gray-color;
+ }
+
+ .reCupcha-block {
+  margin-bottom: 30px;
+ }
+
+ .contuct-us {
+
+  // Input
+  .input {
+    margin-bottom: 30px;
+  }
+
+  .button {
+    line-height: inherit;
+  }
+ }

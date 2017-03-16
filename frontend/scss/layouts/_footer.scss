@@ -1,14 +1,29 @@
 .prefooter {
+  @media (max-width: $md-screen - 1) {
+    margin-bottom: -7px;
+  }
   @extend .container;
-  margin-bottom: -15px;
+  margin-top: 60px;
+  margin-bottom: -16px;
+
+  &--another {
+    margin-bottom: -4px;
+  }
+
+  &--404 {
+    @media (max-width: $sm-screen - 1) {
+      margin-bottom: -12px;
+    }
+    padding: 0;
+    margin-bottom: -24px;
+  }
 }
 
 .footer {
   background-color: $dark-gray-color;
   color: $white-color;
   padding-top: 65px;
-  padding-bottom: 35px;
-  margin-bottom: -15px;
+  padding-bottom: 15px;
 
   &__content-wrap {
     @media(min-width: 768px) {

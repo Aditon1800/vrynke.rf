@@ -9,7 +9,9 @@ html(lang="en")
         //- Header
         include partials/nav
       .crumbs
-      section.main-content.login-in
+
+      // Login in
+      section.main-content.login-in(hidden)
         .container
           h1.form-title.login-in__title Вход
           .login-in__form
@@ -21,6 +23,28 @@ html(lang="en")
               .login-in__acc-block
                 span Ещё нет акканта?
                 a.login-in__reg Зарегистрироваться
+
+      // Recover your password
+      section.main-content(hidden)
+        .container
+          h1.form-title.login-in__title Восстановление пароля
+          .login-in__form
+            form(action="" method="" id="")
+              +inputBlock("","text", "yourName", "Адрес эл. почты или ID")
+              button.button.button--confirm-reg Войти
+
+      // New password
+      section.main-content
+        .container
+          h1.form-title.login-in__title Новый пароль
+          .login-in__form
+            form(action="" method="" id="")
+              +inputBlock("","password", "newPassword", "Введите новый пароль")
+              p.input-check
+              +inputBlock("","password", "newPasswordCopy", "Повторите новый пароль")
+              p.input-check
+              button.button.button--confirm-reg Отправить
+
 
         // Footer
       include partials/footer

@@ -1,0 +1,334 @@
+.person {
+  
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &__header {
+    background: url('../img/for-texture.png') repeat-x;
+    height: 456px;
+  }
+
+  .container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__header-title {
+    @media (max-width: $lg-screen - 1) {
+      position: static;
+      text-align: center;
+      max-width: none;
+      transform: translateY(0);
+
+      br {
+        display: none;
+      }
+    }
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-family: $ubuntu;
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__header-img {
+    @media (max-width: $lg-screen - 1) {
+      background-size: contain;
+    }
+
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  &__block-title {
+    width: 85%;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $black-color;
+    margin-bottom: 25px;
+
+    &--center {
+      width: 100%;
+      text-align: center;
+    }
+
+    &--lg {
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+  }
+
+  &__whyus-title {
+    @extend .person__block-title;
+    text-align: center;
+    margin: 0 0 110px;
+  }
+
+  &__whyus-block {
+    @media (max-width: $sm-screen - 1) {
+      margin: 0 auto;
+    }
+
+    position: relative;
+    max-width: 262px;
+    height: 166px;
+    border: 6px solid $gray-color;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding: 40px 15px 0;
+    text-align: center;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 80%;
+      height: 25px;
+      top: -15px;
+      left: 0;
+      right: 0;
+      background-color: $white-color;
+      margin: 0 auto;
+      z-index: 0;
+    }
+
+    p {
+      font-size: 1.6em;
+      line-height: 1.2;
+      color: $black-color;
+    }
+  }
+
+  &__block-wrap {
+    @media (max-width: $md-screen - 1) and (min-width: $sm-screen) {
+      &:first-child,
+      &:nth-child(2) {
+        margin-bottom: 120px;
+      }
+
+      &:nth-child(odd) .person__whyus-block {
+        float: right;
+      }
+    }
+
+    @media (max-width: $sm-screen - 1) {
+      margin-bottom: 120px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__whyus-img {
+    position: absolute;
+    width: 190px;
+    top: -55%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 100;
+  }
+
+  &__text-block,
+  &__img-block {
+    @media (max-width: $sm-screen - 1) {
+      float: none;
+      width: 100%;
+    }
+
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+  }
+
+  &__img-block {
+    text-align: center;
+  }
+
+  &__block-untitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #999;
+    margin-bottom: 25px;
+  }
+
+  &__block-unlist {
+    padding: 0 40px 0 15px;
+  }
+
+  &__list-item {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 15px;
+    margin-bottom: 30px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 8px;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border: 1px solid $red-color;
+      border-radius: 50%;
+    }
+
+    &--unlist {
+      padding-left: 10px;
+      margin-bottom: 0;
+
+      &:before {
+        background-color: $red-color;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__vector {
+    position: relative;
+    width: 48%;
+    height: 2px;
+    background-color: $gray-color;
+    margin: 50px auto;
+
+    &:before {
+      position: absolute;
+      content: '1';
+      display: block;
+      top: -15px;
+      left: -30px;
+      width: 30px;
+      height: 30px;
+      border: 2px solid $gray-color;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 16px;
+      padding-top: 2px;
+    } 
+
+    &:after {
+      position: absolute;
+      content: '2';
+      display: block;
+      top: -15px;
+      right: -30px;
+      width: 30px;
+      height: 30px;
+      border: 2px solid $gray-color;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 16px;
+      padding-top: 2px;
+    } 
+  }
+
+
+  &__line {
+    background-color: rgba($gray-color, .18);
+  }
+
+  &__line-block {
+    width: 50%;
+    text-align: center;
+    padding: 0 15px;
+
+    &:first-child {
+      float: left;
+    }
+
+    &:last-child {
+      float: right;
+    }
+  }
+
+  &__par {
+    max-width: 300px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0 auto;
+
+    &--lg {
+      max-width: 480px;
+    }
+
+    &--contractor {
+      max-width: 785px;
+      text-align: center;
+    }
+  }
+
+  &__info-block {
+    background-color: rgba($gray-color, 0.18);
+  }
+
+  &__reg-title {
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__button-block {
+    text-align: center;
+  }
+
+// Registration
+
+ &__reg-block {
+  @media (max-width: $sm-screen - 1) {
+   margin-bottom: 50px; 
+  }
+  padding-left: 20px;
+  border-left: 5px solid;
+
+  &--agent {
+    border-color: $orange-color;
+  }
+
+  &--contractor {
+    @media (max-width: $md-screen - 1) and (min-width: $sm-screen) {
+      margin-left: 50px;
+    }
+    border-color: $green-color;
+  }
+ }
+
+ &__block-name {
+  font-size: 2rem;
+  font-weight: 400;
+  color: $black-color;
+  margin-bottom: 30px;
+ }
+
+  &__link-list {
+    @include cf();
+  }
+
+  &__link-item {
+
+    &:last-child {
+
+      a {
+        margin-bottom: 2px;
+      }
+    }
+
+    a {
+      @extend .login-in__reg;
+    }
+  }
+}

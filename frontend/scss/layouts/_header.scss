@@ -155,4 +155,76 @@
     color: $white-color; 
     padding: 20px 30px;
   }
+
+  &__button-account {
+    position: relative;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+
+  &__account-block {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 15px;
+    z-index: 100;
+    padding-top: 10px;
+  }
+
+  &__account-list {
+    position: relative;
+    width: 230px;
+    background-color: $white-color;
+    box-shadow: 0 2px 4px 1px $gray-color;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    color: darken($gray-color, 18%);
+    padding: 0 15px;
+    z-index: 50;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: -7px;
+      right: 20px;
+      width: 15px;
+      height: 15px;
+      background-color: $white-color;
+      box-shadow: -2px -2px 1px 1px rgba($gray-color, .1);
+      transform: rotate(45deg);
+      z-index: 0;
+    } 
+  }
+
+  &__account-item {
+    border-bottom: 1px solid $gray-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      display: block;
+      background-image: url('../img/account/account-sprite.png');
+      background-repeat: no-repeat;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left: 35px;
+    }
+
+    &:first-child a {
+      background-position: left 20px;
+    }
+
+    &:nth-child(2) a {
+      background-position: left -30px;
+    }
+
+    &:last-child a {
+      background-position: left -82px;
+    }
+  }
 }

@@ -1,0 +1,85 @@
+.training {
+
+  &__tab-list {
+    margin-top: -14px;
+    margin-bottom: 30px;
+  }
+
+  &__tab-item {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: $dark-gray-color;
+    padding: 6px 25px;
+    margin-top: 14px;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &--active {
+      border: 2px solid $red-color;
+      border-radius: 26px;
+      color: $red-color;
+    }
+  }
+
+  &__block {
+    @extend .news__block;
+  }
+
+  &__img-link {
+    @extend .news__img-link;
+    position: relative;
+  }
+
+  &__img-block {
+    @extend .news__img-block;
+  }
+
+  &__category-block {
+    position: absolute;
+    bottom: 12px;
+    right: 5px;
+  }
+
+  &__category {
+    font-size: 11px;
+    font-weight: 700;
+    color: $white-color;
+    padding: 6px 12px;
+    border-radius: 15px;
+    background-color: $dark-gray-color;
+    margin: 0 2px;
+
+    &--web {
+      background-color: #00cc66;
+    }
+
+    &--free {
+      background-color: #ff9900;
+    }
+
+    &--sem {
+      background-color: #666699;
+    }
+
+    &--sec {
+      background-color: #169bd5;
+    }
+
+    &--pres {
+      background-color: #e8002f;
+    }
+  }
+
+  &__desc {
+    @extend .news__desc;
+  }
+
+  &__title {
+    @extend .news__title;
+  }
+
+  &__date {
+    @extend .news__date;
+  }
+}

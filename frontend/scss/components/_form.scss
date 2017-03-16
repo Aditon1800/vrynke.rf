@@ -20,7 +20,7 @@
 
   &__acc-block {
     border-top: 1px solid $gray-color;
-    padding-top: 25px;
+    padding-top: 15px;
 
     span {
       font-size: 1.6em;
@@ -36,8 +36,8 @@
     border-bottom: 1px dotted rgba($blue-color, .3);
     color: $button-blue-color;
     padding-bottom: 1px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 
     &:hover {
       text-decoration: none;
@@ -47,5 +47,20 @@
 
   &__reg {
     margin-top: 0;
+  }
+}
+
+// Form
+
+.form {
+
+  &__input-block {
+    text-align: justify;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
   }
 }

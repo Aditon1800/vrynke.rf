@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        include partials/nav
+      .crumbs
+
+      section.main-content.career
+        .container
+          h1.main-content__title Открытые вакансии
+
+          // Career block
+          article.career__block
+            a.career__block-title(href="#~") Маркетолог /PR менеджер/офис менеджер
+            .career__block-pay
+              span.career__block-name Зарплата:
+              span.career__block-arg от 33 000 до 33 000 руб
+            .career__block-exp
+              span.career__block-name Опыт работы:
+              span.career__block-arg 1-3 года
+            .career__block-town
+              span.career__block-name Город:
+              span.career__block-arg Москва
+            a.career__block-link(href="#~") Подробнее
+
+          // Career block
+          article.career__block
+            a.career__block-title(href="#~") PR менеджер/офис менеджер
+            .career__block-pay
+              span.career__block-name Зарплата:
+              span.career__block-arg от 50 000 до 70 000 руб
+            .career__block-exp
+              span.career__block-name Опыт работы:
+              span.career__block-arg 3-6 года
+            .career__block-town
+              span.career__block-name Город:
+              span.career__block-arg Санкт-Питербург
+            a.career__block-link(href="#~") Подробнее
+
+          // Career block
+          article.career__block
+            a.career__block-title(href="#~") Маркетолог /PR менеджер/офис менеджер
+            .career__block-pay
+              span.career__block-name Зарплата:
+              span.career__block-arg от 60 000 до 60 000 руб
+            .career__block-exp
+              span.career__block-name Опыт работы:
+              span.career__block-arg 3-6 года
+            .career__block-town
+              span.career__block-name Город:
+              span.career__block-arg Волгоград
+            a.career__block-link(href="#~") Подробнее
+
+          // Career block
+          article.career__block
+            a.career__block-title(href="#~") PHP - программист
+            .career__block-pay
+              span.career__block-name Зарплата:
+              span.career__block-arg от 50 000 до 80 000 руб
+            .career__block-exp
+              span.career__block-name Опыт работы:
+              span.career__block-arg 1-3 года
+            .career__block-town
+              span.career__block-name Город:
+              span.career__block-arg Москва
+            a.career__block-link(href="#~") Подробнее
+
+          // Career block
+          article.career__block
+            a.career__block-title(href="#~") Дизайнер
+            .career__block-pay
+              span.career__block-name Зарплата:
+              span.career__block-arg от 50 000 до 60 000 руб
+            .career__block-exp
+              span.career__block-name Опыт работы:
+              span.career__block-arg 3-6 года
+            .career__block-town
+              span.career__block-name Город:
+              span.career__block-arg Москва
+            a.career__block-link(href="#~") Подробнее
+
+      //- Footer
+      include partials/footer
+      include partials/scripts

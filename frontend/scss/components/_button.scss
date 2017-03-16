@@ -74,10 +74,23 @@
   &--green--lg {
     @extend .button--green--md;
     width: 296px;
-    height: 50px;
-    line-height: 50px;
+    height: 60px;
+    line-height: 60px;
+    text-transform: uppercase;
   }
 
+  // Transparent button
+
+  &--transp {
+    @extend .button--green--lg;
+    background-color: transparent;
+    border: 2px solid $gray-color;
+    color: $gray-color;
+
+    &:hover {
+      border: 2px solid;
+    }
+  }
 
   // Add button
 
@@ -106,6 +119,30 @@
     }
   }
 
+  // Edit button
+
+  &--edit {
+    width: 14px;
+    height: 16px;
+    background-image: url('../img/account/account-desc-sprite.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  // Buttot flag
+
+  &--flag {
+    width: 12px;
+    height: 16px;
+    background-image: url('../img/account/flag-button.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    &--active {
+      background-position: center top;
+    }
+  }  
+
   // Button more
 
   &--more {
@@ -122,6 +159,16 @@
     &:hover {
       border: 2px solid;
     }
+  }
+
+  // Back button
+
+  &--back {
+    font-size: 18px;
+    font-weight: 400;
+    color: #169bd5;
+    padding-left: 40px;
+    background: url('../img/arrow-back-404.png') left 8px no-repeat;
   }
 
   // Registration button

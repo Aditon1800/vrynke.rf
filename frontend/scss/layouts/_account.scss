@@ -1,0 +1,393 @@
+// Account
+
+.account {
+    background-color: rgba($gray-color, .1);
+
+  &__profile {
+    background-color: $white-color;
+    box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
+    text-align: center;
+    padding: 20px 20px 25px;
+  }
+
+  &__link-refresh {
+    @extend .login-in__reg;
+    margin-top: 15px;
+  }
+
+  .button--green--md {
+    width: 100%;
+    max-width: 100%;
+    min-height: 50px;
+    height: auto;
+    line-height: 1.2;
+    padding: 15px 0;
+  }
+
+  &__action {
+    background-color: $white-color;
+    box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
+    padding: 20px 10px 15px 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__action-list {
+    @media (max-width: 480px) {
+      display: none;
+    }
+    margin-top: 25px;
+  }
+
+  &__action-title {
+    @media (max-width: 480px) {
+    }
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $black-color;
+    
+  }
+
+  &__action-item {
+    margin-bottom: 15px;
+
+    a {
+      @extend .login-in__reg;
+      display: inline;
+      font-size: 1.4rem;
+      line-height: 1.4;
+    }
+  }
+
+  // Personal
+  &__personal {
+    position: relative;
+    background-color: $white-color;
+    box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $gray-color;
+    padding: 20px 20px 25px;
+
+    .button--edit {
+      @media (max-width: 480px) {
+        top: 22px!important;
+        right: 20px!important;
+      }
+      position: absolute;
+      top: 22px;
+      right: 20px;
+    }
+  }
+
+  &__personal-id {
+    font-size: 1.2rem;
+  }
+
+  &__block-name {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $black-color;
+  }
+
+  &__column-wrap {
+    @include cf();
+    margin-top: 25px;
+  }
+
+  &__column {
+    @media (max-width: $md-screen - 1) {
+      float: none;
+      width: 100%;
+      padding-right: 20%;
+      margin-right: 0;
+    }
+    float: left;
+    width: 35%;
+    margin-right: 15%;
+  }
+
+  &__personal-phone,
+  &__personal-location,
+  &__personal-mail,
+  &__personal-info {
+    position: relative;
+    word-wrap: break-word;
+    padding-left: 25px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: 0;
+      background-image: url('../img/account/account-desc-sprite.png');
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 30px;
+    }
+  }
+
+  &__personal-phone {
+
+    &:before {
+      background-position: left -68px;  
+    }
+  }
+
+  &__personal-location {
+
+    &:before {
+      background-position: left -147px;  
+    }
+  }
+
+  &__personal-mail {
+
+    &:before {
+      background-position: left -225px;  
+    }
+  }
+
+  &__personal-info {
+
+    &:before {
+      background-position: left -302px;  
+    }
+  }
+
+
+  &__products {
+    background-color: $white-color;
+    box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
+    padding: 20px 20px 25px;
+    margin-top: 30px;
+  }
+
+  &__title-block {
+    @include cf();
+    margin-bottom: 15px;
+
+    .account__block-name {
+      float: left;
+    }
+
+    .button--add {
+      @media (max-width: $md-screen - 1) and (min-width: 481px) {
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+
+        &:before {
+          left: 22.5%;
+          top: 55%;
+          background-image: url('../img/button-plus-mob.png');
+        }
+      }
+    @media (max-width: 480px) {
+        width: 100%;
+        float: none;
+        height: 40px;
+        font-size: 1.6rem;
+        line-height: 40px;
+      }
+
+      float: right;
+      margin-top: 8px;
+    }
+  }
+
+  // Table
+
+  .table {
+    @media (max-width: 480px) {
+      display: block;
+    }
+    display: table;
+    margin-bottom: 40px;
+  }
+
+  .tr {
+    @media (max-width: 480px) {
+      position: relative;
+      display: block;
+      border-bottom: 1px solid lighten($gray-color, 10%);
+      padding: 10px 0;
+    }
+    display: table-row;
+
+    &:nth-child(2) {
+
+      .td {
+        @media (max-width: 480px) {
+          border: none;
+        }
+        border-top: 1px solid $gray-color;
+      }
+    }
+
+    &:last-child {
+
+      .td {
+        @media (max-width: 480px) {
+          border: none;
+        }
+        border-bottom: 1px solid lighten($gray-color, 10%);
+      }
+    }
+
+    .td {
+      @media (max-width: 480px) {
+        border: none;
+        padding: 2px 0;
+      }
+      padding: 15px 10px;
+      border-top: 1px solid lighten($gray-color, 10%);
+
+      &:first-child {
+        @media (max-width: $md-screen - 1) {
+          width: 40%;
+        }
+        @media (max-width: 480px) {
+          width: 80%;  
+        }
+        padding-left: 0;
+        width: 28%;
+      }
+
+      &:last-child {
+        @media (max-width: $md-screen - 1) {
+          text-align: right;
+        }
+        padding-right: 0;
+      }
+    }
+  }
+
+  .title-tr {
+    @media (max-width: 480px) {
+      border-bottom: 1px solid $gray-color;
+    }
+  }
+
+  .th,
+  .td {
+    @media (max-width: 480px) {
+      display: block;
+    }
+    display: table-cell;
+    font-size: 1.4rem;
+
+  }
+
+  .th {
+    white-space: nowrap;
+  }
+
+  &__table-title {
+    @extend .order__table-title;
+    padding: 0 10px 5px;
+
+    &--mob {
+      @media (max-width: 480px) {
+        display: block;
+        padding-left: 0;
+        margin-bottom: -5px;
+      }
+      display: none;
+    }
+
+    &--number {
+      padding-left: 0;
+    }
+
+    &--cost {
+      text-align: right;
+    }
+
+    &--name,
+    &--reward,
+    &--volume {
+      @media (max-width: $md-screen - 1) {
+        display: none!important;
+      }
+    }
+
+    &--number,
+    &--cost {
+      @media (max-width: 480px) {
+        display: none!important;
+      }
+    }
+  }
+
+  &__name {
+    @extend .order__name;
+  }
+
+  &__reward {
+    text-align: right;
+  }
+
+  &__cost {
+    text-align: right;
+  }
+
+  &__volume {
+    @media (max-width: 480px) {
+      text-align: left;
+    }
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  &__status,
+  &__reward,
+  &__cost {
+    @media (max-width: $md-screen - 1) {
+      display: none!important;
+    }
+  }
+
+  .button--edit {
+    @media (max-width: 480px) {
+      position: absolute;
+      top: 16px;
+      right: 0;
+    }
+    vertical-align: middle;
+  }
+
+  .button--flag {
+    @media (max-width: 480px) {
+      position: absolute;
+      top: 16px;
+      right: 0;
+    }
+    vertical-align: middle;
+  }
+
+  &__button-block {
+    text-align: center;
+  }
+
+  // News
+
+  &__news {
+    background-color: $white-color;
+    box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
+    padding: 20px 20px 25px;
+    margin-top: 30px;
+  }  
+
+  &__news-title {
+    margin-bottom: 20px;
+  }
+
+  &__news-block {
+    @include cf();
+  }
+}
