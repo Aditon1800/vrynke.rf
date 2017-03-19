@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        nav.header__nav
+          .toggle.header__toggle.js-toggle
+            span.toggle__line
+            span.toggle__line
+            span.toggle__line
+          .logo.header__logo
+            a.header__logo-link
+              img.logo-img.header__logo-img(src="img/logo.png" alt="врынке.рф")
+          .header__list.js-header__list
+            button.button.header__list-button.js-list-button
+            .header__nav-list
+              .header__nav-item.header__nav-item--active
+                a(href="#~") Я — агент
+              .header__nav-item
+                a(href="#~") Я — поставщик
+              .header__nav-item
+                a(href="#~") Каталог предложений
+              .header__nav-item
+                a(href="#~") Регионы
+            .header__nav-list.header__nav-list--mobile
+              .header__nav-item
+                a(href="#~") О платформе
+              .header__nav-item
+                a(href="#~") Работать у нас
+              .header__nav-item
+                a(href="#~") Новости
+              .header__nav-item
+                a(href="#~") Связаться с нами
+          .header__sign-in
+            a.button.header__button-account.js-button-account(href="#~")
+               img(src="img/account-icon.png" alt="account-logo")
+              .header__account-block.js-account-block
+                ul.header__account-list
+                  li.header__account-item
+                    a(href="#~") Редактировать профиль
+                  li.header__account-item
+                    a(href="#~") Сообщения
+                  li.header__account-item
+                    a(href="#~") Выйти
+
+      // Crumbs
+      include components/crumbs
+
+      // Account edit
+      section.main-content.account.account__edit
+        .container
+          h1.main-content__title Новый заказ
+          .accountn__edit-block
+            form(action="" method="" id="")
+
+              .row.account__block-category
+                .col-sm-3
+                  span.account__input-category Товар / услуга:
+                .col-sm-9
+                  span.account__input-attr Композитный состав CERAMET ANTICOR #[span ID-P000000001-00123]
+              .row.account__block-category
+                .col-sm-3
+                  span.account__input-category Поставщик:
+                .col-sm-9
+                  span.account__input-attr ООО "Ромашка"
+              .row.account__block-category
+                .col-sm-3
+                  span.account__input-category Количество:
+                .col-sm-2
+                  +inputBlock('', 'text', 'count')
+
+              .row.account__block-category
+                .col-sm-3
+                  span.account__input-category Дополнительная
+                    br
+                    | информация:
+                .col-sm-6
+                  +inputBlock('textarea', 'textarea', 'moreInfo')
+
+              // Personal info
+              h2.account__edit-name Плательщик / Покупатель
+              .row.account__input-block
+                .col-sm-4
+                  +inputBlock("js-let-check","text", "name", "Наименования *")
+                .col-sm-4
+                  +inputBlock("js-let-check","text", "inn", "ИНН *")
+                .col-sm-4
+                  +inputBlock("js-let-check","text", "kpp", "КПП *")
+                .col-sm-4
+                  +inputBlock("js-let-check","text", "code", "Код ОКПО")
+
+              // Registered address
+              h3.account__edit-name.account__edit-name--md Адрес места нахождения (юридический адрес)
+              .row.account__input-block
+                .col-sm-4
+                  +inputBlock("js-let-check","text", "index", "Индекс *")
+                .col-sm-4
+                  +inputBlock("js-let-check","text", "rfSubject", "Субъект РФ *")
+                .col-sm-4
+                  +inputBlock("js-let-check","text", "city", "Город *")
+                .col-sm-12
+                  +inputBlock("js-let-check","text", "address", "Улица, номер дома, номер офиса *")
+
+              // The bank data
+              h3.account__edit-name.account__edit-name--md Банковские реквизиты
+              .row.account__input-block
+                .col-sm-4
+                  +inputBlock("","text", "bankAccount", "Расчетный счет *")
+                .col-sm-4
+                  +inputBlock("","text", "bankName", "Наименование банка *")
+                .col-sm-4
+                  +inputBlock("","text", "bankCity", "Город банка *")
+                .col-sm-4
+                  +inputBlock("","text", "corAccount", "Корреспондентский счет *")
+                .col-sm-4
+                  +inputBlock("","text", "bik", "БИК *")
+              .account__input-block.account__input-block--sm
+                  +checkBox('threeCheckbox', 'Требуется доставка')
+
+              // Contact info
+              .account__check-title
+                h3.account__edit-name Грузополучатель
+                +checkBox('fourCheckbox', 'Соответствует плательщику / получателю *')
+              .row.account__input-block
+                .col-sm-4
+                  +inputBlock("js-get-check","text", "name", "Наименования *")
+                .col-sm-4
+                  +inputBlock("js-get-check","text", "inn", "ИНН *")
+                .col-sm-4
+                  +inputBlock("js-get-check","text", "kpp", "КПП *")
+                .col-sm-4
+                  +inputBlock("js-get-check","text", "code", "Код ОКПО")
+
+              // Delivery address
+              .account__check-title
+                h3.account__edit-name.account__edit-name--md Адрес доставки
+                +checkBox('fiveCheckbox', 'Соответствует адресу плательщика / получателя *')
+              .row.account__input-block
+                .col-sm-4
+                  +inputBlock("js-get-check","text", "index", "Индекс *")
+                .col-sm-4
+                  +inputBlock("js-get-check","text", "rfSubject", "Субъект РФ *")
+                .col-sm-4
+                  +inputBlock("js-get-check","text", "city", "Город *")
+                .col-sm-12
+                  +inputBlock("js-get-check","text", "address", "Улица, номер дома, номер офиса *")
+
+              .row.account__input-block
+                .col-sm-4
+                  button.button.button--green Отправить заявку на заказ
+              .account__important-info
+                span Поля, отмеченные звездочкой (*), обязательны к заполнению.
+
+          // Footer
+        include partials/footer
+        include partials/scripts
+

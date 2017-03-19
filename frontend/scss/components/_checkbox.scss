@@ -1,6 +1,8 @@
 .checkbox {
   $checkbox-color: #3dd472;
   $checkbox-button-color: #25bf5b;
+  display: inline-block;
+  vertical-align: middle;
 
   &__input {
       vertical-align: top;
@@ -8,10 +10,6 @@
       width: 17px;
       height: 17px;
 
-
-    & + label {
-      cursor: pointer;
-    }
 
     &:not(checked) {
       position: absolute;
@@ -23,8 +21,9 @@
       font-family: inherit;
       font-size: 1.6rem;
       font-weight: 300;
-      color: $black-color;
+      color: darken($gray-color, 5%);
       padding: 0 0 0 46px;
+      transition: all .2s;
     }
 
     &:not(checked) + label:before {
@@ -52,6 +51,10 @@
       background: $gray-color;
       box-shadow: 0 2px 5px rgba(0,0,0,.2);
       transition: all .2s;
+    }
+
+    &:checked + label {
+      color: $black-color;
     }
 
     &:checked + label:before {

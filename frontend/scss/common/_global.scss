@@ -78,3 +78,17 @@
     line-height: inherit;
   }
  }
+
+.js-tt-number,
+.js-tt-cost,
+.js-tt-name {
+  cursor: pointer;
+
+  span i {
+    display: inline-block;
+    width: 9px;
+    height: 11px;
+    background-image: url('../img/account/th-click.png');
+    background-repeat: no-repeat;
+  }
+}

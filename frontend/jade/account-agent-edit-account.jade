@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        nav.header__nav
+          .toggle.header__toggle.js-toggle
+            span.toggle__line
+            span.toggle__line
+            span.toggle__line
+          .logo.header__logo
+            a.header__logo-link
+              img.logo-img.header__logo-img(src="img/logo.png" alt="врынке.рф")
+          .header__list.js-header__list
+            button.button.header__list-button.js-list-button
+            .header__nav-list
+              .header__nav-item.header__nav-item--active
+                a(href="#~") Я — агент
+              .header__nav-item
+                a(href="#~") Я — поставщик
+              .header__nav-item
+                a(href="#~") Каталог предложений
+              .header__nav-item
+                a(href="#~") Регионы
+            .header__nav-list.header__nav-list--mobile
+              .header__nav-item
+                a(href="#~") О платформе
+              .header__nav-item
+                a(href="#~") Работать у нас
+              .header__nav-item
+                a(href="#~") Новости
+              .header__nav-item
+                a(href="#~") Связаться с нами
+          .header__sign-in
+            a.button.header__button-account.js-button-account(href="#~")
+               img(src="img/account-icon.png" alt="account-logo")
+              .header__account-block.js-account-block
+                ul.header__account-list
+                  li.header__account-item
+                    a(href="#~") Редактировать профиль
+                  li.header__account-item
+                    a(href="#~") Сообщения
+                  li.header__account-item
+                    a(href="#~") Выйти
+
+      // Crumbs
+      .crumbs
+        .container
+          +navLink("crumbs__nav-link crumbs__nav-link", "index.html", "Профиль", "crumbs__block--active")
+          +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "index.html", "Сообщения", '25')
+          +navLink("crumbs__nav-link", "index.html", "Избранное")
+          +navLink("crumbs__nav-link crumbs__nav-link--training", "index.html", "Обучение")
+
+      // Account edit
+      section.main-content.account.account__edit
+        .container
+          h1.main-content__title Редактировать профиль
+          .accountn__edit-block
+            form(action="" method="" id="")
+
+              // Personal info
+              h2.account__edit-name Персональная информация
+              .row.account__input-block
+                .col-lg-8
+                  +inputBlock("","text", "name", "Иванов Иван Иванович")
+                .col-lg-4
+                  +inputBlock("","text", "id", "656565654654")
+                .col-lg-4
+                  select.input()
+                    option(disable) Высшее
+                    option Среднее
+                    option Среднее-специальное
+                    option Низшее
+                    option Никакое
+
+              // Registered address
+              h3.account__edit-name.account__edit-name--md Адрес регистрации
+              .row.account__input-block
+                .col-lg-4
+                  +inputBlock("js-let-check","text", "index", "125000")
+                .col-lg-4
+                  +inputBlock("js-let-check","text", "region", "Московская область")
+                .col-lg-4
+                  +inputBlock("js-let-check","text", "city", "Московская область")
+                .col-lg-12
+                  +inputBlock("js-let-check","text", "address", "Московская область")
+
+              // The actual address
+              .account__check-title
+                h3.account__edit-name.account__edit-name--md Фактический адрес (для направления корреспонденции)
+                +checkBox('firstCheckbox', 'Соответствует адресу регистрации')
+              .row.account__input-block
+                .col-lg-4
+                  +inputBlock("js-get-check","text", "index", "125000")
+                .col-lg-4
+                  +inputBlock("js-get-check","text", "region", "Московская область")
+                .col-lg-4
+                  +inputBlock("js-get-check","text", "city", "Московская область")
+                .col-lg-12
+                  +inputBlock("js-get-check","text", "address", "Московская область")
+
+              // Contact info
+              h2.account__edit-name Контактная информация
+              .row.account__input-block
+                .col-lg-4
+                  +inputBlock("","tel", "phone", "+7 (905) 123-45-67")
+                .col-lg-4
+                  +inputBlock("","phone", "mail", "656565654654")
+
+              .account__input-block.account__input-block--mb
+                +checkBox('secondCheckbox', 'Получить статус подтверждённого агента')
+                .question &#63;
+                  span.question__tooltip Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, illum ut ipsam quasi porro numquam aut ratione facilis eveniet, recusandae quia perspiciatis at dolorem aspernatur expedita earum eum, molestiae quidem.
+                .account__input-block__info Стоимость услуги – #[span.account__check-get 0] рублей
+
+              .row.account__input-block
+                .col-lg-4
+                  +inputBlock("","text", "inn", "40702810638050013199")
+                .col-lg-4
+                  +inputBlock("","text", "bank", "ПАО \"Сбербанк России\"")
+
+              .row.account__input-block
+                .col-lg-4
+                  +inputBlock("","text", "name", "Иванов Иван Иванович")
+                .col-lg-4
+                  +inputBlock("","text", "id", "656565654654")
+                .col-lg-4
+                  +inputBlock("","text", "id", "656565654654")
+
+              .row.account__input-block
+                .col-sm-4
+                  button.button.button--confirm-reg Подтвердить изменения
+
+          // Footer
+        include partials/footer
+        include partials/scripts
+

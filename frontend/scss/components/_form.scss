@@ -64,3 +64,33 @@
     }
   }
 }
+
+// Search form
+
+.search-form {
+  background-color: $white-color;
+  box-shadow: 0 1px 6px 1px rgba(51, 51, 51, 0.25);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.search-block__ft {
+  @media (max-width: $sm-screen - 1) {
+    display: block;
+  }
+  font-size: 0;
+  display: inline-block;
+  margin-bottom: 20px;
+
+  span {
+    font-size: 1.6rem;
+    vertical-align: baseline;
+  }
+
+  &--ml {
+    @media (max-width: $sm-screen - 1) {
+      margin-left: 0;
+    }
+    margin-left: 10px;
+  }
+}

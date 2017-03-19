@@ -2,17 +2,19 @@
 .textarea {
   $input-color: $gray-color;
   width: 100%;
+  height: 40px;
   font-family: 'Arial';
   font-weight: 400;
-  line-height: 1.45;
+  line-height: 1;
   color: $black-color;
   font-size: 1.4em;
   border: 1px solid $input-color;
-  padding: 9px 14px;
+  padding: 11px 14px;
   margin-bottom: 20px;
 
   &::placeholder {
     color: darken($input-color, 25%);
+    background-color: transparent;
   }
 
   &--lg {
@@ -26,9 +28,71 @@
   &:focus {
     outline: none;
   }
+
+  &--search {
+    background-image: url('../img/account/input-search.png');
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+  }
+
+  &--ft {
+    width: 80px;
+    height: 40px;
+    font-size: 1.4rem;
+
+    &--name {
+      @media (max-width: $sm-screen - 1) {
+        display: block;
+        margin-bottom: 10px;
+      }
+      padding-right: 5px;
+    }
+
+    &--line {
+      padding: 0 5px;
+    }
+  }
+}
+
+.check[type="checkbox"] {
+  opacity: 0;
+
+  &:checked + label:before {
+    content: "\2713";
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 12px;
+    text-align: center;
+    color: $black-color;
+  }
+}
+
+.check-label {
+  position: relative;
+  padding-left: 3px;
+  font-size: 1.4rem;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 50%;
+    margin-top: -7px;
+    left: -16px;
+    width: 14px;
+    height: 14px;
+    background-color: $white-color;
+    border: 1px solid $gray-color;
+    border-radius: 2px;
+  }
 }
 
 .textarea {
   height: 170px;
   resize: none;
+}
+
+label {
+  vertical-align: middle;
+  cursor: pointer;
 }

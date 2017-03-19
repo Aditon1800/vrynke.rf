@@ -1,6 +1,37 @@
 .order {
   background-color: rgba($gray-color, .1);
 
+  &__title-block {
+    @include cf();
+
+    .main-content__title {
+      @media (max-width: 480px) {
+        float: none;
+      }
+      float: left;
+    }
+
+    .button--add,
+    .input {
+      @media (max-width: 480px) {
+        width: 100%;
+        float: none;
+        margin-bottom: 25px;
+        height: 40px;
+        font-size: 1.6rem;
+        line-height: 40px;
+      }
+      float: right;
+      margin-top: 4px;
+    }
+
+    .input {
+      width: 270px;
+      font-size: 1.3rem;
+      background-color: transparent;
+    }
+  }
+
   &__table {
     background-color: $white-color;
     box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
@@ -22,8 +53,42 @@
     display: table-cell;
   }
 
+  &--item-list {
+
+    .tr {
+
+      &:nth-child(2) {
+
+        .td {
+          @media (max-width: $sm-screen) {
+            border: none;
+          }
+          border-top: 1px solid $gray-color;
+        }
+      }
+
+      &:last-child {
+
+        .td {
+          @media (max-width: $sm-screen) {
+            border: none;
+          }
+          border-bottom: 1px solid lighten($gray-color, 10%);
+        }
+      }
+
+      .td {
+        @media (max-width: $sm-screen) {
+          border: none;
+        }
+        border-top: 1px solid lighten($gray-color, 10%);
+      }
+    }
+  }
+
   .tr {
     @media (max-width: $sm-screen - 1) {
+      position: relative;
       display: block;
       padding: 15px 0;
     }
@@ -80,7 +145,17 @@
       text-align: right;
     }
 
-    &--reward {
+    &--volume {
+      white-space: nowrap;
+    }
+
+    &--name {
+      white-space: nowrap;
+    }
+
+    &--reward,
+    &--list-reward,
+    &--img {
       @media (max-width: $md-screen - 1) {
         width: 45px;
       }
@@ -99,7 +174,7 @@
 
   &__name {
     font-weight: 700!important;
-    color: #65a2d5!important;
+    color: #35a3d8!important;
   }
 
   &__volume,
@@ -133,6 +208,38 @@
       @media (max-width: $md-screen - 1) {
         font-size: 0;
       }
+    }
+  }
+
+  &__list-reward {
+    @media (max-width: $sm-screen - 1) {
+      text-align: left;
+    }
+    text-align: right;
+  }
+
+  &__img {
+    text-align: left;
+    vertical-align: middle;
+
+    img {
+      width: 30px;
+      height: 30px;
+      background-color: $gray-color;
+      border: 2px solid $gray-color;
+      border-radius: 50%;
+      color: $gray-color;
+    }
+  }
+
+
+  // Button edit
+
+  .button--edit {
+    @media (max-width: $sm-screen - 1) {
+      position: absolute;
+      top: 16px;
+      right: 0px;
     }
   }
 

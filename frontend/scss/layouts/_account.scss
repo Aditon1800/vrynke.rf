@@ -196,7 +196,7 @@
       }
 
       float: right;
-      margin-top: 8px;
+      margin-top: 10px;
     }
   }
 
@@ -280,6 +280,7 @@
     }
     display: table-cell;
     font-size: 1.4rem;
+    vertical-align: baseline;
 
   }
 
@@ -389,5 +390,74 @@
 
   &__news-block {
     @include cf();
+  }
+
+  // Account edit
+
+  &__input-block {
+
+    &--mb {
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    &--sm {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    &__info {
+      font-size: 1rem;
+      font-style: italic;
+      color: lighten($dark-gray-color, 40%);
+      padding-top: 2px;
+      padding-left: 46px;
+    }
+
+    .button--confirm-reg {
+      margin-top: 25px;
+    }
+  }
+
+  &__check-title {
+    @include cf();
+
+    .account__edit-name {
+      float: left;
+    }
+
+    .checkbox {
+      float: right;
+      padding-top: 10px;
+    }
+  }
+
+  &__edit-name,
+  &__edit-name--md {
+    @extend .account__block-name;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__edit-name--md {
+    font-size: 1.6rem;
+  }
+
+  &__important-info {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+    color: darken($gray-color, 40%);
+    text-align: right;
+    margin-top: 40px;
+  }
+
+  &__block-category {
+    @extend .order__block-category;
+    padding-bottom: 20px;
+
+    span {
+      vertical-align: top;
+    }
   }
 }

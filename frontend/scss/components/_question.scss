@@ -3,13 +3,14 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  background-color: $blue-color;
+  background-color: $dark-blue-color;
   border-radius: 50%;
   font-size: 12px;
   font-weight: 700;
-  padding: 2px 5px;
   color: $white-color;
   vertical-align: middle;
+  padding: 2px 5px;
+  margin-left: 5px;
   cursor: pointer;
 
   &__tooltip {
