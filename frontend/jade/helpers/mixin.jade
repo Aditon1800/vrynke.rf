@@ -1,6 +1,6 @@
 //- Input
-mixin inputBlock(inputClass, inputType, inputName, inputPlaceholder)
-  input.input(class=inputClass, type=inputType name=inputName, placeholder=inputPlaceholder)
+mixin inputBlock(inputClass, inputType, inputName, inputPlaceholder, inputTitle)
+  input.input(class=inputClass, type=inputType name=inputName, placeholder=inputPlaceholder, title=inputTitle, required oninvalid="this.setCustomValidity('#{inputTitle}')" oninput="setCustomValidity('')")
 
 //- Checkbox
 mixin checkBox(checkboxId, text)

@@ -62,14 +62,17 @@
             <h1 class="main-content__title">Результат поиска</h1>
             <div class="search-form">
               <form action="" method="" id="">
-                <input type="text" name="search" placeholder="Поиск предложений..." class="input input--search"/>
-                <div class="search-block__ft"><span class="input--ft--name">Цена, руб.</span>
-                      <input type="text" name="from" placeholder="от" class="input input--ft"/><span class="input--ft--line">-</span>
-                      <input type="text" name="from" placeholder="до" class="input input--ft"/>
+                <div class="input__search-block">
+                  <input type="text" name="search" placeholder="Поиск предложений..." class="input input--search"/>
+                  <button class="button button--search"></button>
                 </div>
-                <div class="search-block__ft search-block__ft--ml"><span class="input--ft--name">Вознаграждение</span>
-                      <input type="text" name="from" placeholder="от" class="input input--ft"/><span class="input--ft--line">-</span>
-                      <input type="text" name="from" placeholder="до" class="input input--ft"/>
+                <div class="search-block__ft"><span class="input--ft--name">Цена, руб.</span>
+                      <input type="text" name="from" placeholder="от" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input input--ft"/><span class="input--ft--line">-</span>
+                      <input type="text" name="from" placeholder="до" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input input--ft"/>
+                </div>
+                <div class="search-block__ft search-block__ft--ml"><span class="input--ft--name">Вознаграждение,  &#37;</span>
+                      <input type="text" name="from" placeholder="от" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input input--ft"/><span class="input--ft--line">-</span>
+                      <input type="text" name="from" placeholder="до" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input input--ft"/>
                 </div>
                 <input type="text" name="search" placeholder="Начните вводить регион" class="input"/>
                 <div class="search-block">
@@ -85,12 +88,12 @@
                   <div class="th order__table-title">
                     <div class="order__table-title--img">Изображение</div>
                   </div>
-                  <div class="th order__table-title order__table-title--number js-tt-number"><span><i></i></span> Наименование</div>
-                  <div class="th order__table-title order__table-title--name js-tt-name"><span><i></i></span>  Регионы поставки</div>
+                  <div class="th order__table-title order__table-title--number js-tt-number"><span class="sorter"></span> Наименование</div>
+                  <div class="th order__table-title order__table-title--name js-tt-name"><span class="sorter"></span>  Регионы поставки</div>
                   <div class="th order__table-title">
                     <div class="order__table-title--list-reward order__table-title--reward">Вознаграждение</div>
                   </div>
-                  <div class="th order__table-title order__table-title--cost js-tt-cost"><span><i></i></span> Цена</div>
+                  <div class="th order__table-title order__table-title--cost js-tt-cost"><span class="sorter"></span> Цена</div>
                   <div class="th order__table-title order__table-title--volume">Мин. объём</div>
                 </div>
                 <!-- Product line-->

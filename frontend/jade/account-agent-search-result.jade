@@ -59,16 +59,20 @@ html(lang="en")
         section.main-content
           .container
             h1.main-content__title Результат поиска
+
+            //- Search form
             .search-form
               form(action="" method="" id="")
-                input.input.input--search(type="text" name="search" placeholder="Поиск предложений...")
+                .input__search-block
+                  input.input.input--search(type="text" name="search" placeholder="Поиск предложений...")
+                  button.button.button--search
                 .search-block__ft
                   span.input--ft--name Цена, руб.
                   +inputBlock('input--ft', 'text', 'from', 'от')
                   span.input--ft--line -
                   +inputBlock('input--ft', 'text', 'from', 'до')
                 .search-block__ft.search-block__ft--ml
-                  span.input--ft--name Вознаграждение
+                  span.input--ft--name Вознаграждение,  &#37;
                   +inputBlock('input--ft', 'text', 'from', 'от')
                   span.input--ft--line -
                   +inputBlock('input--ft', 'text', 'from', 'до')
@@ -86,11 +90,11 @@ html(lang="en")
                   .order__table-title.order__table-title--number--mob Наименование / цена
                   .th.order__table-title
                     .order__table-title--img Изображение
-                  .th.order__table-title.order__table-title--number.js-tt-number #[span #[i]] Наименование
-                  .th.order__table-title.order__table-title--name.js-tt-name #[span #[i]]  Регионы поставки
+                  .th.order__table-title.order__table-title--number.js-tt-number #[span.sorter] Наименование
+                  .th.order__table-title.order__table-title--name.js-tt-name #[span.sorter]  Регионы поставки
                   .th.order__table-title
                     .order__table-title--list-reward.order__table-title--reward Вознаграждение
-                  .th.order__table-title.order__table-title--cost.js-tt-cost #[span #[i]] Цена
+                  .th.order__table-title.order__table-title--cost.js-tt-cost #[span.sorter] Цена
                   .th.order__table-title.order__table-title--volume Мин. объём
 
                 // Product line

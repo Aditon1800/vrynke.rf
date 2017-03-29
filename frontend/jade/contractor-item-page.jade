@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        nav.header__nav
+          .toggle.header__toggle.js-toggle
+            span.toggle__line
+            span.toggle__line
+            span.toggle__line
+          .logo.header__logo
+            a.header__logo-link
+              img.logo-img.header__logo-img(src="img/logo.png" alt="врынке.рф")
+          .header__list.js-header__list
+            button.button.header__list-button.js-list-button
+            .header__nav-list
+              .header__nav-item.header__nav-item--active
+                a(href="#~") Я — агент
+              .header__nav-item
+                a(href="#~") Я — поставщик
+              .header__nav-item
+                a(href="#~") Каталог предложений
+              .header__nav-item
+                a(href="#~") Регионы
+            .header__nav-list.header__nav-list--mobile
+              .header__nav-item
+                a(href="#~") О платформе
+              .header__nav-item
+                a(href="#~") Работать у нас
+              .header__nav-item
+                a(href="#~") Новости
+              .header__nav-item
+                a(href="#~") Связаться с нами
+          .header__sign-in
+            a.button.header__button-account.js-button-account(href="#~")
+               img(src="img/account-icon.png" alt="account-logo")
+              .header__account-block.js-account-block
+                ul.header__account-list
+                  li.header__account-item
+                    a(href="#~") Редактировать профиль
+                  li.header__account-item
+                    a(href="#~") Сообщения
+                  li.header__account-item
+                    a(href="#~") Выйти
+
+      // Crumbs
+      .crumbs
+        .container
+          +crumbsLink("crumbs__link","index.html", "Главная", " /")
+          +crumbsLink("crumbs__link","index.html", "Каталог", " /")
+          +crumbsLink("crumbs__link","index.html", "Категория товаров/услуг", " /")
+          +crumbsLink("crumbs__link","index.html", "Подкатегория", " /")
+          +crumbsLink("crumbs__link","index.html", "Композитный состав CERAMET ANTICOR")
+
+      section.main-content.item
+        .container
+          .row
+            .col-left
+              h1.item__title Композитный состав CERAMET ANTICOR, Москва, ООО Ромашка
+
+              .item__top-info
+                // Prew block
+                .item__prew-block
+                  .item__main-prew
+                    img(src="img/contractor/prew/prew-img.jpg" alt="item-img")
+                    .item__prew-mini
+                      .item__prew-mini__block
+                        img(src="img/contractor/prew/prew-img-mini1.jpg" alt="item-img-mini")
+                      .item__prew-mini__block
+                        img(src="img/contractor/prew/prew-img-mini2.jpg" alt="item-img-mini")
+                      .item__prew-mini__block
+                        img(src="img/contractor/prew/prew-img-mini3.jpg" alt="item-img-mini")
+                      .item__prew-mini__block
+                        img(src="img/contractor/prew/prew-img-mini4.jpg" alt="item-img-mini")
+                // Top desc
+                .item__prew-desc
+                  span.item__cost-name Цена для агентов
+                  .question &#63;
+                    span.question__tooltip Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, illum ut ipsam quasi porro numquam aut ratione facilis eveniet, recusandae quia perspiciatis at dolorem aspernatur expedita earum eum, molestiae quidem.
+                  .item__cost 600 &#8381;/кг
+                  .item__prew-category
+                    span.item__prew-name Минимальный объём:
+                    span.item__prew-attr 5 000 кг
+                  .item__prew-category
+                    span.item__prew-name Вознаграждение агента:
+                    span.item__prew-attr 15 &#37;
+                  br
+                  .item__prew-category
+                    span.item__prew-name Регионы распространения:
+                    span.item__prew-attr Москва, Нижний Новгород, Екатеринбург
+                  .item__button-top
+                    a.button.button--green(href="#~") Заказать
+                    a.button.button--add-fav(href="#~") Добавить в избранное
+                  .item__link-block
+                    .item__link-inner
+                      a(href="#~") Гарантированное вознаграждение
+                      .question &#63;
+                          span.question__tooltip Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, illum ut ipsam quasi porro numquam aut ratione facilis eveniet, recusandae quia perspiciatis at dolorem aspernatur expedita earum eum, molestiae quidem.
+
+
+                // Main desc
+              .item__main-desc
+                h2.order__block-title Описание
+                .item__prew-category
+                  p Керамзит — один из самых экологически чистых утеплителей. Производится путем обжига легкоплавких глин. Керамзит применяют так же в качестве заполнителя при производстве легких бетонов. Основными характеристиками керамзита является его насыпная плотность, теплопроводность и прочность.
+              .item__main-desc
+                h2.order__block-title Требования к торговому агенту
+                .item__prew-category
+                  p среднее или высшее образование;
+                  p знание ПК;
+                  p грамотная речь;
+                  p умение продавать;
+                  p водительские права;
+                  p возраст от 20 до 35 лет.
+
+            .col-right
+              // Prew block
+              .item__prew-info
+                h2.order__block-title Информация о поставщике
+                .item__prew-category
+                  span.item__prew-name Поставщик:
+                  span.item__prew-attr
+                    a.green-check(href="#~") ООО Ромашка
+
+                .item__prew-category
+                  span.item__prew-name Категория:
+                  span.item__prew-attr
+                    a(href="#~") Строительные материалы
+                .item__prew-category
+                  span.item__prew-name На портале:
+                  span.item__prew-attr менее 1 года
+
+                .item__prew-category
+                  span.item__prew-name Регион местонахождения:
+                  span.item__prew-attr Москва
+                br
+                .item__prew-category
+                  a(href="#~") Все товары/услуги поставщика
+                br
+                .item__prew-category
+                  span.item__prew-name Контактное лицо:
+                  span.item__prew-attr Иванов Иван Иванович
+                a.button.button--blue--md Связаться с поставщиком
+              // Prew block
+              .item__prew-info
+                h2.order__block-title Условия поставки
+                .item__prew-category
+                  p Продаем керамзит фракций 5-10, 10-20, 20-40 насыпь и фасованный в МКР (1м3 и 0,9м3) и мешки 0,05м3. Цена от 1490 руб/м3. Отгрузка на самовывоз и ж/д транспортом. Возможна доставка собственным автотранспортом.
+
+              .item__prew-info.item__prew-info--link-block
+                h2.order__block-title Документы
+                .item__prew-category
+                  span.item__prew-name Форма договора поставки:
+                  span.item__prew-attr
+                    a(href="#~") Скачать
+                .item__prew-category
+                  span.item__prew-name Прайс-лист:
+                  span.item__prew-attr
+                    a(href="#~") Скачать
+
+                .item__prew-category
+                  span.item__prew-name Презентация (PDF):
+                  span.item__prew-attr
+                    a(href="#~") Скачать
+
+                .item__prew-category
+                  span.item__prew-name Другие документы:
+                  span.item__prew-attr
+                    a(href="#~") Условия_возврата.doc
+                    a(href="#~") Еще_какой_то_документ.xls
+
+            .col-sm-12
+              //- Search form
+              .search-form
+                form(action="" method="" id="")
+                  .input__search-block
+                    input.input.input--search(type="text" name="search" placeholder="Поиск предложений...")
+                    button.button.button--search
+                  .item__input-wrap.item__input-wrap--first
+                    input.input(type="text" name="categorySearch" placeholder="Искать во всех категориях")
+                  .item__input-wrap
+                    .search-block__ft
+                      span.input--ft--name Цена, руб.
+                      +inputBlock('input--ft', 'text', 'from', 'от')
+                      span.input--ft--line -
+                      +inputBlock('input--ft', 'text', 'from', 'до')
+                    .search-block__ft.search-block__ft--ml
+                      span.input--ft--name Вознаграждение, &#37;
+                      +inputBlock('input--ft', 'text', 'from', 'от')
+                      span.input--ft--line -
+                      +inputBlock('input--ft', 'text', 'from', 'до')
+                  input.input(type="text" name="search" placeholder="Начните вводить регион")
+                  .search-block
+                    input.check(type="checkbox" id="photo")
+                    label.check-label(for="photo") с фото
+
+          // Footer
+        include partials/footer
+        include partials/scripts

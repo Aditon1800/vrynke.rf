@@ -46,8 +46,8 @@
           <h1 class="form-title login-in__title">Вход</h1>
           <div class="login-in__form">
             <form action="" method="" id="">
-                  <input type="text" name="yourName" placeholder="Адрес эл. почты или ID" class="input"/>
-                  <input type="password" name="password" placeholder="Пароль" class="input"/>
+                  <input type="text" name="yourName" placeholder="Адрес эл. почты или ID" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
+                  <input type="password" name="password" placeholder="Пароль" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
               <button class="button button--confirm-reg">Войти</button><a class="password login-in__password">Забыли пароль?</a>
               <div class="login-in__acc-block"><span>Ещё нет акканта?</span><a class="login-in__reg">Зарегистрироваться</a></div>
             </form>
@@ -60,7 +60,7 @@
           <h1 class="form-title login-in__title">Восстановление пароля</h1>
           <div class="login-in__form">
             <form action="" method="" id="">
-                  <input type="text" name="yourName" placeholder="Адрес эл. почты или ID" class="input"/>
+                  <input type="text" name="yourName" placeholder="Адрес эл. почты или ID" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
               <button class="button button--confirm-reg">Войти</button>
             </form>
           </div>
@@ -72,9 +72,9 @@
           <h1 class="form-title login-in__title">Новый пароль</h1>
           <div class="login-in__form">
             <form action="" method="" id="">
-                  <input type="password" name="newPassword" placeholder="Введите новый пароль" class="input"/>
+                  <input type="password" name="newPassword" placeholder="Введите новый пароль" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
               <p class="input-check"></p>
-                  <input type="password" name="newPasswordCopy" placeholder="Повторите новый пароль" class="input"/>
+                  <input type="password" name="newPasswordCopy" placeholder="Повторите новый пароль" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
               <p class="input-check"></p>
               <button class="button button--confirm-reg">Отправить</button>
             </form>

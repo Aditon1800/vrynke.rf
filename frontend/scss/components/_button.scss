@@ -132,6 +132,11 @@
   // Buttot flag
 
   &--flag {
+    @media (max-width: $sm-screen - 1) {
+      position: absolute;
+      top: 16px;
+      right: 0;
+    }
     width: 12px;
     height: 16px;
     background-image: url('../img/account/flag-button.png');
@@ -183,6 +188,113 @@
 
     &:hover {
       border: 2px solid $red-color;
+    }
+  }
+
+  // Search button
+
+  &--search {
+    position: absolute;
+    display: block;
+    width: 22px;
+    height: 22px;
+    top: 9px;
+    right: 11px;
+    background-image: url('../img/account/input-search.png');
+    background-repeat: no-repeat;
+  }
+
+  // Mail button
+
+  &--mail {
+    @media (max-width: $sm-screen - 1) {
+      position: absolute;
+      top: 15px;
+      right: 0;
+    }
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url('../img/account/button-mail.png');
+    background-repeat: no-repeat;
+  }
+
+  // Gray button
+
+  &--gray {
+    @extend .button--green;
+    position: relative;
+    height: 50px;
+    background-color: #ccc;
+    text-transform: none;
+    line-height: 50px;
+    color: #666;
+    padding-left: 20px;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 50%;
+      left: 25px;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 7px;
+      background-image: url('../img/button-gray-arrow.png');
+      background-repeat: no-repeat;
+    }
+  }
+
+  // Blue edit
+
+  &--blue-edit {
+    @extend .button--gray;
+    background-color: $button-blue-color;
+    color: $white-color;
+
+    &:after {
+      width: 18px;
+      height: 18px;
+      left: 28px;
+      background-image: url('../img/account/blue-edit.png');
+      background-position: center top;
+    }
+  }
+
+  // Blue md
+
+  &--blue--md {
+    @extend .button--green--md;
+    width: 100%;
+    font-size: 1.4rem;
+    background-color: $button-blue-color;
+    margin-top: 10px;
+  }
+
+  // Add fav
+
+  &--add-fav {
+    @extend .button--green--md;
+    position: relative;
+    width: 100%;
+    background-color: #ff1c49;
+    font-size: 1.3rem;
+    padding-left: 20px;
+
+    &:after {
+      @media (max-width: 480px) {
+        left: 60px;
+      }
+      position: absolute;
+      content: '';
+      display: block;
+      top: 50%;
+      left: 13%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 18px;
+      background-image: url('../img/account/ribbon.png');
+      background-repeat: no-repeat;
     }
   }
 }

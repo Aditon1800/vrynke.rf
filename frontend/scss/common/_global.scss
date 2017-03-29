@@ -1,3 +1,7 @@
+body {
+  min-width: 320px;
+}
+
 .main-content {
   @media (min-height: 900px) {
    min-height: 400px; 
@@ -35,6 +39,10 @@
     font-size: 3.2em;
     color: $black-color;
     margin-bottom: 50px;
+
+    span {
+      display: inline-block;
+    }
   }
 
   &__title-block {
@@ -79,16 +87,29 @@
   }
  }
 
-.js-tt-number,
-.js-tt-cost,
-.js-tt-name {
+.sorter {
+  display: inline-block;
+  width: 9px;
+  height: 11px;
+  background-image: url('../img/account/th-click.png');
+  background-repeat: no-repeat;
   cursor: pointer;
+}
 
-  span i {
-    display: inline-block;
-    width: 9px;
-    height: 11px;
-    background-image: url('../img/account/th-click.png');
+// Green check
+
+.green-check {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    right: -8px;
+    width: 8px;
+    height: 8px;
+    background-image: url('../img/green-check.png');
     background-repeat: no-repeat;
   }
 }

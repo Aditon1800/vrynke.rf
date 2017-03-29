@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        include partials/nav
+
+      .crumbs
+
+      section.main-content.catalog
+        .container
+          h1.main-content__title Каталог предложений
+          .row
+            .col-lg-4.col-sm-6
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-1] Авто и мото
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Автозапчасти
+
+                  li.catalog__list-item
+                    a(href="#~") Автоинструмент
+
+                  li.catalog__list-item
+                    a(href="#~") Авто аксессуары
+
+                  li.catalog__list-item
+                    a(href="#~") Автомобили легковые
+
+                  li.catalog__list-item
+                    a(href="#~") Автомобили грузовые
+
+                  li.catalog__list-item
+                    a(href="#~") Мотоциклы
+
+                  li.catalog__list-item
+                    a(href="#~") Спецтехника
+
+                  li.catalog__list-item
+                    a(href="#~") Шины диски колеса
+
+                  li.catalog__list-item
+                    a(href="#~") Электроника для автомобилей
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие авто-мото товары
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-2] Бытовая техника
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Видео и аудиотехника
+
+                  li.catalog__list-item
+                    a(href="#~") Кино и фотооборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Комплектующие
+
+                  li.catalog__list-item
+                    a(href="#~") Компьютерная техника
+
+                  li.catalog__list-item
+                    a(href="#~") Кухонная техника
+
+                  li.catalog__list-item
+                    a(href="#~") Прочая бытовая техника           
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-3] Бытовые товары
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Бытовая химия
+
+                  li.catalog__list-item
+                    a(href="#~") Лакокрасочная продукция
+
+                  li.catalog__list-item
+                    a(href="#~") Посуда
+
+                  li.catalog__list-item
+                    a(href="#~") Предметы домашнего обихода
+
+                  li.catalog__list-item
+                    a(href="#~") Товары для садоводов
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие бытовые товары  
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-4] Детские товары
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Детская обувь
+
+                  li.catalog__list-item
+                    a(href="#~") Детская одежда
+
+                  li.catalog__list-item
+                    a(href="#~") Детское питание
+
+                  li.catalog__list-item
+                    a(href="#~") Игрушки
+
+                  li.catalog__list-item
+                    a(href="#~") Товары для новорожденных
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие детские товары  
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-5] Изделия для производства
+
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Запорная арматура
+
+                  li.catalog__list-item
+                    a(href="#~") Крепеж
+
+                  li.catalog__list-item
+                    a(href="#~") Пластмассы
+
+                  li.catalog__list-item
+                    a(href="#~") Подшипники
+
+                  li.catalog__list-item
+                    a(href="#~") Резина
+
+                  li.catalog__list-item
+                    a(href="#~") Трубы
+
+                  li.catalog__list-item
+                    a(href="#~") Химическая продукция
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие изделия для производства
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-6] Инструмент
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Строительный инструмент
+
+                  li.catalog__list-item
+                    a(href="#~") Электроинструмент
+
+                  li.catalog__list-item
+                    a(href="#~") Прочий инструментя продукция
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие изделия для производства
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-7] Канцелярские товары
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Бумага и картон
+
+                  li.catalog__list-item
+                    a(href="#~") Канцтовары
+
+                  li.catalog__list-item
+                    a(href="#~") Полиграфическая продукция
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие канцтовары
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-8] Климатическая техника
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Вентиляционные системы
+
+                  li.catalog__list-item
+                    a(href="#~") Кондиционеры
+
+                  li.catalog__list-item
+                    a(href="#~") Отопительное оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Прочая климатическая техника
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-9] Кожгалантерея
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-10] Мебель
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Корпусная мебель
+
+                  li.catalog__list-item
+                    a(href="#~") Кухонная мебель
+
+                  li.catalog__list-item
+                    a(href="#~") Мебель для производственных помещений
+
+                  li.catalog__list-item
+                    a(href="#~") Мебельная фурнитура
+
+                  li.catalog__list-item
+                    a(href="#~") Мягкая мебель
+
+                  li.catalog__list-item
+                    a(href="#~") Офисная мебель
+
+                  li.catalog__list-item
+                    a(href="#~") Столы и стулья
+
+                  li.catalog__list-item
+                    a(href="#~") Прочая мебель
+
+            .col-lg-4.col-sm-6
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-11] Медицинские товары
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Лекарственные средства
+
+                  li.catalog__list-item
+                    a(href="#~") Косметика и парфюмерия
+
+                  li.catalog__list-item
+                    a(href="#~") Товары медицинского назначения
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие медицинские товары
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-12] Оборудование
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Водоочистное оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Горно-шахтное оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Деревообрабатывающее оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Металлообрабатывающее оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Насосное оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Нефтехимическое оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Оборудование для автосервиса
+
+                  li.catalog__list-item
+                    a(href="#~") Оборудование для ароматизации
+
+                  li.catalog__list-item
+                    a(href="#~") Оборудование для медучреждений
+
+                  li.catalog__list-item
+                    a(href="#~") Оборудование для производства
+
+                  li.catalog__list-item
+                    a(href="#~") Оборудование для сферы услуг
+
+                  li.catalog__list-item
+                    a(href="#~") Подъемное оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Сварочное оборудование и материалы
+
+                  li.catalog__list-item
+                    a(href="#~") Световое оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Системы автоматизации
+
+                  li.catalog__list-item
+                    a(href="#~") Складское оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Станки/Торговое оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Упаковка и упаковочное оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Холодильное оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Швейное оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Прочее оборудование
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-13] Одежда
+
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Аксессуары
+
+                  li.catalog__list-item
+                    a(href="#~") Верхняя одежда
+
+                  li.catalog__list-item
+                    a(href="#~") Головные уборы
+
+                  li.catalog__list-item
+                    a(href="#~") Нижнее белье
+
+                  li.catalog__list-item
+                    a(href="#~") Обувь
+
+                  li.catalog__list-item
+                    a(href="#~") Спецодежда
+
+                  li.catalog__list-item
+                    a(href="#~") Средства по уходу за обувью
+
+                  li.catalog__list-item
+                    a(href="#~") Трикотаж
+
+                  li.catalog__list-item
+                    a(href="#~") Форменная одежда
+
+                  li.catalog__list-item
+                    a(href="#~") Чулочно-носочные изделия
+
+                  li.catalog__list-item
+                    a(href="#~") Прочая одежда и обувь
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-14] Подарки и сувениры
+
+
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Подарки
+
+                  li.catalog__list-item
+                    a(href="#~") Сувениры
+
+                  li.catalog__list-item
+                    a(href="#~") Подарки и сувениры - прочее
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-15] Продукты питания
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Алкогольная продукция
+
+                  li.catalog__list-item
+                    a(href="#~") Безалкогольные напитки
+
+                  li.catalog__list-item
+                    a(href="#~") Чай
+
+                  li.catalog__list-item
+                    a(href="#~") Кондитерские изделия
+
+                  li.catalog__list-item
+                    a(href="#~") Консервы
+
+                  li.catalog__list-item
+                    a(href="#~") Кофе
+
+                  li.catalog__list-item
+                    a(href="#~") Макаронные изделия
+
+                  li.catalog__list-item
+                    a(href="#~") Молоко и молочные изделия
+
+                  li.catalog__list-item
+                    a(href="#~") Мука и крупы
+
+                  li.catalog__list-item
+                    a(href="#~") Мясо и мясные изделия
+
+                  li.catalog__list-item
+                    a(href="#~") Овощи и фрукты
+
+                  li.catalog__list-item
+                    a(href="#~") Рыбные изделия и морепродукты
+
+                  li.catalog__list-item
+                    a(href="#~") Сырье и пищевые добавки
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие продукты питания
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-16] Спортивные товары
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Корпусная мебель
+
+                  li.catalog__list-item
+                    a(href="#~") Кухонная мебель
+
+                  li.catalog__list-item
+                    a(href="#~") Мебель для производственных помещений
+
+                  li.catalog__list-item
+                    a(href="#~") Мебельная фурнитура
+
+                  li.catalog__list-item
+                    a(href="#~") Мягкая мебель
+
+                  li.catalog__list-item
+                    a(href="#~") Офисная мебель
+
+                  li.catalog__list-item
+                    a(href="#~") Столы и стулья
+
+                  li.catalog__list-item
+                    a(href="#~") Прочая мебель
+
+            .col-lg-4.col-sm-6
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-17] Средства связи
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Телекоммуникационное оборудование
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие средства связи
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-18] Строительные и 
+                  br
+                  | отделочные материалы
+
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Бетон и железобетонные изделия
+
+                  li.catalog__list-item
+                    a(href="#~") Искусственный камень
+
+                  li.catalog__list-item
+                    a(href="#~") Кровельные материалы и изделия
+
+                  li.catalog__list-item
+                    a(href="#~") Лакокрасочные материалы
+
+                  li.catalog__list-item
+                    a(href="#~") Лесо и пиломатериалы
+
+                  li.catalog__list-item
+                    a(href="#~") Отделочные материалы
+
+                  li.catalog__list-item
+                    a(href="#~") ПлиткаРастворы и смеси
+
+                  li.catalog__list-item
+                    a(href="#~") Сэндвич панели
+
+                  li.catalog__list-item
+                    a(href="#~") Утеплитель
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие строительные материалы
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-19] Строительные конструкции
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Входные двери
+
+                  li.catalog__list-item
+                    a(href="#~") Клееный брус
+
+                  li.catalog__list-item
+                    a(href="#~") Межкомнатные двери
+
+                  li.catalog__list-item
+                    a(href="#~") Пластиковые окна
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие строительные конструкции
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-20] Сырьё
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Вторичное сырьё
+
+                  li.catalog__list-item
+                    a(href="#~") Горнохимическое сырьё
+
+                  li.catalog__list-item
+                    a(href="#~") Искусственное сырьё
+
+                  li.catalog__list-item
+                    a(href="#~") Металлургическое сырьё
+
+                  li.catalog__list-item
+                    a(href="#~") Сырьё для производства строительных материалов
+
+                  li.catalog__list-item
+                    a(href="#~") Сырьё животного происхождения
+
+                  li.catalog__list-item
+                    a(href="#~") Сырьё растительного происхождения
+
+                  li.catalog__list-item
+                    a(href="#~") Техническое сырьё
+
+                  li.catalog__list-item
+                    a(href="#~") Топливно-энергетическое сырьё
+
+                  li.catalog__list-item
+                    a(href="#~") Прочее сырьё
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-21] Сумки и рюкзаки
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-22] Текстиль
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Пряжа и нитки
+
+                  li.catalog__list-item
+                    a(href="#~") Текстиль для дома
+
+                  li.catalog__list-item
+                    a(href="#~") Технический текстиль
+
+                  li.catalog__list-item
+                    a(href="#~") Ткани
+
+                  li.catalog__list-item
+                    a(href="#~") Швейная фурнитура
+
+                  li.catalog__list-item
+                    a(href="#~") Прочий текстиль
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-23] Товары для животных
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Аксессуары для животных
+
+                  li.catalog__list-item
+                    a(href="#~") Корма
+
+                  li.catalog__list-item
+                    a(href="#~") Средства по уходу
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие товары для животных
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-24] Товары для творчества
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-25] Упаковочные материалы
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-26] БИЗНЕС-УСЛУГИ
+                ul.catalog__list
+                  li.catalog__list-item
+                    a(href="#~") Бытовые услуги
+
+                  li.catalog__list-item
+                    a(href="#~") Кадровые агентства
+
+                  li.catalog__list-item
+                    a(href="#~") Консалтинг и аудит
+
+                  li.catalog__list-item
+                    a(href="#~") Кредитование
+
+                  li.catalog__list-item
+                    a(href="#~") Ландшафтный дизайн
+
+                  li.catalog__list-item
+                    a(href="#~") Логистика и перевозка грузов
+
+                  li.catalog__list-item
+                    a(href="#~") Охранные услуги
+
+                  li.catalog__list-item
+                    a(href="#~") Рекламные услуги
+
+                  li.catalog__list-item
+                    a(href="#~") Сертификация товаров и услуг
+
+                  li.catalog__list-item
+                    a(href="#~") Страхование
+
+                  li.catalog__list-item
+                    a(href="#~") Строительные услуги
+
+                  li.catalog__list-item
+                    a(href="#~") Услуги лизинга
+
+                  li.catalog__list-item
+                    a(href="#~") Финансовые услуги
+
+                  li.catalog__list-item
+                    a(href="#~") Юридические услуги
+
+                  li.catalog__list-item
+                    a(href="#~") Прочие бизнес услуги
+
+
+              // Catalog block
+              .catalog__block
+                .catalog__title #[span.catalog__title-icon-27] Прочее
+
+      //- Footer
+      include partials/footer
+      include partials/scripts

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        include partials/nav
+
+      // Crumbs
+      .crumbs
+
+      // Account edit
+      section.main-content.account.account__edit
+        .container
+          h1.main-content__title Регистрация
+          .accountn__edit-block
+            form(action="" method="" id="")
+
+              // Personal info
+              h2.account__edit-name Персональная информация
+              .row.account__input-block
+                .col-lg-8
+                  +inputBlock("","text", "name", "ФИО *")
+                .col-lg-4
+                  +inputBlock("","text", "id", "ИНН *")
+                .col-lg-4
+                  select.input()
+                    option(disable) Образование *
+                    option Высшее
+                    option Среднее
+                    option Среднее-специальное
+                    option Низшее
+                    option Никакое
+
+              // Registered address
+              h3.account__edit-name.account__edit-name--md Адрес регистрации
+              .row.account__input-block
+                .col-lg-4
+                  +inputBlock("js-let-check","text", "index", "Индекс *")
+                .col-lg-4
+                  +inputBlock("js-let-check","text", "region", "Субъект РФ *")
+                .col-lg-4
+                  +inputBlock("js-let-check","text", "city", "Город *")
+                .col-lg-12
+                  +inputBlock("js-let-check","text", "address", "Улица, номер дома, номер офиса *")
+
+              // The actual address
+              .account__check-title
+                h3.account__edit-name.account__edit-name--md Фактический адрес (для направления корреспонденции)
+                +checkBox('firstCheckbox', 'Соответствует адресу регистрации')
+              .row.account__input-block
+                .col-lg-4
+                  +inputBlock("js-get-check","text", "index", "Нндекс *")
+                .col-lg-4
+                  +inputBlock("js-get-check","text", "region", "Субъект РФ *")
+                .col-lg-4
+                  +inputBlock("js-get-check","text", "city", "Город *")
+                .col-lg-12
+                  +inputBlock("js-get-check","text", "address", "Улица, номер дома, номер офиса *")
+
+              // Contact info
+              h2.account__edit-name Контактная информация
+              .row.account__input-block
+                .col-lg-4
+                  +inputBlock("","tel", "phone", "Телефон *")
+                .col-lg-4
+                  +inputBlock("","phone", "mail", "Электронная почта *")
+
+              // Category
+              h2.account__edit-name Категория товаров / услуг
+              .row.account__input-block
+                .col-lg-8
+                  select.input
+                    option(disable) Выберите из списка
+                    option Категория-1
+                    option Категория-2
+                    option Категория-3
+                    option Категория-4
+                    option Категория-5
+
+              // Password
+              h2.account__edit-name Пароль для входа в систему
+              .row.account__input-block
+                .col-lg-4
+                  +inputBlock("", "password", "yourPassword", "Придумайте пароль *")
+                .col-lg-4
+                  +inputBlock("", "password", "yourPasswordCopy", "Повторите пароль *")
+
+              .account__input-block.account__input-block--mb
+                +checkBox('secondCheckbox', 'Получить статус подтверждённого агента')
+                .question &#63;
+                  span.question__tooltip Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, illum ut ipsam quasi porro numquam aut ratione facilis eveniet, recusandae quia perspiciatis at dolorem aspernatur expedita earum eum, molestiae quidem.
+                .account__input-block__info Стоимость услуги – #[span.account__check-get 0] рублей
+
+              .row.account__input-block
+                .col-lg-4
+                  +inputBlock("","text", "inn", "Расчетный счет *")
+                .col-lg-4
+                  +inputBlock("","text", "bank", "Наименвание банка *")
+                .col-lg-4
+                  +inputBlock("","text", "bankCity", "Город банка *")
+
+              .row.account__input-block
+                .col-lg-4
+                  +inputBlock("","text", "id", "Корреспондентский счет *")
+                .col-lg-4
+                  +inputBlock("","text", "bik", "БИК *")
+
+              .account__input-block.account__input-block--mb
+                +checkBox('thirdCheckbox', 'С условиями предоставления услуги согласен')
+                .question &#63;
+                  span.question__tooltip Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, illum ut ipsam quasi porro numquam aut ratione facilis eveniet, recusandae quia perspiciatis at dolorem aspernatur expedita earum eum, molestiae quidem.
+
+              .account__input-block.account__input-block--mb
+                +checkBox('fourthCheckbox', 'Даю согласие на обработку персональных данных')
+                .question &#63;
+                  span.question__tooltip Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, illum ut ipsam quasi porro numquam aut ratione facilis eveniet, recusandae quia perspiciatis at dolorem aspernatur expedita earum eum, molestiae quidem.
+
+
+              .row.account__input-block
+                .col-sm-4
+                  button.button.button--confirm-reg Подтвердить регистрацию
+              .account__important-info
+                span Поля, отмеченные звездочкой (*), обязательны к заполнению.
+
+          // Footer
+        include partials/footer
+        include partials/scripts
+

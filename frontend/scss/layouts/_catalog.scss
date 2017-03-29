@@ -1,0 +1,263 @@
+.catalog {
+
+  &__block {
+    padding-left: 55px;
+    margin-bottom: 45px;
+  }
+
+  &__title {
+    @extend .login-in__reg;
+    @media (max-width: $sm-screen - 1) {
+      border: none;
+      
+      &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 3px;
+        right: -18px;
+        width: 13px;
+        height: 7px;
+        background-image: url('../img/catalog-title-arrow.png');
+        background-repeat: no-repeat;
+      }
+    }
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    cursor: default;
+
+    &:hover {
+      cursor: default;
+    }
+
+    span {
+      vertical-align: middle;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: -12px;
+        left: -55px;
+        width: 40px;
+        height: 40px;
+        background-image: url('../img/catalog-sprite.png');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  // Title icon
+  &__title-icon-1 {
+    
+    &:before {
+      background-position: left center;
+    }
+  }
+
+  &__title-icon-2 {
+
+    &:before {
+      background-position: -42px center;
+    }
+  }
+
+  &__title-icon-3 {
+
+    &:before {
+      background-position: -84px center;
+    }
+  }
+
+  &__title-icon-4 {
+    
+    &:before {
+      background-position: -126px center;
+    }
+  }
+
+  &__title-icon-5 {
+
+    &:before {
+      background-position: -168px center;
+    }
+  }
+
+  &__title-icon-6 {
+
+    &:before {
+      background-position: -210px center;
+    }
+  }
+
+  &__title-icon-7 {
+    
+    &:before {
+      background-position: -252px center;
+    }
+  }
+
+  &__title-icon-8 {
+
+    &:before {
+      background-position: -294px center;
+    }
+  }
+
+  &__title-icon-9 {
+
+    &:before {
+      background-position: -336px center;
+    }
+  }
+
+  &__title-icon-10 {
+    
+    &:before {
+      background-position: -378px center;
+    }
+  }
+
+  &__title-icon-11 {
+
+    &:before {
+      background-position: -420px center;
+    }
+  }
+
+  &__title-icon-12 {
+
+    &:before {
+      background-position: -462px center;
+    }
+  }
+
+
+  &__title-icon-13 {
+    
+    &:before {
+      background-position: -504px center;
+    }
+  }
+
+  &__title-icon-14 {
+
+    &:before {
+      background-position: -546px center;
+    }
+  }
+
+  &__title-icon-15 {
+
+    &:before {
+      background-position: -588px center;
+    }
+  }
+
+  &__title-icon-16 {
+    
+    &:before {
+      background-position: -630px center;
+    }
+  }
+
+  &__title-icon-17 {
+
+    &:before {
+      background-position: -672px center;
+    }
+  }
+
+  &__title-icon-18 {
+
+    &:before {
+      background-position: -714px center;
+    }
+  }
+
+  &__title-icon-19 {
+    
+    &:before {
+      background-position: -756px center;
+    }
+  }
+
+  &__title-icon-20 {
+
+    &:before {
+      background-position: -798px center;
+    }
+  }
+
+  &__title-icon-21 {
+
+    &:before {
+      background-position: -840px center;
+    }
+  }
+
+  &__title-icon-22 {
+    
+    &:before {
+      background-position: -882px center;
+    }
+  }
+
+  &__title-icon-23 {
+
+    &:before {
+      background-position: -924px center;
+    }
+  }
+
+  &__title-icon-24 {
+
+    &:before {
+      background-position: -966px center;
+    }
+  }
+
+  &__title-icon-25 {
+    
+    &:before {
+      background-position: -1008px center;
+    }
+  }
+
+  &__title-icon-26 {
+
+    &:before {
+      background-position: -1050px center;
+    }
+  }
+
+  &__title-icon-27 {
+
+    &:before {
+      background-position: -1092px center;
+    }
+  }
+
+  &__list {
+    @media (max-width: $sm-screen - 1) {
+      display: none;
+    }
+  }
+
+  &__list-item {
+    padding-top: 10px;
+
+    a {
+      font-size: 1.4rem;
+      color:$dark-gray-color;
+      line-height: 1;
+
+      &:visited {
+        color: inherit;
+      }
+    }
+  }
+}

@@ -74,114 +74,114 @@
               <div class="row account__block-category">
                 <div class="col-sm-3"><span class="account__input-category">Количество:</span></div>
                 <div class="col-sm-2">
-                          <input type="text" name="count" class="input"/>
+                          <input type="text" name="count" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
                 </div>
               </div>
               <div class="row account__block-category">
-                <div class="col-sm-3"><span class="account__input-category">Дополнительная<br/>информация</span></div>
+                <div class="col-sm-3"><span class="account__input-category">Дополнительная<br/>информация:</span></div>
                 <div class="col-sm-6">
-                          <input type="textarea" name="moreInfo" class="input textarea"/>
+                          <input type="textarea" name="moreInfo" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input textarea"/>
                 </div>
               </div>
               <!-- Personal info-->
               <h2 class="account__edit-name">Плательщик / Покупатель</h2>
               <div class="row account__input-block">
                 <div class="col-sm-4">
-                          <input type="text" name="name" placeholder="Наименования *" class="input js-let-check"/>
+                          <input type="text" name="name" placeholder="Наименования *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="inn" placeholder="ИНН *" class="input js-let-check"/>
+                          <input type="text" name="inn" placeholder="ИНН *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="kpp" placeholder="КПП *" class="input js-let-check"/>
+                          <input type="text" name="kpp" placeholder="КПП *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="code" placeholder="Код ОКПО" class="input js-let-check"/>
+                          <input type="text" name="code" placeholder="Код ОКПО" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
                 </div>
               </div>
               <!-- Registered address-->
               <h3 class="account__edit-name account__edit-name--md">Адрес места нахождения (юридический адрес)</h3>
               <div class="row account__input-block">
                 <div class="col-sm-4">
-                          <input type="text" name="index" placeholder="Индекс *" class="input js-let-check"/>
+                          <input type="text" name="index" placeholder="Индекс *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="rfSubject" placeholder="Субъект РФ *" class="input js-let-check"/>
+                          <input type="text" name="rfSubject" placeholder="Субъект РФ *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="city" placeholder="Город *" class="input js-let-check"/>
+                          <input type="text" name="city" placeholder="Город *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
                 </div>
                 <div class="col-sm-12">
-                          <input type="text" name="address" placeholder="Улица, номер дома, номер офиса *" class="input js-let-check"/>
+                          <input type="text" name="address" placeholder="Улица, номер дома, номер офиса *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
                 </div>
               </div>
               <!-- The bank data-->
               <h3 class="account__edit-name account__edit-name--md">Банковские реквизиты</h3>
               <div class="row account__input-block">
                 <div class="col-sm-4">
-                          <input type="text" name="bankAccount" placeholder="Расчетный счет *" class="input"/>
+                          <input type="text" name="bankAccount" placeholder="Расчетный счет *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="bankName" placeholder="Наименование банка *" class="input"/>
+                          <input type="text" name="bankName" placeholder="Наименование банка *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="bankCity" placeholder="Город банка *" class="input"/>
+                          <input type="text" name="bankCity" placeholder="Город банка *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="corAccount" placeholder="Корреспондентский счет *" class="input"/>
+                          <input type="text" name="corAccount" placeholder="Корреспондентский счет *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="bik" placeholder="БИК *" class="input"/>
+                          <input type="text" name="bik" placeholder="БИК *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
                 </div>
               </div>
               <div class="account__input-block account__input-block--sm">
                         <div class="checkbox">
-                          <input type="checkbox" id="threeCheckbox" class="checkbox__input"/>
-                          <label for="threeCheckbox" class="checkbox__label">Требуется доставка</label>
+                          <input type="checkbox" id="firstCheckbox" class="checkbox__input"/>
+                          <label for="firstCheckbox" class="checkbox__label">Требуется доставка</label>
                         </div>
               </div>
               <!-- Contact info-->
               <div class="account__check-title">
                 <h3 class="account__edit-name">Грузополучатель</h3>
                         <div class="checkbox">
-                          <input type="checkbox" id="fourCheckbox" class="checkbox__input"/>
-                          <label for="fourCheckbox" class="checkbox__label">Соответствует плательщику / получателю *</label>
+                          <input type="checkbox" id="secondCheckbox" class="checkbox__input"/>
+                          <label for="secondCheckbox" class="checkbox__label">Соответствует плательщику / получателю *</label>
                         </div>
               </div>
               <div class="row account__input-block">
                 <div class="col-sm-4">
-                          <input type="text" name="name" placeholder="Наименования *" class="input js-get-check"/>
+                          <input type="text" name="name" placeholder="Наименования *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="inn" placeholder="ИНН *" class="input js-get-check"/>
+                          <input type="text" name="inn" placeholder="ИНН *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="kpp" placeholder="КПП *" class="input js-get-check"/>
+                          <input type="text" name="kpp" placeholder="КПП *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="code" placeholder="Код ОКПО" class="input js-get-check"/>
+                          <input type="text" name="code" placeholder="Код ОКПО" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
                 </div>
               </div>
               <!-- Delivery address-->
               <div class="account__check-title">
                 <h3 class="account__edit-name account__edit-name--md">Адрес доставки</h3>
                         <div class="checkbox">
-                          <input type="checkbox" id="fiveCheckbox" class="checkbox__input"/>
-                          <label for="fiveCheckbox" class="checkbox__label">Соответствует адресу плательщика / получателя *</label>
+                          <input type="checkbox" id="thirdCheckbox" class="checkbox__input"/>
+                          <label for="thirdCheckbox" class="checkbox__label">Соответствует адресу плательщика / получателя *</label>
                         </div>
               </div>
               <div class="row account__input-block">
                 <div class="col-sm-4">
-                          <input type="text" name="index" placeholder="Индекс *" class="input js-get-check"/>
+                          <input type="text" name="index" placeholder="Индекс *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="rfSubject" placeholder="Субъект РФ *" class="input js-get-check"/>
+                          <input type="text" name="rfSubject" placeholder="Субъект РФ *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="city" placeholder="Город *" class="input js-get-check"/>
+                          <input type="text" name="city" placeholder="Город *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
                 </div>
                 <div class="col-sm-12">
-                          <input type="text" name="address" placeholder="Улица, номер дома, номер офиса *" class="input js-get-check"/>
+                          <input type="text" name="address" placeholder="Улица, номер дома, номер офиса *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
                 </div>
               </div>
               <div class="row account__input-block">

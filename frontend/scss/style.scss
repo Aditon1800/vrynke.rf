@@ -24,6 +24,7 @@
 @import 'components/training';
 @import 'components/question';
 @import 'components/paginator';
+@import 'components/subcat';
 
 // project layouts
 @import 'layouts/header';
@@ -32,6 +33,9 @@
 @import 'layouts/careers';
 @import 'layouts/order';
 @import 'layouts/account';
+@import 'layouts/catalog';
+@import 'layouts/message';
+@import 'layouts/prew-item';
 
 // pages
 @import 'pages/index';

@@ -90,7 +90,7 @@
     @media (max-width: $sm-screen - 1) {
       position: relative;
       display: block;
-      padding: 15px 0;
+      padding: 15px 50px 15px 0;
     }
     display: table-row;
     border-bottom: 1px solid lighten($gray-color, 5%);
@@ -163,6 +163,12 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
+    &--contact {
+      @media (max-width: $md-screen - 1) {
+        display: none !important;
+      }
+    }
   }
 
   &__number {
@@ -184,10 +190,6 @@
     }
     text-align: right;
     white-space: nowrap;
-  }
-
-  &__status {
-    font-style: italic;
   }
 
   &__reward {
@@ -229,6 +231,12 @@
       border: 2px solid $gray-color;
       border-radius: 50%;
       color: $gray-color;
+    }
+  }
+
+  &__contact {
+    @media (max-width: $md-screen - 1) {
+      display: none!important;
     }
   }
 
@@ -331,5 +339,15 @@
       vertical-align: top;
       margin-bottom: 15px;
     }
+  }
+
+  &__bottom-info {
+    @extend .order__table-title;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    padding: 0;
+    margin-bottom: 10px;
   }
 }

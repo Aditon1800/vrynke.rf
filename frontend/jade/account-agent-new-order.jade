@@ -119,12 +119,12 @@ html(lang="en")
                 .col-sm-4
                   +inputBlock("","text", "bik", "БИК *")
               .account__input-block.account__input-block--sm
-                  +checkBox('threeCheckbox', 'Требуется доставка')
+                  +checkBox('firstCheckbox', 'Требуется доставка')
 
               // Contact info
               .account__check-title
                 h3.account__edit-name Грузополучатель
-                +checkBox('fourCheckbox', 'Соответствует плательщику / получателю *')
+                +checkBox('secondCheckbox', 'Соответствует плательщику / получателю *')
               .row.account__input-block
                 .col-sm-4
                   +inputBlock("js-get-check","text", "name", "Наименования *")
@@ -138,7 +138,7 @@ html(lang="en")
               // Delivery address
               .account__check-title
                 h3.account__edit-name.account__edit-name--md Адрес доставки
-                +checkBox('fiveCheckbox', 'Соответствует адресу плательщика / получателя *')
+                +checkBox('thirdCheckbox', 'Соответствует адресу плательщика / получателя *')
               .row.account__input-block
                 .col-sm-4
                   +inputBlock("js-get-check","text", "index", "Индекс *")

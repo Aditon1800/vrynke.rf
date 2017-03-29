@@ -3,6 +3,10 @@
 .account {
     background-color: rgba($gray-color, .1);
 
+  &__img-block {
+    margin-bottom: 15px;
+  }
+
   &__profile {
     background-color: $white-color;
     box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
@@ -10,9 +14,11 @@
     padding: 20px 20px 25px;
   }
 
-  &__link-refresh {
+  &__link-refresh,
+  &__all-offers,
+  &__link-petition {
     @extend .login-in__reg;
-    margin-top: 15px;
+    margin-bottom: 10px;
   }
 
   .button--green--md {
@@ -363,11 +369,6 @@
   }
 
   .button--flag {
-    @media (max-width: 480px) {
-      position: absolute;
-      top: 16px;
-      right: 0;
-    }
     vertical-align: middle;
   }
 
@@ -447,7 +448,7 @@
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 1;
-    color: darken($gray-color, 40%);
+    color: darken($gray-color, 13%);
     text-align: right;
     margin-top: 40px;
   }
@@ -459,5 +460,103 @@
     span {
       vertical-align: top;
     }
+  }
+
+  &__line-title {
+    background-color: $dark-blue-color;
+    padding: 15px 12px;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: $white-color;
+  }
+
+  &__edit-title {
+    display: inline-block;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: $dark-gray-color;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+// Contractor list
+
+.contractor-list {
+
+  .tr {
+
+    .td {
+
+      &:first-child {
+        @media (min-width: $md-screen) {
+          width: auto;
+        }
+        @media (max-width: $sm-screen - 1) {
+          width: auto;
+        }
+        width: 50%;
+      }
+    }
+  }
+}
+
+// Contractor profile
+
+.contractor-profile {
+
+  .account__profile {
+    text-align: left;  
+  }
+
+  .account__personal-info__block {
+    margin-top: 5px;
+  }
+
+  .personal-info__block-name {
+    display: inline-block;
+    width: 42%;
+  }
+
+  .personal-info__block-attr {
+    display: inline-block;
+    width: 58%;
+    vertical-align: top;
+  }
+
+  .button--more {
+    max-width: none;
+    width: auto;
+    height: auto;
+    padding: 15px 40px;
+    line-height: 1;
+  }
+
+  .tr {
+
+    .td {
+
+      &:first-child {
+        @media (max-width: $md-screen - 1) {
+          width: auto;
+        }
+        width: 50%;
+      }
+    }
+  }
+}
+
+.account--edit {
+
+  .button--green--md {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .button--green {
+    height: 50px;
+    max-width: 300px;
+    line-height: 50px;
+    text-transform: none;
   }
 }

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        nav.header__nav
+          .toggle.header__toggle.js-toggle
+            span.toggle__line
+            span.toggle__line
+            span.toggle__line
+          .logo.header__logo
+            a.header__logo-link
+              img.logo-img.header__logo-img(src="img/logo.png" alt="врынке.рф")
+          .header__list.js-header__list
+            button.button.header__list-button.js-list-button
+            .header__nav-list
+              .header__nav-item.header__nav-item--active
+                a(href="#~") Я — агент
+              .header__nav-item
+                a(href="#~") Я — поставщик
+              .header__nav-item
+                a(href="#~") Каталог предложений
+              .header__nav-item
+                a(href="#~") Регионы
+            .header__nav-list.header__nav-list--mobile
+              .header__nav-item
+                a(href="#~") О платформе
+              .header__nav-item
+                a(href="#~") Работать у нас
+              .header__nav-item
+                a(href="#~") Новости
+              .header__nav-item
+                a(href="#~") Связаться с нами
+          .header__sign-in
+            a.button.header__button-account.js-button-account(href="#~")
+               img(src="img/account-icon.png" alt="account-logo")
+              .header__account-block.js-account-block
+                ul.header__account-list
+                  li.header__account-item
+                    a(href="#~") Редактировать профиль
+                  li.header__account-item
+                    a(href="#~") Сообщения
+                  li.header__account-item
+                    a(href="#~") Выйти
+
+      // Crumbs
+      .crumbs
+        .container
+          +crumbsLink("crumbs__link","index.html", "Главная", " /")
+          +crumbsLink("crumbs__link","index.html", "Поставщик по регтонам", " /")
+          +crumbsLink("crumbs__link","index.html", "Москва", " /")
+          +crumbsLink("crumbs__link","index.html", "ООО Ромашка")
+
+      .account
+        section.main-content.contractor-profile
+          .container
+            .row
+              .col-md-3.col-sm-4
+
+                // Account profile
+                .account__profile
+                  .account__img-block
+                    img(src="img/account/account-plug.png")
+                  a.account__all-offers(href="#~") Все предложения #[span.offers-cont (45)]
+                  a.account__link-petition(href="#~") Пожаловаться на поставщика
+                  a.button.button--green--md Написать поставщику
+
+              .col-md-9.col-sm-8
+
+                // Account personal
+                .account__personal
+                  .account__block-name.account__block-name--personal ООО Ромашка
+                  .account__personal-id ID-A000000000
+
+                  .account__column-wrap
+                    // Account personal info
+                    .row
+                      .col-sm-7
+
+                        .account__personal-info
+                          span.personal-info__block-name Контактное лицо:
+                          span.personal-info__block-attr Иванов Иван Иванович
+                          .account__personal-info__block
+                            span.personal-info__block-name Категория:
+                            span.personal-info__block-attr Строительные материалы
+
+                        // Account personal location
+                        .account__personal-location
+                          span.personal-info__block-name Регион местонахождения:
+                          span.personal-info__block-attr 125000, Московская область, Москва, Люблинская улица, 141, кв. 25
+
+
+                  // Account last products / services
+                .account__products
+                  .account__title-block
+                    .account__block-name Новые предложения поставщика
+                  .account__table
+                    .table
+                      .tr.title-tr
+                        .account__table-title.account__table-title--mob Наименование / цена
+                        .th.account__table-title.account__table-title--number Наименование
+                        .th.account__table-title.account__table-title--name  Регионы поставки
+                        .th.account__table-title.account__table-title--reward Вознаграждение
+                        .th.account__table-title.account__table-title--cost Цена
+                        .th.account__table-title.account__table-title--volume Мин. объём
+                        
+                      // Product line
+                      .tr
+                        .td.account__name
+                          a(href="#~") Композитный состав CERAMET ANTICOR
+                        .td.account__status Москва, Нижний Новгород, Екатеринбург
+                        .td.account__reward 15%
+                        .td.account__volume 600 &#8381;/кг
+                        .td.account__cost 5 000 кг
+                        .td.account__edit
+                          button.button.button-flag.button--flag--active
+
+                      // Product line
+                      .tr
+                        .td.account__name
+                          a(href="#~") Профессиональные наколенники, RUBI
+                        .td.account__status Москва
+                        .td.account__reward 15%
+                        .td.account__volume 1000 &#8381;/кг
+                        .td.account__cost 20 шт
+                        .td.account__edit
+                          button.button.button-flag.button--flag--active
+
+                      // Product line
+                      .tr
+                        .td.account__name
+                          a(href="#~") Носилки строительные
+                        .td.account__status Нижний Новгород
+                        .td.account__reward 3%
+                        .td.account__volume 300 &#8381;/кг
+                        .td.account__cost 11 000 кг
+                        .td.account__edit
+                          button.button.button-flag.button--flag--active
+
+                      // Product line
+                      .tr
+                        .td.account__name
+                          a(href="#~") Встроенный сифон для сброса дренажа HL 138
+                        .td.account__status Москва
+                        .td.account__reward 15%
+                        .td.account__volume 150 &#8381;/кг
+                        .td.account__cost 8 000 кг
+                        .td.account__edit
+                          button.button.button-flag.button--flag--active
+
+                      // Product line
+                      .tr
+                        .td.account__name
+                          a(href="#~") Плиты Quick Deck (Квик Дек) 16х2440х600
+                        .td.account__status Москва, Нижний Новгород, Екатеринбург
+                        .td.account__reward 15%
+                        .td.account__volume 600 &#8381;/кг
+                        .td.account__cost 5 000 кг
+                        .td.account__edit
+                          button.button.button-flag.button--flag--active
+
+                      // Product line
+                      .tr
+                        .td.account__name
+                          a(href="#~") Опора деревянная пропитанная для ЛЭП
+                        .td.account__status Москва
+                        .td.account__reward 11%
+                        .td.account__volume 1000 &#8381;/кг
+                        .td.account__cost 20 шт
+                        .td.account__edit
+                          button.button.button-flag.button--flag--active
+
+                      // Product line
+                      .tr
+                        .td.account__name
+                          a(href="#~") Ведро строительное
+                        .td.account__status Нижний Новгород
+                        .td.account__reward 3%
+                        .td.account__volume 300 &#8381;/кг
+                        .td.account__cost 11 000 кг
+                        .td.account__edit
+                          button.button.button-flag.button--flag--active
+
+                      // Product line
+                      .tr
+                        .td.account__name
+                          a(href="#~") Компенсатор усадки М30х300-100х100
+                        .td.account__status Москва
+                        .td.account__reward 15%
+                        .td.account__volume 150 &#8381;/кг
+                        .td.account__cost 8 000 кг
+                        .td.account__edit
+                          button.button.button-flag.button--flag--active
+
+                      // Product line
+                      .tr
+                        .td.account__name
+                          a(href="#~") Электроды ЛЭЗ, МР-3, Ф4
+                        .td.account__status Нижний Новгород
+                        .td.account__reward 3%
+                        .td.account__volume 300 &#8381;/кг
+                        .td.account__cost 11 000 кг
+                        .td.account__edit
+                          button.button.button-flag.button--flag--active
+
+                      // Product line
+                      .tr
+                        .td.account__name
+                          a(href="#~") Угловая насадка (сопло) Полинор
+                        .td.account__status Москва
+                        .td.account__reward 15%
+                        .td.account__volume 150 &#8381;/кг
+                        .td.account__cost 8 000 кг
+                        .td.account__edit
+                          button.button.button-flag.button--flag--active
+
+                    .account__button-block
+                      a.button.button--more(href="#~") Все предложения поставщика
+
+
+
+          // Footer
+        include partials/footer
+        include partials/scripts
+        script(src="js/project/action-title.js")

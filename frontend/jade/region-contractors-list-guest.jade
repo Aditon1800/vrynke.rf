@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        nav.header__nav
+          .toggle.header__toggle.js-toggle
+            span.toggle__line
+            span.toggle__line
+            span.toggle__line
+          .logo.header__logo
+            a.header__logo-link
+              img.logo-img.header__logo-img(src="img/logo.png" alt="врынке.рф")
+          .header__list.js-header__list
+            button.button.header__list-button.js-list-button
+            .header__nav-list
+              .header__nav-item.header__nav-item--active
+                a(href="#~") Я — агент
+              .header__nav-item
+                a(href="#~") Я — поставщик
+              .header__nav-item
+                a(href="#~") Каталог предложений
+              .header__nav-item
+                a(href="#~") Регионы
+            .header__nav-list.header__nav-list--mobile
+              .header__nav-item
+                a(href="#~") О платформе
+              .header__nav-item
+                a(href="#~") Работать у нас
+              .header__nav-item
+                a(href="#~") Новости
+              .header__nav-item
+                a(href="#~") Связаться с нами
+          .header__sign-in
+            a.button.header__button-account.js-button-account(href="#~")
+               img(src="img/account-icon.png" alt="account-logo")
+              .header__account-block.js-account-block
+                ul.header__account-list
+                  li.header__account-item
+                    a(href="#~") Редактировать профиль
+                  li.header__account-item
+                    a(href="#~") Сообщения
+                  li.header__account-item
+                    a(href="#~") Выйти
+
+      // Crumbs
+      .crumbs
+        .container
+          +crumbsLink("crumbs__link","index.html", "Главная", " /")
+          +crumbsLink("crumbs__link","index.html", "Поставщик по регтонам", " /")
+          +crumbsLink("crumbs__link","index.html", "Москва")
+
+      .order.order--item-list
+        section.main-content.contractor-list
+          .container
+            h1.main-content__title Поставщики в Москве *
+            .order__table
+              .table
+                .tr.title-tr
+                  .order__table-title.order__table-title--number--mob Поставщик
+                  
+                  .th.order__table-title.order__table-title--name #[span.sorter]  Поставщик
+                  .th.order__table-title.order__table-title--number #[span.sorter] Категория товаров / услуг
+                  .th.order__table-title.order__table-title--contact Контактное лицо
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") ООО Ромашка
+                  .td.order__category Бытовая химия
+                  .td.order__contact Иванов Иван Иванович
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") ИП Иванов М.Д.
+                  .td.order__category.order__category--check Электроинструмент
+                  .td.order__contact Иванов Матвей Дмитриевич
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") Ильина М.М.
+                  .td.order__category Крепёж
+                  .td.order__contact Ильина Марина Михайловна
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") ИП Гордон А.А
+                  .td.order__category Юридические услуги
+                  .td.order__contact Гордон Андрей Андреевич
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") ООО Строительные технологии
+                  .td.order__category Строительное оборудование
+                  .td.order__contact Романов Максим Игоревич
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") ООО Ромашка
+                  .td.order__category Бытовая химия
+                  .td.order__contact Иванов Иван Иванович
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") ИП Иванов М.Д.
+                  .td.order__category.order__category--check Электроинструмент
+                  .td.order__contact Иванов Матвей Дмитриевич
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") Ильина М.М.
+                  .td.order__category Крепёж
+                  .td.order__contact Ильина Марина Михайловна
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") ИП Гордон А.А
+                  .td.order__category Юридические услуги
+                  .td.order__contact Гордон Андрей Андреевич
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") ООО Строительные технологии
+                  .td.order__category Строительное оборудование
+                  .td.order__contact Романов Максим Игоревич
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") ООО Ромашка
+                  .td.order__category Бытовая химия
+                  .td.order__contact Иванов Иван Иванович
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") ИП Иванов М.Д.
+                  .td.order__category.order__category--check Электроинструмент
+                  .td.order__contact Иванов Матвей Дмитриевич
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") Ильина М.М.
+                  .td.order__category Крепёж
+                  .td.order__contact Ильина Марина Михайловна
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") ИП Гордон А.А
+                  .td.order__category Юридические услуги
+                  .td.order__contact Гордон Андрей Андреевич
+                  .td.order__mail
+                    button.button.button--mail
+
+                // Contractor line
+                .tr
+                  .td.order__name
+                    a(href="#~") ООО Строительные технологии
+                  .td.order__category Строительное оборудование
+                  .td.order__contact Романов Максим Игоревич
+                  .td.order__mail
+                    button.button.button--mail
+
+
+
+
+            include components/paginator
+            span.order__bottom-info * - В данном разделе указана только часть предложений. Более подробную информацию о товарах или услугах можно получить после регистрации в качестве торгового агента.
+
+          // Footer
+        include partials/footer
+        include partials/scripts
