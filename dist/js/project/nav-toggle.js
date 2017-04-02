@@ -1,9 +1,11 @@
 ;(function() {
 
       var headerList = $('.js-header__list'),
-            listButton = $('.js-list-button');
+            listButton = $('.js-list-button'),
+            overlay = $('.overlay');
       // Toggle click
       $('.js-toggle').on('click', function() {
+        overlay.fadeIn('slow');
         headerList.animate({
           left: 0
         })
@@ -14,6 +16,7 @@
             left: -500
           });
           $(this).fadeOut();
+          overlay.fadeOut();
         });
 
         // Show/hide closed-button

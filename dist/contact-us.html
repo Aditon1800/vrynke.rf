@@ -21,23 +21,23 @@
         <div class="container">
           <nav class="header__nav">
             <div class="toggle header__toggle js-toggle"><span class="toggle__line"></span><span class="toggle__line"></span><span class="toggle__line"></span></div>
-            <div class="logo header__logo"><a class="header__logo-link"><img src="img/logo.png" alt="врынке.рф" class="logo-img header__logo-img"/></a></div>
+            <div class="logo header__logo"><a href="index.html" class="header__logo-link"><img src="img/logo.png" alt="врынке.рф" class="logo-img header__logo-img"/></a></div>
             <div class="header__list js-header__list">
               <button class="button header__list-button js-list-button"></button>
               <div class="header__nav-list">
-                <div class="header__nav-item header__nav-item--active"><a href="#~">Я — агент</a></div>
-                <div class="header__nav-item"><a href="#~">Я — поставщик</a></div>
-                <div class="header__nav-item"><a href="#~">Каталог предложений</a></div>
-                <div class="header__nav-item"><a href="#~">Регионы</a></div>
+                <div class="header__nav-item"><a href="for-agent.html">Я — агент</a></div>
+                <div class="header__nav-item"><a href="for-contractor.html">Я — поставщик</a></div>
+                <div class="header__nav-item"><a href="catalog.html">Каталог предложений</a></div>
+                <div class="header__nav-item"><a href="regions-list.html">Регионы</a></div>
               </div>
               <div class="header__nav-list header__nav-list--mobile">
                 <div class="header__nav-item"><a href="#~">О платформе</a></div>
                 <div class="header__nav-item"><a href="#~">Работать у нас</a></div>
-                <div class="header__nav-item"><a href="#~">Новости</a></div>
-                <div class="header__nav-item"><a href="#~">Связаться с нами</a></div>
+                <div class="header__nav-item"><a href="news.html">Новости</a></div>
+                <div class="header__nav-item"><a href="#~">Связаться с нами</a></div><a href="registration.html" class="button header__button-reg header__mob-reg">Регистрация</a>
               </div>
             </div>
-            <div class="header__sign-in"><a href="#~" class="button header__button-in">Вход</a><a href="#~" class="button header__button-reg">Регистрация</a></div>
+            <div class="header__sign-in"><a href="login.html" class="button header__button-in">Вход</a><a href="registration.html" class="button header__button-reg header__desc-reg">Регистрация</a></div>
           </nav>
         </div>
         <div class="crumbs"></div>
@@ -46,7 +46,7 @@
           <div class="container">
             <h1 class="main-title">Связаться с нами</h1>
             <div class="form">
-              <form action="" method="" id="">
+              <form action="contact-us-success.html" method="" id="">
                 <div class="row">
                   <div class="col-md-4 col-sm-6 col-xs-12">
                           <input type="text" name="name" placeholder="Введите ваше имя? *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
@@ -70,7 +70,7 @@
                   <div class="col-xs-12">
                     <textarea name="message" placeholder="Текст сообщения" class="textarea"></textarea>
                   </div>
-                  <div class="col-xs-4">
+                  <div class="col-sm-4">
                     <div class="reCupcha-block"><img src="img/reCupcha.png"/></div>
                     <button class="button button--confirm-reg">Отправить</button>
                   </div>
@@ -81,53 +81,54 @@
           <!-- Footer-->
         </section>
       </div>
-      <!-- Footer-->
-      <div class="prefooter">
-        <picture>
-          <source srcset="img/footer-img-main-mob.png" media="(max-width: 991px)" class="prefooter__img-block"/><img src="img/footer-img-main.png" alt="footer-img" class="prefooter__img-block"/>
-        </picture>
-      </div>
-      <footer class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="footer__content-wrap">
-                <div class="logo footer__logo"><img src="img/footer-logo.png" alt="врынке.рф"/></div>
-                <p class="footer__copy">&copy; Врынке, 2017. Все права защищены.</p>
-                <div class="footer__social"><a href="#~" class="footer__social-icon footer__social-vk"></a><a href="#~" class="footer__social-icon footer__social-inst"></a><a href="#~" class="footer__social-icon footer__social-facebook"></a></div>
-                <div class="footer__author-info">Проект создан - <a href="http://voidmedia.ru/" target="_blank" class="footer__author-link">Void media</a> </div>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="footer__content-wrap">
-                <h2 class="footer__title js-footer-title">Врынке</h2>
-                <ul class="footer__list">
-                  <li class="footer__list-item"><a href="#~" class="footer__list-link">О платформе</a></li>
-                  <li class="footer__list-item"><a href="#~" class="footer__list-link">Работать у нас</a></li>
-                  <li class="footer__list-item"><a href="#~" class="footer__list-link">Сотрудничать с нами</a></li>
-                  <li class="footer__list-item"><a href="#~" class="footer__list-link">Юридическая информация</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="footer__content-wrap">
-                <h2 class="footer__title js-footer-title">Информация и поддержка</h2>
-                <ul class="footer__list">
-                  <li class="footer__list-item"><a href="#~" class="footer__list-link">Политика конфиденциальности</a></li>
-                  <li class="footer__list-item"><a href="#~" class="footer__list-link">Публичная оферта</a></li>
-                  <li class="footer__list-item"><a href="#~" class="footer__list-link">Новости</a></li>
-                  <li class="footer__list-item"><a href="#~" class="footer__list-link">Связаться с нами</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="prefooter"></div>
+    </div>
+  </body>
+  <picture>
+    <source srcset="img/footer-img-main-mob.png" media="(max-width: 991px)" class="prefooter__img-block"/><img src="img/footer-img-main.png" alt="footer-img" class="prefooter__img-block"/>
+  </picture>
+</html>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="footer__content-wrap">
+          <h2 class="footer__title js-footer-title">Информация и поддержка <span class="arrow"></span></h2>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="privacy.html" class="footer__list-link">Политика конфиденциальности</a></li>
+            <li class="footer__list-item"><a href="public-offer.html" class="footer__list-link">Публичная оферта</a></li>
+            <li class="footer__list-item"><a href="news-list.html" class="footer__list-link">Новости</a></li>
+            <li class="footer__list-item"><a href="contact-us.html" class="footer__list-link">Связаться с нами</a></li>
+          </ul>
         </div>
-      </footer>
+      </div>
+      <div class="col">
+        <div class="footer__content-wrap">
+          <h2 class="footer__title js-footer-title">Врынке <span class="arrow"></span></h2>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="about.html" class="footer__list-link">О платформе</a></li>
+            <li class="footer__list-item"><a href="careers-list.html" class="footer__list-link">Работать у нас</a></li>
+            <li class="footer__list-item"><a href="partnership.html" class="footer__list-link">Сотрудничать с нами</a></li>
+            <li class="footer__list-item"><a href="legal-info.html" class="footer__list-link">Юридическая информация</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="footer__content-wrap">
+          <div class="logo footer__logo"><a href="index.html"><img src="img/footer-logo.png" alt="врынке.рф"/></a></div>
+          <p class="footer__copy">&copy; Врынке, 2017. Все права защищены.</p>
+          <div class="footer__social"><a href="#~" class="footer__social-icon footer__social-vk"></a><a href="#~" class="footer__social-icon footer__social-inst"></a><a href="#~" class="footer__social-icon footer__social-facebook"></a></div>
+          <div class="footer__author-info">Проект создан - <a href="http://voidmedia.ru/" target="_blank" class="footer__author-link">Void media</a> </div>
+        </div>
+      </div>
+      <!-- Overlay-->
+      <div class="overlay"></div>
+      <!-- Scripts-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="js/script.js"></script>
       <script src="js/project/nav-toggle.js"></script>
       <script src="js/project/footer-link.js"></script>
       <script src="js/project/account-block.js"></script>
     </div>
-  </body>
-</html>
+  </div>
+</footer>

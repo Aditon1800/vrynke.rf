@@ -19,52 +19,52 @@ html(lang="en")
             button.button.header__list-button.js-list-button
             .header__nav-list
               .header__nav-item.header__nav-item--active
-                a(href="#~") Я — агент
+                a(href="for-agent.html") Я — агент
               .header__nav-item
-                a(href="#~") Я — поставщик
+                a(href="for-contractor.html") Я — поставщик
               .header__nav-item
-                a(href="#~") Каталог предложений
+                a(href="catalog.html") Каталог предложений
               .header__nav-item
-                a(href="#~") Регионы
+                a(href="regions-list.html") Регионы
             .header__nav-list.header__nav-list--mobile
               .header__nav-item
-                a(href="#~") О платформе
+                a(href="about.html") О платформе
               .header__nav-item
-                a(href="#~") Работать у нас
+                a(href="careers-list.html") Работать у нас
               .header__nav-item
-                a(href="#~") Новости
+                a(href="news.html") Новости
               .header__nav-item
-                a(href="#~") Связаться с нами
+                a(href="contact-us.html") Связаться с нами
           .header__sign-in
             a.button.header__button-account.js-button-account(href="#~")
                img(src="img/account-icon.png" alt="account-logo")
               .header__account-block.js-account-block
                 ul.header__account-list
                   li.header__account-item
-                    a(href="#~") Редактировать профиль
+                    a(href="account-agent-edit-account.html") Редактировать профиль
                   li.header__account-item
-                    a(href="#~") Сообщения
+                    a(href="account-agent-message.html") Сообщения
                   li.header__account-item
-                    a(href="#~") Выйти
+                    a(href="login.html") Выйти
 
       // Crumbs
       .crumbs
         .container
-          +navLink("crumbs__nav-link crumbs__nav-link", "index.html", "Профиль", "crumbs__block--active")
-          +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "index.html", "Сообщения", '25')
-          +navLink("crumbs__nav-link", "index.html", "Избранное")
-          +navLink("crumbs__nav-link crumbs__nav-link--training", "index.html", "Обучение")
+          +navLink("crumbs__nav-link crumbs__nav-link", "", "Профиль", "crumbs__block--active")
+          +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "account-agent-message.html", "Сообщения", '25')
+          +navLink("crumbs__nav-link", "account-agent-fi-list.html", "Избранное")
+          +navLink("crumbs__nav-link crumbs__nav-link--training", "training.html", "Обучение")
 
       .order.order--item-list
         section.main-content
           .container
             .main-content__title-block.order__title-block
-              h1.main-content__title Мои заказы
-              a.button.button--add Добавить заказ
+              h1.main-content__title Мои товары / услуги
+              a.button.button--add(href="account-contractor-edit-item.html") Добавить товар
             .order__table
               .table
                 .tr.title-tr
-                  .order__table-title.order__table-title--number--mob Наименование / цена
+                  .order__table-title.order__table-title--number--mob Наименование / Регионы поставки / Вознаграждение / Цена Мин.объем
                   .th.order__table-title
                     .order__table-title--img Изображение
                   .th.order__table-title.order__table-title--number Наименование
@@ -79,39 +79,39 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon1.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Композитный состав CERAMET ANTICOR
+                    a(href="account-contractor-item-page.html") Композитный состав CERAMET ANTICOR
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 600 &#8381;/кг
                   .td.order__cost 5 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon2.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Опора деревянная пропитанная для ЛЭП
+                    a(href="account-contractor-item-page.html") Опора деревянная пропитанная для ЛЭП
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 11%
                   .td.order__volume 1000 &#8381;/кг
                   .td.order__cost 20 шт
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon3.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Носилки строительные
+                    a(href="account-contractor-item-page.html") Носилки строительные
                   .td.order__status Нижний Новгород
                   .td.order__reward.order__list-reward 3%
                   .td.order__volume 300 &#8381;/кг
                   .td.order__cost 11 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
 
                 // Product line
@@ -119,13 +119,13 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon4.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Компенсатор усадки М30х300-100х100
+                    a(href="account-contractor-item-page.html") Компенсатор усадки М30х300-100х100
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 150 &#8381;/кг
                   .td.order__cost 8 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
 
                 // Product line
@@ -133,39 +133,39 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon5.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Встроенный сифон для сброса дренажа от кондиционеров HL 138
+                    a(href="account-contractor-item-page.html") Встроенный сифон для сброса дренажа от кондиционеров HL 138
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 600 &#8381;/кг
                   .td.order__cost 5 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon6.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Ведро строительное пластиковое с ручкой
+                    a(href="account-contractor-item-page.html") Ведро строительное пластиковое с ручкой
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 11%
                   .td.order__volume 1 000 &#8381;/кг
                   .td.order__cost 20 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon7.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Электроды ЛЭЗ, МР-3, Ф4
+                    a(href="account-contractor-item-page.html") Электроды ЛЭЗ, МР-3, Ф4
                   .td.order__status Нижний Новгород
                   .td.order__reward.order__list-reward 3%
                   .td.order__volume 300 &#8381;/кг
                   .td.order__cost 11 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
 
                 // Product line
@@ -173,78 +173,78 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon8.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Угловая насадка (сопло) Полинор
+                    a(href="account-contractor-item-page.html") Угловая насадка (сопло) Полинор
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 150 &#8381;/кг
                   .td.order__cost 8 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon1.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Плиты Quick Deck (Квик Дек) 16х2440х600
+                    a(href="account-contractor-item-page.html") Плиты Quick Deck (Квик Дек) 16х2440х600
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 600 &#8381;/кг
                   .td.order__cost 5 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon9.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Композитный состав CERAMET ANTICOR
+                    a(href="account-contractor-item-page.htmlaccount-contractor-item-page.html") Композитный состав CERAMET ANTICOR
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 11%
                   .td.order__volume 1 000 &#8381;/кг
                   .td.order__cost 20 шт
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon1.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Композитный состав CERAMET ANTICOR
+                    a(href="account-contractor-item-page.htmlaccount-contractor-item-page.html") Композитный состав CERAMET ANTICOR
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 600 &#8381;/кг
                   .td.order__cost 5 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon2.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Опора деревянная пропитанная для ЛЭП
+                    a(href="account-contractor-item-page.htmlaccount-contractor-item-page.html") Опора деревянная пропитанная для ЛЭП
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 11%
                   .td.order__volume 1000 &#8381;/кг
                   .td.order__cost 20 шт
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon3.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Носилки строительные
+                    a(href="account-contractor-item-page.htmlaccount-contractor-item-page.html") Носилки строительные
                   .td.order__status Нижний Новгород
                   .td.order__reward.order__list-reward 3%
                   .td.order__volume 300 &#8381;/кг
                   .td.order__cost 11 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
 
                 // Product line
@@ -252,13 +252,13 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon4.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Компенсатор усадки М30х300-100х100
+                    a(href="account-contractor-item-page.htmlaccount-contractor-item-page.html") Компенсатор усадки М30х300-100х100
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 150 &#8381;/кг
                   .td.order__cost 8 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
 
                 // Product line
@@ -266,39 +266,39 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon5.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Встроенный сифон для сброса дренажа от кондиционеров HL 138
+                    a(href="account-contractor-item-page.htmlaccount-contractor-item-page.html") Встроенный сифон для сброса дренажа от кондиционеров HL 138
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 600 &#8381;/кг
                   .td.order__cost 5 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon6.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Ведро строительное пластиковое с ручкой
+                    a(href="account-contractor-item-page.htmlaccount-contractor-item-page.html") Ведро строительное пластиковое с ручкой
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 11%
                   .td.order__volume 1 000 &#8381;/кг
                   .td.order__cost 20 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon7.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Электроды ЛЭЗ, МР-3, Ф4
+                    a(href="account-contractor-item-page.html") Электроды ЛЭЗ, МР-3, Ф4
                   .td.order__status Нижний Новгород
                   .td.order__reward.order__list-reward 3%
                   .td.order__volume 300 &#8381;/кг
                   .td.order__cost 11 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
 
                 // Product line
@@ -306,42 +306,84 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon8.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Угловая насадка (сопло) Полинор
+                    a(href="account-contractor-item-page.html") Угловая насадка (сопло) Полинор
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 150 &#8381;/кг
                   .td.order__cost 8 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon1.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Плиты Quick Deck (Квик Дек) 16х2440х600
+                    a(href="account-contractor-item-page.html") Плиты Quick Deck (Квик Дек) 16х2440х600
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 600 &#8381;/кг
                   .td.order__cost 5 000 кг
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
                 // Product line
                 .tr
                   .td.order__img
                     img(src="img/account/list/list-group-icon9.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Композитный состав CERAMET ANTICOR
+                    a(href="account-contractor-item-page.html") Композитный состав CERAMET ANTICOR
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 11%
                   .td.order__volume 1 000 &#8381;/кг
                   .td.order__cost 20 шт
                   .td.order__edit
-                    button.button.button--edit
+                    a.button.button--edit(href="account-contractor-edit-item.html")
 
             include components/paginator
 
           // Footer
-        include partials/footer
+        .prefooter
+          picture
+            source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
+            img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
+
+        footer.footer
+          .container
+            .row
+              .col
+                .footer__content-wrap
+                  h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
+                  ul.footer__list
+                    li.footer__list-item
+                      a.footer__list-link(href="privacy.html") Политика конфиденциальности
+                    li.footer__list-item
+                      a.footer__list-link(href="public-offer.html") Публичная оферта
+                    li.footer__list-item
+                      a.footer__list-link(href="news-list.html") Новости
+                    li.footer__list-item
+                      a.footer__list-link(href="contact-us.html") Связаться с нами
+              .col
+                .footer__content-wrap
+                  h2.footer__title.js-footer-title Врынке #[span.arrow]
+                  ul.footer__list
+                    li.footer__list-item
+                      a.footer__list-link(href="about.html") О платформе
+                    li.footer__list-item
+                      a.footer__list-link(href="careers-list.html") Работать у нас
+                    li.footer__list-item
+                      a.footer__list-link(href="partnership.html") Сотрудничать с нами
+                    li.footer__list-item
+                      a.footer__list-link(href="legal-info.html") Юридическая информация
+              .col
+                .footer__content-wrap
+                  .logo.footer__logo
+                    a(href="index.html")
+                      img(src="img/footer-logo.png" alt="врынке.рф")
+                  p.footer__copy &copy; Врынке, 2017. Все права защищены.
+                  .footer__social
+                    a.footer__social-icon.footer__social-vk(href="#~")
+                    a.footer__social-icon.footer__social-inst(href="#~")
+                    a.footer__social-icon.footer__social-facebook(href="#~")
+                  .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
         include partials/scripts

@@ -163,6 +163,8 @@
     
     &:hover {
       border: 2px solid;
+      background-color: $red-color;
+      color: $white-color;
     }
   }
 
@@ -174,6 +176,10 @@
     color: #169bd5;
     padding-left: 40px;
     background: url('../img/arrow-back-404.png') left 8px no-repeat;
+  
+    &--success {
+      margin-top: 30px;
+    }
   }
 
   // Registration button
@@ -188,6 +194,8 @@
 
     &:hover {
       border: 2px solid $red-color;
+      background-color: $red-color;
+      color: $white-color;
     }
   }
 

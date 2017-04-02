@@ -2,66 +2,189 @@
 html(lang="en")
   head
     include partials/meta
+    style.
+      p {
+        margin-bottom: 10px;
+      }
+      p a {
+        font-size: 1.8rem;
+        line-height: 1.4;
+        color: black;
+      }
+
+      p a:hover {
+        text-decoration: underline;
+      }
   body
     include helpers/mixin
     .container-fluid
       .container
         //- Header
         include partials/nav
-        .row.row-inline
-          //- Inputs
-          //- .col-sm-4
-          //-   form
-          //-     +inputBlock("","text", "name", "Введите ваше имя?*")
-          //-     button Send
-          //- .col-sm-4
-          //-   form
-          //-     +inputBlock("","text", "name", "Введите ваше имя?*")
-          //-     button Send
-          //- .col-sm-4
-          //-   form
-          //-     +inputBlock("","text", "name", "Введите ваше имя?*")
-          //-     button Send
-          //- News
-          .col-md-3.col-sm-4
-            +newsBlock('news-img1', 'Россияне привезут из Швеции новые профессии', '12 декабря 2016')
-          .col-md-3.col-sm-4
-            +newsBlock('news-img2', 'Большинство работодателей повысят зарплату сотрудникам', '12 декабря 2016')
-          .col-md-3.col-sm-4
-            +newsBlock('news-img3', 'Бедный мой бухгалтер', '12 декабря 2016')
-          .col-md-3.col-sm-4
-            +newsBlock('news-img4', 'Пассажиров метро научать искать работу', '12 декабря 2016')
-
-      //- Crumbs
-      include components/crumbs
-      section.main-content
+      .crumbs
+      section
         .container
-          //- Titles
-          h1 Заголовок
-          h2 Заголовок
-          h3 Заголовок
-          h4 Заголовок
+          h1 #[strong.logo-text #[span.logo-text__char в]рынке]
+          br
+          .row
+            .col-sm-6
+              p
+                a(target="_blank" href="index.html") Index
+              p
+                a(target="_blank" href="for-agent.html") For agent
+              p
+                a(target="_blank" href="for-contractor.html")  For contractors
+              p
+                a(target="_blank" href="login.html") Login
+              p
+                a(target="_blank" href="forgot-password.html") Forgot password
+              p
+                a(target="_blank" href="change-password.html") Change password
+              p
+                a(target="_blank" href="registration.html") Registration
+              p
+                a(target="_blank" href="registration-agent-ul.html") Reg agent ul
+              p
+                a(target="_blank" href="registration-agent-ip.html") Reg agent ip
+              p
+                a(target="_blank" href="registration-agent-fl.html") Reg agent fl
+              p
+                a(target="_blank" href="registration-contractor-ul.html") Reg contractor ul
+              p
+                a(target="_blank" href="registration-contractor-ip.html") Reg contractor ip
+              p
+                a(target="_blank" href="registration-contractor-fl.html") Reg contractor fl
+              p
+                a(target="_blank" href="account-contractor.html") Account contractor
+              p
+                a(target="_blank" href="account-contractor-item-list.html") Account contractor list item
+              p
+                a(target="_blank" href="account-contractor-new-item.html") Account contractor new item
+              p
+                a(target="_blank" href="account-contractor-preview-item.html") Account contractor preview item
+              p
+                a(target="_blank" href="account-contractor-item-page.html") Account contractor item page
+              p
+                a(target="_blank" href="account-contractor-edit-item") Account contractor edit item
+              p
+                a(target="_blank" href="account-contractor-order-list.html") Account contractor order list
+              p
+                a(target="_blank" href="account-contractor-order-page-incoming.html") Account contractor page inc
+              p
+                a(target="_blank" href="account-contractor-order-page.html") Account contractor order page
+              p
+                a(target="_blank" href="account-contractor-order-success.html") Account contractor order success
+              p
+                a(target="_blank" href="account-agent.html") Account agent
+              p
+                a(target="_blank" href="account-agent-message.html") Account agent message
+            .col-sm-6
+              p
+                a(target="_blank" href="account-agent-edit-account.html") Account agent edit account
+              p
+                a(target="_blank" href="account-agent-fi-list.html") Account agent favorite list
+              p
+                a(target="_blank" href="account-agent-search-result.html") Account agent search result
+              p
+                a(target="_blank" href="account-agent-new-order.html") Account agent new order
+              p
+                a(target="_blank" href="account-agent-item-page.html") Account agent item page
+              p
+                a(target="_blank" href="regions-list.html") Regions list
+              p
+                a(target="_blank" href="region-contractors-list-guest.html") Region contractor list guest
+              p
+                a(target="_blank" href="region-contractors-list.html") Region contractor list
+              p
+                a(target="_blank" href="contractor-page.html") Contractor page
+              p
+                a(target="_blank" href="contractor-list-item.html") Contractor item list
+              p
+                a(target="_blank" href="catalog.html") Catalog
+              p
+                a(target="_blank" href="catalog-category-guest.html") Catalog category guest
+              p
+                a(target="_blank" href="catalog-category.html") Catalog category
+              p
+                a(target="_blank" href="catalog-category-sub.html") Catalog category sub
+              p
+                a(target="_blank" href="news-list.html") News list
+              p
+                a(target="_blank" href="news-page.html") News page
+              p
+                a(target="_blank" href="careers-list.html") Careers list
+              p
+                a(target="_blank" href="careers-page.html") Careers page
+              p
+                a(target="_blank" href="contact-us.html") Contuct us
+              p
+                a(target="_blank" href="about.html") About
+              p
+                a(target="_blank" href="404.html") 404
+              p
+                a(target="_blank" href="training.html") Training
+              p
+                a(target="_blank" href="success.html") Success
+              p
+                a(target="_blank" href="success-date.html") Success date
+              p
+                a(target="_blank" href="success-item.html") Success item
+              p
+                a(target="_blank" href="success-password.html") Success password
 
-          //- Buttons
-          a.button.button--more Узнать больше
-          a.button.button--main--sup Я - поставщик
-          a.button.button--main--agent Я - агент
-          a.button.button--reg Зарегистрироваться сейчас
-          a.button.button--confirm-reg Подтвердить регистрацию
-          a.button.button--green Отправить заявку на заказ
-          a.button.button--green--md Продолжить
-          a.button.button--green--lg Предпросмотр и публикация
-          a.button.button--add Добавить заказ
 
-          .question &#63;
-            span.question__tooltip Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, illum ut ipsam quasi porro numquam aut ratione facilis eveniet, recusandae quia perspiciatis at dolorem aspernatur expedita earum eum, molestiae quidem.
 
-          +checkBox('firstCheckbox', 'Заказать что-то')
-          //- Paginator
-          include components/paginator
+
+
+
 
       //- Footer
-      include partials/footer
+      .prefooter
+  picture
+    source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
+    img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
+
+footer.footer
+  .container
+    .row
+      .col
+        .footer__content-wrap
+          h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
+          ul.footer__list
+            li.footer__list-item
+              a.footer__list-link(href="privacy.html") Политика конфиденциальности
+            li.footer__list-item
+              a.footer__list-link(href="public-offer.html") Публичная оферта
+            li.footer__list-item
+              a.footer__list-link(href="news-list.html") Новости
+            li.footer__list-item
+              a.footer__list-link(href="contact-us.html") Связаться с нами
+      .col
+        .footer__content-wrap
+          h2.footer__title.js-footer-title Врынке #[span.arrow]
+          ul.footer__list
+            li.footer__list-item
+              a.footer__list-link(href="about.html") О платформе
+            li.footer__list-item
+              a.footer__list-link(href="careers-list.html") Работать у нас
+            li.footer__list-item
+              a.footer__list-link(href="partnership.html") Сотрудничать с нами
+            li.footer__list-item
+              a.footer__list-link(href="legal-info.html") Юридическая информация
+      .col
+        .footer__content-wrap
+          .logo.footer__logo
+            a(href="index.html")
+              img(src="img/footer-logo.png" alt="врынке.рф")
+          p.footer__copy &copy; Врынке, 2017. Все права защищены.
+          .footer__social
+            a.footer__social-icon.footer__social-vk(href="#~")
+            a.footer__social-icon.footer__social-inst(href="#~")
+            a.footer__social-icon.footer__social-facebook(href="#~")
+          .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
+    
+    // Overlay
+    .overlay
 
     //Scripts
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")

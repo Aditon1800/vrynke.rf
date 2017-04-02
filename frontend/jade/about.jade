@@ -13,12 +13,12 @@ html(lang="en")
           .container
             h1.person__header-title О платформе 
               br
-              | региональных продаж
+              | региональных продаж 
               br
               | товаров и услуг 
               br
-              | &#34;ВРЫНКЕ&#34;
-            .person__header-img(style="background-image: url('img/about/vrynke-main.png');")
+              | &#34;#[strong.logo-text #[strong.logo-text__char в]рынке]&#34;
+            .person__header-img.person__about(style="background-image: url('img/about/vrynke-main.png');")
         .about__contant
             //Why us
           section.about__whyus
@@ -29,28 +29,28 @@ html(lang="en")
                   .person__whyus-block
                     .person__whyus-number
                       span 1
-                    p #[strong врынке] - площадка, объединяющая поставщиков товаров и услуг и торговых агентов в регионах
+                    p #[strong.logo-text #[strong.logo-text__char в]рынке] - площадка, объединяющая поставщиков товаров и услуг и торговых агентов в регионах
                 .col-lg-3.col-md-3.col-sm-6.person__block-wrap
                   .person__whyus-block
                     .person__whyus-number
                       span 2
-                    p #[strong врынке] помогает получить основной или дополнительный доход
+                    p #[strong.logo-text #[strong.logo-text__char в]рынке] помогает получить основной или дополнительный доход
                 .col-lg-3.col-md-3.col-sm-6.person__block-wrap
                   .person__whyus-block
                     .person__whyus-number
                       span 3
-                    p #[strong врынке] помагает найти товар или услугу, которая ближе вам по опыту или образованию 
+                    p #[strong.logo-text #[strong.logo-text__char в]рынке] помагает найти товар или услугу, которая ближе вам по опыту или образованию 
                 .col-lg-3.col-md-3.col-sm-6.person__block-wrap
                   .person__whyus-block
                     .person__whyus-number
                       span 4
-                    p #[strong врынке] поможет научиться как правильно представлять себя, товар или услугу
+                    p #[strong.logo-text #[strong.logo-text__char в]рынке] поможет научиться как правильно представлять себя, товар или услугу
 
             // person working
           section.person__working
             .container
-              h2.person__block-title Как работает врынке?
-              .row
+              h2.person__block-title Как работает #[strong.logo-text #[strong.logo-text__char в]рынке]?
+              .person__block-row
                 .person__text-block
                   p.person__block-untitle После регистрации вы:
                   ul.person__block-list
@@ -81,11 +81,11 @@ html(lang="en")
 
                   ul.list-block
                     li.list-block__item 
-                      a(href="#~") Работа у нас
+                      a(href="careers-list.html") Работа у нас
                       span 1
 
                     li.list-block__item
-                      a(href="#~") Сотрудничество с нами
+                      a(href="partnetship.html") Сотрудничество с нами
                       span 2
 
                     li.list-block__item
@@ -93,13 +93,55 @@ html(lang="en")
                       span 3
 
                     li.list-block__item
-                      a(href="#~") Новости
+                      a(href="news-list.html") Новости
                       span 4
 
                     li.list-block__item
-                      a(href="#~") Связаться с нами
+                      a(href="contact-us.html") Связаться с нами
                       span 5
 
           // Footer
-      include partials/footer
+      .prefooter
+  picture
+    source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
+    img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
+
+footer.footer
+  .container
+    .row
+      .col
+        .footer__content-wrap
+          h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
+          ul.footer__list
+            li.footer__list-item
+              a.footer__list-link(href="privacy.html") Политика конфиденциальности
+            li.footer__list-item
+              a.footer__list-link(href="public-offer.html") Публичная оферта
+            li.footer__list-item
+              a.footer__list-link(href="news-list.html") Новости
+            li.footer__list-item
+              a.footer__list-link(href="contact-us.html") Связаться с нами
+      .col
+        .footer__content-wrap
+          h2.footer__title.js-footer-title Врынке #[span.arrow]
+          ul.footer__list
+            li.footer__list-item
+              a.footer__list-link(href="about.html") О платформе
+            li.footer__list-item
+              a.footer__list-link(href="careers-list.html") Работать у нас
+            li.footer__list-item
+              a.footer__list-link(href="partnership.html") Сотрудничать с нами
+            li.footer__list-item
+              a.footer__list-link(href="legal-info.html") Юридическая информация
+      .col
+        .footer__content-wrap
+          .logo.footer__logo
+            a(href="index.html")
+              img(src="img/footer-logo.png" alt="врынке.рф")
+          p.footer__copy &copy; Врынке, 2017. Все права защищены.
+          .footer__social
+            a.footer__social-icon.footer__social-vk(href="#~")
+            a.footer__social-icon.footer__social-inst(href="#~")
+            a.footer__social-icon.footer__social-facebook(href="#~")
+          .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
       include partials/scripts

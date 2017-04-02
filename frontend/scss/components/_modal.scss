@@ -1,0 +1,116 @@
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($black-color, .2);
+  z-index: 150;
+  overflow: hidden;
+}
+
+.modal {
+  @media (max-width: $sm-screen - 1) {
+    max-width: none;
+    padding: 15px;
+  }
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white-color;
+  width: 96vw;
+  max-width: 900px;
+  height: 75vh;
+  padding: 30px;
+  z-index: 500;
+
+    &__mes-name {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+  &--mes {
+    @media (max-width: $sm-screen - 1) {
+      width: 96vw;
+    }
+    width: 600px;
+    height: auto;
+    padding: 25px 25px 0;
+
+    .modal__inner {
+      padding: 0;
+    }
+
+    .input {
+      @media (max-width: 480px) {
+        width: 100%;
+      }
+      max-width: 352px;
+    }
+
+    .textarea {
+      font-style: italic;
+    }
+  }
+
+  &__inner-wrap {
+    height: 100%;
+    border: 1px solid $gray-color;
+    overflow-y: scroll;
+  }
+
+  &__inner {
+    @media (max-width: $sm-screen - 1) {
+      max-width: none;
+      padding: 30px 15px 20px;
+    }
+    padding: 50px 30px 20px;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: $black-color;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: $dark-gray-color;
+      margin-bottom: 20px;
+    }
+  }
+
+  &--question {
+    @extend .modal--mes;
+    max-width: 420px;
+  }
+
+  // Close modal
+  &__close {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/modal-close.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  // Close message frame
+  &__close--mes {
+    top: 10px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    background-image: url('../img/header/header__list-button.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

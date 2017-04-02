@@ -1,15 +1,19 @@
 body {
-  min-width: 320px;
+  min-width: 330px;
 }
 
 .main-content {
+  @media (max-width: $sm-screen - 1) {
+    padding-top: 30px;
+  }
+
   @media (min-height: 900px) {
    min-height: 400px; 
   }
   @media (min-height: 1100px) {
    min-height: 720px; 
   }
-  min-height: 460px;
+  min-height: 340px;
   padding-top: 50px;
 
   &--404 {
@@ -28,6 +32,9 @@ body {
       margin-bottom: 0;
 
       .main-content__title {
+        @media (max-width: $sm-screen - 1) {
+          line-height: 1.2;
+        }
         font-size: 2rem;
         margin-bottom: 25px;
       }
@@ -36,6 +43,11 @@ body {
   }
 
   &__title {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 2.8rem;
+      line-height: 1.2;
+      margin-bottom: 30px;
+    }
     font-size: 3.2em;
     color: $black-color;
     margin-bottom: 50px;
@@ -54,6 +66,9 @@ body {
   }
 
   &__link-back {
+    @media (max-width: $sm-screen - 1) {
+      display: none;
+    }
     float: right;
     font-size: 12px;
     font-weight: 400;
@@ -63,12 +78,80 @@ body {
     padding-top: 8px;
   }
 
+  &__success {
+
+    .form-title {
+      text-align: left;
+    }
+
+    p {
+      @media (max-width: $sm-screen - 1) {
+        margin-bottom: 10px;
+      }
+      max-width: 680px;
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+
+      a {
+        @media (max-width: $sm-screen - 1) {
+          font-size: 1.4rem;
+        }
+        @extend .login-in__reg;
+        font-size: 1.6rem;
+        margin-bottom: 0;
+      }
+
+      strong {
+        text-transform: uppercase;
+      }
+    }
+
+    ul {
+
+      li {
+        @media (max-width: $sm-screen - 1) {
+          font-size: 1.4rem;
+        }
+        position: relative;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        padding-left: 8px;
+        margin-bottom: 2px;
+
+        &:before {
+          position: absolute;
+          content: '\2022';
+          display: block;
+          top: 0;
+          left: 0;
+          font-size: inherit;
+        }
+
+        a {
+          @media (max-width: $sm-screen - 1) {
+            font-size: 1.4rem;
+          }
+          @extend .login-in__reg;
+          font-size: 1.6rem;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .button {
+      max-width: 360px;
+    }
+  }
 }
 
  .main-title {
+  @media (max-width: $sm-screen - 1) {
+    font-size: 3.2rem;
+    margin-bottom: 30px;
+  }
   margin-bottom: 50px;
   line-height: 1;
-  color: $dark-gray-color;
+  color: $black-color;
  }
 
  .reCupcha-block {
@@ -112,4 +195,20 @@ body {
     background-image: url('../img/green-check.png');
     background-repeat: no-repeat;
   }
+}
+
+// Success message
+
+.success-message {
+  font-size: 1.4rem;
+  background-color: rgba(217, 255, 220, 1);
+  border: 1px solid rgba(0, 153, 0, 1);
+  border-radius: 3px;
+  color: #009900;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.gray-bg {
+  background-color: #f7f7f7;
 }

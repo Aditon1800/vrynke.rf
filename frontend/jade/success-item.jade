@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/meta
+  body
+    include helpers/mixin
+    .container-fluid
+      .container
+        //- Header
+        nav.header__nav
+          .toggle.header__toggle.js-toggle
+            span.toggle__line
+            span.toggle__line
+            span.toggle__line
+          .logo.header__logo
+            a.header__logo-link
+              img.logo-img.header__logo-img(src="img/logo.png" alt="врынке.рф")
+          .header__list.js-header__list
+            button.button.header__list-button.js-list-button
+            .header__nav-list
+              .header__nav-item.header__nav-item--active
+                a(href="for-agent.html") Я — агент
+              .header__nav-item
+                a(href="for-contractor.html") Я — поставщик
+              .header__nav-item
+                a(href="catalog.html") Каталог предложений
+              .header__nav-item
+                a(href="regions-list.html") Регионы
+            .header__nav-list.header__nav-list--mobile
+              .header__nav-item
+                a(href="about.html") О платформе
+              .header__nav-item
+                a(href="careers-list.html") Работать у нас
+              .header__nav-item
+                a(href="news.html") Новости
+              .header__nav-item
+                a(href="contact-us.html") Связаться с нами
+          .header__sign-in
+            a.button.header__button-account.js-button-account(href="#~")
+               img(src="img/account-icon.png" alt="account-logo")
+              .header__account-block.js-account-block
+                ul.header__account-list
+                  li.header__account-item
+                    a(href="account-agent-edit-account.html") Редактировать профиль
+                  li.header__account-item
+                    a(href="account-agent-message.html") Сообщения
+                  li.header__account-item
+                    a(href="login.html") Выйти
+
+      // Crumbs
+      .crumbs
+        .container
+          +navLink("crumbs__nav-link crumbs__nav-link", "", "Профиль", "crumbs__block--active")
+          +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "account-agent-message.html", "Сообщения", '25')
+          +navLink("crumbs__nav-link", "account-agent-fi-list.html", "Избранное")
+          +navLink("crumbs__nav-link crumbs__nav-link--training", "training.html", "Обучение")
+
+      // Recover your password
+      section.main-content
+        .container
+          .main-content__success
+            h1.main-content__title Новое предложение добавлено
+            p Обращаем ваше внимание, что что все страницы предложений проходят предварительную модерацию администрацией портала ВРЫНКЕ. После проверки и публикации, страница вашего предложения отобразится в общем каталоге предложений и будет доступна по 
+              a(href="account-contractor-item-page.html") ссылке.
+
+            a.button.button--back.button--back--success(href="account-contractor.html") Вернуться в личный кабинет
+
+
+        // Footer
+      .prefooter
+  picture
+    source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
+    img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
+
+footer.footer
+  .container
+    .row
+      .col
+        .footer__content-wrap
+          h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
+          ul.footer__list
+            li.footer__list-item
+              a.footer__list-link(href="privacy.html") Политика конфиденциальности
+            li.footer__list-item
+              a.footer__list-link(href="public-offer.html") Публичная оферта
+            li.footer__list-item
+              a.footer__list-link(href="news-list.html") Новости
+            li.footer__list-item
+              a.footer__list-link(href="contact-us.html") Связаться с нами
+      .col
+        .footer__content-wrap
+          h2.footer__title.js-footer-title Врынке #[span.arrow]
+          ul.footer__list
+            li.footer__list-item
+              a.footer__list-link(href="about.html") О платформе
+            li.footer__list-item
+              a.footer__list-link(href="careers-list.html") Работать у нас
+            li.footer__list-item
+              a.footer__list-link(href="partnership.html") Сотрудничать с нами
+            li.footer__list-item
+              a.footer__list-link(href="legal-info.html") Юридическая информация
+      .col
+        .footer__content-wrap
+          .logo.footer__logo
+            a(href="index.html")
+              img(src="img/footer-logo.png" alt="врынке.рф")
+          p.footer__copy &copy; Врынке, 2017. Все права защищены.
+          .footer__social
+            a.footer__social-icon.footer__social-vk(href="#~")
+            a.footer__social-icon.footer__social-inst(href="#~")
+            a.footer__social-icon.footer__social-facebook(href="#~")
+          .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
+      include partials/scripts

@@ -11,41 +11,62 @@ html(lang="en")
       .crumbs
 
       // Login in
-      section.main-content.login-in(hidden)
+      section.main-content.login-in
         .container
           h1.form-title.login-in__title Вход
           .login-in__form
-            form(action="" method="" id="")
+            form(action="account-contractor.html" method="" id="")
               +inputBlock("","text", "yourName", "Адрес эл. почты или ID")
               +inputBlock("","password", "password", "Пароль")
               button.button.button--confirm-reg Войти
-              a.password.login-in__password Забыли пароль?
+              a.password.login-in__password(href="forgot-password.html") Забыли пароль?
               .login-in__acc-block
                 span Ещё нет акканта?
-                a.login-in__reg Зарегистрироваться
-
-      // Recover your password
-      section.main-content(hidden)
-        .container
-          h1.form-title.login-in__title Восстановление пароля
-          .login-in__form
-            form(action="" method="" id="")
-              +inputBlock("","text", "yourName", "Адрес эл. почты или ID")
-              button.button.button--confirm-reg Войти
-
-      // New password
-      section.main-content
-        .container
-          h1.form-title.login-in__title Новый пароль
-          .login-in__form
-            form(action="" method="" id="")
-              +inputBlock("","password", "newPassword", "Введите новый пароль")
-              p.input-check
-              +inputBlock("","password", "newPasswordCopy", "Повторите новый пароль")
-              p.input-check
-              button.button.button--confirm-reg Отправить
+                a.login-in__reg(href="registration.html") Зарегистрироваться
 
 
         // Footer
-      include partials/footer
+      .prefooter
+  picture
+    source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
+    img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
+
+footer.footer
+  .container
+    .row
+      .col
+        .footer__content-wrap
+          h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
+          ul.footer__list
+            li.footer__list-item
+              a.footer__list-link(href="privacy.html") Политика конфиденциальности
+            li.footer__list-item
+              a.footer__list-link(href="public-offer.html") Публичная оферта
+            li.footer__list-item
+              a.footer__list-link(href="news-list.html") Новости
+            li.footer__list-item
+              a.footer__list-link(href="contact-us.html") Связаться с нами
+      .col
+        .footer__content-wrap
+          h2.footer__title.js-footer-title Врынке #[span.arrow]
+          ul.footer__list
+            li.footer__list-item
+              a.footer__list-link(href="about.html") О платформе
+            li.footer__list-item
+              a.footer__list-link(href="careers-list.html") Работать у нас
+            li.footer__list-item
+              a.footer__list-link(href="partnership.html") Сотрудничать с нами
+            li.footer__list-item
+              a.footer__list-link(href="legal-info.html") Юридическая информация
+      .col
+        .footer__content-wrap
+          .logo.footer__logo
+            a(href="index.html")
+              img(src="img/footer-logo.png" alt="врынке.рф")
+          p.footer__copy &copy; Врынке, 2017. Все права защищены.
+          .footer__social
+            a.footer__social-icon.footer__social-vk(href="#~")
+            a.footer__social-icon.footer__social-inst(href="#~")
+            a.footer__social-icon.footer__social-facebook(href="#~")
+          .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
       include partials/scripts

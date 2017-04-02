@@ -1,6 +1,16 @@
 .person {
+  @media (max-width: $lg-screen - 1) {
+
+    br {
+      display: none;
+    }
+  }
   
   section {
+    @media (max-width: $sm-screen - 1) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -21,10 +31,10 @@
       text-align: center;
       max-width: none;
       transform: translateY(0);
-
-      br {
-        display: none;
-      }
+      padding-top: 50px;
+    }
+    @media (max-width: $sm-screen - 1) {
+      font-size: 3.4rem;
     }
     position: absolute;
     top: 50%;
@@ -38,15 +48,51 @@
 
   &__header-img {
     @media (max-width: $lg-screen - 1) {
+      background-size: 70%;
+      background-position: center;
+      height: 77%;
+    }
+    @media (max-width: $md-screen - 1) {
+      height: 76%;
       background-size: contain;
+    }
+    @media (max-width: 480px) {
+      height: 66%;
+      background-image: url('../img/person-header-mob.png');
+      background-position: center;
+      background-size: auto;
     }
 
     height: 100%;
     background-repeat: no-repeat;
     background-position: right center;
+    background-image: url('../img/person-header.png');
+  }
+
+  &__about {
+    @media (max-width: $md-screen - 1) {
+      background-size: initial;
+      height: 66%;
+    }
+    @media (max-width: $sm-screen - 1) {
+      background-size: 66%;
+      height: 70%;
+    }
+    @media (max-width: 480px) {
+      background-size: 82%;
+      height: 53%;
+    } 
   }
 
   &__block-title {
+    @media (max-width: $md-screen - 1) {
+      font-size: 2.8rem;
+      width: 100%;
+    }
+    @media (max-width: $sm-screen - 1) {
+      font-size: 2.4rem;
+      line-height: 1.1;
+    }
     width: 85%;
     font-size: 28px;
     font-weight: 700;
@@ -60,6 +106,9 @@
     }
 
     &--lg {
+      @media (max-width: $sm-screen - 1) {
+        font-size: 1.4rem;
+      }
       font-size: 1.8em;
       font-weight: 700;
     }
@@ -138,11 +187,16 @@
     z-index: 100;
   }
 
+  &__block-row {
+    @include cf();
+  }
+
   &__text-block,
   &__img-block {
     @media (max-width: $sm-screen - 1) {
       float: none;
       width: 100%;
+      padding: 20px 0;
     }
 
     float: left;
@@ -155,6 +209,9 @@
   }
 
   &__block-untitle {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 1.4rem;
+    }
     font-size: 16px;
     font-weight: 700;
     color: #999;
@@ -166,8 +223,12 @@
   }
 
   &__list-item {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
     position: relative;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 400;
     padding-left: 15px;
     margin-bottom: 30px;
@@ -198,7 +259,16 @@
     }
   }
 
+  .list-block__item {
+    @media (max-width: $md-screen - 1) {
+      margin-bottom: 25px;
+    }
+  }
+
   &__vector {
+    @media (max-width: $sm-screen - 1) {
+      display: none;
+    }
     position: relative;
     width: 48%;
     height: 2px;
@@ -236,21 +306,45 @@
     } 
   }
 
+  &__vector-block {
+    @media (max-width: $sm-screen - 1) {
+      display: block;
+    }
+    display: none;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $gray-color;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 2px;
+    margin: 30px auto 30px;
+  }
+
 
   &__line {
     background-color: rgba($gray-color, .18);
   }
 
   &__line-block {
+    @media (max-width: $sm-screen - 1) {
+      width: 100%;
+    }
     width: 50%;
     text-align: center;
     padding: 0 15px;
 
     &:first-child {
+      @media (max-width: $sm-screen - 1) {
+        float: none;
+      }
       float: left;
     }
 
     &:last-child {
+      @media (max-width: $sm-screen - 1) {
+        float: none;
+      }
       float: right;
     }
   }
@@ -275,7 +369,19 @@
     background-color: rgba($gray-color, 0.18);
   }
 
+  &__block {
+    @media (max-width: $md-screen - 1) {
+      
+      &:first-child {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
   &__reg-title {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 2.4rem;
+    }
     font-weight: 400;
     line-height: 1.2;
     text-align: center;
@@ -290,10 +396,15 @@
 
  &__reg-block {
   @media (max-width: $sm-screen - 1) {
-   margin-bottom: 50px; 
+   margin-bottom: 30px; 
   }
-  padding-left: 20px;
-  border-left: 5px solid;
+
+
+  &--agent,
+  &--contractor {
+    padding-left: 20px;
+    border-left: 5px solid;  
+  }
 
   &--agent {
     border-color: $orange-color;

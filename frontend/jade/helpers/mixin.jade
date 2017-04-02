@@ -28,8 +28,8 @@ mixin navLinkCounter(navCountClass, navLinkClass, navAddress, navTitle, navCount
 //- News
 mixin newsBlock(imgUrl, title, date)
   .news__block
-    a.news__img-link(href="#~")
-      .news__img-block(style="background-image: url('../img/news/#{imgUrl}.jpg');")
+    a.news__img-link(href="news-list.html")
+      img.news__img-block(src="img/news/#{imgUrl}.jpg" alt="news" )
     .news__desc
-      a.news__title(href="#~")=title
+      a.news__title(href="news-list.html")=title
       titme.news__date=date

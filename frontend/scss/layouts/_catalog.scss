@@ -5,6 +5,17 @@
     margin-bottom: 45px;
   }
 
+  .col-lg-4 {
+    @include cf();
+  }
+
+  &__block-wrap {
+    @media (max-width: $lg-screen - 1) and (min-width: $sm-screen) {
+      float: left;
+      width: 50%;
+    }
+  }
+
   &__title {
     @extend .login-in__reg;
     @media (max-width: $sm-screen - 1) {

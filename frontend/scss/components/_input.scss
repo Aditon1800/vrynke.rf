@@ -102,6 +102,7 @@
 
   &__fileform-button {
     float: right;
+    display: inline-block;
     width: 90px;
     height: 28px;
     background-color: $gray-color;
@@ -111,6 +112,7 @@
     color: $dark-gray-color;
     line-height: 28px;
     text-align: center;
+    vertical-align: middle;
   }
 
   &__filefield {
@@ -121,7 +123,6 @@
     padding: 2px;
     text-align: left;
     vertical-align: middle;
-    width: 80%;
   }
 
   &__photo-block {

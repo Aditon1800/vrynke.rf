@@ -13,7 +13,7 @@
     &--active {
       position: relative;
 
-      &::after {
+        &::after {
         position: absolute;
         content: '';
         display: block;
@@ -22,7 +22,20 @@
         width: 100%;
         height: 4px;
         background-color: $blue-color;
-      }
+      } 
+    }
+
+    &:hover {
+        &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background-color: $blue-color;
+      }      
     }
   }
 

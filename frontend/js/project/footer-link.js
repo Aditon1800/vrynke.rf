@@ -1,10 +1,11 @@
 function clickTitle() {
   $('.js-footer-title').each(function(index, elem) {
       $(elem).on('click',function() {
-        $(this).next().toggle();
+        $(this).toggleClass('footer--show-elem');
       });
   });
 }
+
 
   clickTitle();
 

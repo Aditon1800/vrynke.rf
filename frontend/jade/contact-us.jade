@@ -16,7 +16,7 @@ html(lang="en")
           .container
             h1.main-title Связаться с нами
             .form
-              form(action="" method="" id="")
+              form(action="contact-us-success.html" method="" id="")
                 .row
                   .col-md-4.col-sm-6.col-xs-12
                     +inputBlock('', 'text', 'name', 'Введите ваше имя? *')
@@ -34,11 +34,53 @@ html(lang="en")
                       option Отдел  5
                   .col-xs-12
                     textarea.textarea(name="message" placeholder="Текст сообщения")
-                  .col-xs-4
+                  .col-sm-4
                     .reCupcha-block
                       img(src="img/reCupcha.png")
                     button.button.button--confirm-reg Отправить
 
           // Footer
-      include partials/footer
+      .prefooter
+  picture
+    source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
+    img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
+
+footer.footer
+  .container
+    .row
+      .col
+        .footer__content-wrap
+          h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
+          ul.footer__list
+            li.footer__list-item
+              a.footer__list-link(href="privacy.html") Политика конфиденциальности
+            li.footer__list-item
+              a.footer__list-link(href="public-offer.html") Публичная оферта
+            li.footer__list-item
+              a.footer__list-link(href="news-list.html") Новости
+            li.footer__list-item
+              a.footer__list-link(href="contact-us.html") Связаться с нами
+      .col
+        .footer__content-wrap
+          h2.footer__title.js-footer-title Врынке #[span.arrow]
+          ul.footer__list
+            li.footer__list-item
+              a.footer__list-link(href="about.html") О платформе
+            li.footer__list-item
+              a.footer__list-link(href="careers-list.html") Работать у нас
+            li.footer__list-item
+              a.footer__list-link(href="partnership.html") Сотрудничать с нами
+            li.footer__list-item
+              a.footer__list-link(href="legal-info.html") Юридическая информация
+      .col
+        .footer__content-wrap
+          .logo.footer__logo
+            a(href="index.html")
+              img(src="img/footer-logo.png" alt="врынке.рф")
+          p.footer__copy &copy; Врынке, 2017. Все права защищены.
+          .footer__social
+            a.footer__social-icon.footer__social-vk(href="#~")
+            a.footer__social-icon.footer__social-inst(href="#~")
+            a.footer__social-icon.footer__social-facebook(href="#~")
+          .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
       include partials/scripts

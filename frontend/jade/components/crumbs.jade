@@ -1,12 +1,9 @@
 .crumbs
   include ../helpers/mixin
   .container
-    //- +crumbsLink("crumbs__link","index.html", "Главная", " /")
-    //- +crumbsLink("crumbs__link","index.html", "Главная", " /")
-    //- +crumbsLink("crumbs__link","index.html", "Главная", " /")
-    //- +crumbsLink("crumbs__link","index.html", "Главная")
+
     +navLink("crumbs__nav-link crumbs__nav-link", "index.html", "Профиль", "crumbs__block--active")
-    +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "index.html", "Сообщения", '25')
-    +navLink("crumbs__nav-link", "index.html", "Избранное")
-    +navLink("crumbs__nav-link", "index.html", "Обучения")
-    +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "index.html", "Мои заказы", '10')
+    +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "account-agent-message.html", "Сообщения", '25')
+    +navLink("crumbs__nav-link", "account-agent-fi-list.html", "Избранное")
+    +navLink("crumbs__nav-link", "training.html", "Обучения")
+    +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "account-contractor-order-list.html", "Мои заказы", '10')

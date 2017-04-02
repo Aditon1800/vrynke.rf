@@ -36,7 +36,20 @@
     margin-bottom: 20px;
   }
 
+  .col {
+    @media (max-width: $sm-screen - 1) {
+      float: none;
+      width: 100%;
+    }
+    float: right;
+    width: 33.3333%;
+    padding: 0 15px;
+  }
+
   &__copy {
+    @media (max-width: $sm-screen - 1) {
+      padding-bottom: 6px;
+    }
     font-size: 1.2rem;
     padding: 24px 0 15px;
   }
@@ -103,6 +116,28 @@
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 15px;
+    color: $white-color;
+
+    .arrow {
+      @media (max-width: $sm-screen - 1) {
+        display: inline-block;
+      }
+      display: none;
+      width: 13px;
+      height: 7px;
+      background-image: url('../img/footer-arrow.png');
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+
+  &--show-elem .arrow {
+    transform: rotate(180deg);
+  }
+
+  &--show-elem + .footer__list {
+    display: block;
   }
 
   &__list {

@@ -7,6 +7,12 @@
 
   @media (max-width: $sm-screen - 1) {
     padding-top: 50px;
+    height: 500px;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    background-image: url('../img/header/main-header-480.jpg');
   }
 
   position: relative;
@@ -22,6 +28,9 @@
     @media (max-width: $md-screen - 1) {
       font-size: 3.2em;
     }
+    @media (max-width: $sm-screen - 1) {
+      font-size: 2.8rem;
+    }
     font-family: $ubuntu;
     font-weight: 700;
     font-size: 48px;
@@ -34,6 +43,10 @@
   }
 
   &__desc {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+    }
     font-size: 1.6em;
     font-weight: 400;
     color: $white-color;
@@ -45,12 +58,20 @@
   }
 
   &__button-wrap {
+    @media (max-width: $sm-screen - 1) {
+      float: none;
+      width: 262px;
+      margin: 0 auto;
+    }
     float: left;
     width: 50%;
     text-align: center;
   }
 
   &__button-desc {
+    @media (max-width: $sm-screen - 1) {
+      display: none;
+    }
     font-size: 1.4em;
     line-height: 1.4;
     color: $white-color;
@@ -62,6 +83,9 @@
     @media (max-width: $md-screen - 1) {
       max-width: 266px;
     }
+    @media (max-width: $sm-screen - 1) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -70,12 +94,28 @@
   &__video-block {
     @media (max-width: $md-screen - 1) {
     margin-top: 0;
+    height: 370px;
+    }
+    @media (max-width: $sm-screen - 1) {
+      height: 260px;
+    }
+    @media (max-width: 480px) {
+      height: 170px;
     }
 
     position: relative;
+    width: 100%;
     max-width: 960px;
-    height: auto;
+    height: 480px;
+    background-image: url("../img/main/main-video-poster.jpg");
     margin: 60px auto;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 200;
+    }
   }
 
   &__video {
@@ -84,6 +124,10 @@
   }
 
   &__video-button {
+    @media (max-width: $sm-screen - 1) {
+      width: 60px;
+      height: 60px;
+    }
     position: absolute;
     display: block;
     top: 50%;
@@ -102,6 +146,35 @@
     .list-block {
       margin-top: 40px;
     }
+    @media (max-width: $sm-screen - 1) {
+      .list-block__item {
+        padding-top: 50px;
+        padding-left: 0;
+
+        span {
+          top: 8px;
+          right: 0;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  &__column {
+    @include cf();
+    @media (max-width: $sm-screen - 1) {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+    float: left;
+    width: 100%;
+
+    .button--more {
+      @media (max-width: $md-screen - 1) {
+        margin-top: 15px;
+      }
+    }
   }
 
   &__list-title {
@@ -112,6 +185,13 @@
   }
 
   &__firm-desc {
+    @media (max-width: $lg-screen - 1) and (min-width: $sm-screen) {
+      font-size: 2.4rem;
+      line-height: 1.2;
+    }
+    @media (max-width: $sm-screen - 1) {
+      margin-bottom: 50px;
+    }
     max-width: 760px;
     font-size: 1.6em;
     font-weight: 700;
@@ -120,93 +200,117 @@
   }
 
   &__img-block {
-    @media (max-width: $md-screen - 1) {
-      height: 542px;
-    }
-    position: relative;
-    height: 547px;
-
-    &:after {
-      @media (max-width: $sm-screen - 1) {
-        width: 100%;
-      }
-      position: absolute;
-      content: '';
+    @media (max-width: $sm-screen - 1) {
       display: block;
-      top: 0;
-      width: 137%;
-      height: 100%;
+      height: 240px;
       background-repeat: no-repeat;
-      // background-size: cover;
+      background-position: center top;
+    }
+    display: none;
+
+    &--right,
+    &--left {
+      position: relative;
+      height: 100%;
+
+      &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-repeat: no-repeat;
+      }
     }
 
     &--right {
+      @include cf();
 
       &:after {
-        @media (max-width: $md-screen - 1) and (min-width: $sm-screen) {
-        background-image: url('../img/main/main-img-block1-mob.jpg');  
-        }
 
       @media (max-width: $sm-screen - 1) {
-        background-position: center;
+        display: none;
       }
 
         background-image: url('../img/main/main-img-block1.jpg');
-        left: 0;
-        background-position: left top;
+        left: 50%;
+        background-position: center top;
+      }
+
+      .main__img-block {
+        background-image: url('../img/main/main-img-block1.jpg');
+        margin-bottom: 30px;
       }
     }
 
+
     &--left {
+      @include cf();
 
       &:after {
-        @media (max-width: $md-screen - 1) and (min-width: $sm-screen) {
-        background-image: url('../img/main/main-img-block2-mob.jpg');  
-        }
 
       @media (max-width: $sm-screen - 1) {
-        background-position: center;
+        display: none;
       }
 
         background-image: url('../img/main/main-img-block2.jpg');
-        right: 0;
-        background-position: right top;
+        right: 50%;
+        background-position: center top;
+      }
+
+      .main__img-block {
+        background-image: url('../img/main/main-img-block2.jpg');
+        margin-top: 30px;
       }
     }
   }
 
   &__list-desc {
+    @media (max-width: $md-screen - 1) {
+      line-height: 1.1;
+    }
     font-size: 1.6em;
     font-weight: 700;
-    color: $gray-color;
+    color: darken($gray-color, 20%);
   }
-
-
 
   &__col {
 
     &--first {
-      @media (max-width: $lg-screen - 1) {
+
+      @media (max-width: $md-screen - 1) {
         padding-right: 15px;
+        padding-bottom: 30px;
       }
-
       @media (max-width: $sm-screen - 1) {
-        margin-bottom: 25px;
+        float: none;
+        width: 100%;
+        padding: 0 15px;
       }
 
-      padding-right: 45px;
+      float: left;
+      width: 50%;
+      padding-right: 40px;
+      padding-bottom: 40px;
     }
 
     &--fourth {
-      @media (max-width: $lg-screen - 1) {
+
+      @media (max-width: $md-screen - 1) {
         padding-left: 30px;
+        padding-bottom: 30px;
       }
-
       @media (max-width: $sm-screen - 1) {
-        margin-bottom: 25px;
+        float: none;
+        width: 100%;
+        padding: 0 15px;
       }
 
-      padding-left: 45px;
+      float: right;
+      width: 50%;
+      padding-left: 40px;
+      padding-bottom: 40px;
 
       .main__list-title {
         margin-top: 25px;
@@ -215,6 +319,11 @@
   }
 
   &__news-block {
+    @media (max-width: $md-screen - 1) and (min-width: $sm-screen) {
+      .main__news-last {
+        display: none;
+      }
+    }
     margin-bottom: 45px;
 
     &__title {

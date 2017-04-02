@@ -1,23 +1,54 @@
 // Account
 
 .account {
-    background-color: rgba($gray-color, .1);
+
+  &__check-wrap {
+    @include cf();
+
+    .question {
+      @media (max-width: $sm-screen - 1) {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .account__input-block {
+      @media (max-width: $sm-screen - 1) {
+        float: left;
+        position: relative;
+      }
+    }
+  }
 
   &__img-block {
+    @media (max-width: $sm-screen - 1) {
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0;
+    }
+    position: relative;
     margin-bottom: 15px;
   }
 
-  &__profile {
-    background-color: $white-color;
-    box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
-    text-align: center;
-    padding: 20px 20px 25px;
-  }
+  &__check {
+    @media (max-width: $sm-screen - 1) {
+      top: 3px;
+      right: 3px;
+    }
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }  
 
   &__link-refresh,
   &__all-offers,
   &__link-petition {
     @extend .login-in__reg;
+    @media (max-width: $sm-screen - 1) {
+      display: block;
+    }
     margin-bottom: 10px;
   }
 
@@ -30,9 +61,30 @@
     padding: 15px 0;
   }
 
+&__profile {
+    @include cf();
+    background-color: $white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px 20px 25px;
+
+    .button--green--md {
+      @media (max-width: $sm-screen - 1) {
+        float: right;
+        max-width: 85%;
+      }
+
+      @media (max-width: 480px) {
+        float: right;
+        width: 77%;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
   &__action {
     background-color: $white-color;
-    box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
     padding: 20px 10px 15px 20px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -52,7 +104,28 @@
     font-weight: 700;
     color: $black-color;
     
+    .arrow {
+      @media (max-width: 480px) {
+        display: inline-block;
+      }
+      display: none;
+      width: 13px;
+      height: 7px;
+      background-image: url('../img/catalog-title-arrow.png');
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
   }
+
+  &--show-elem .arrow {
+    transform: rotate(180deg);
+  }
+
+  &--show-elem + .account__action-list {
+    display: block;
+  }
+
 
   &__action-item {
     margin-bottom: 15px;
@@ -69,7 +142,7 @@
   &__personal {
     position: relative;
     background-color: $white-color;
-    box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.2;
@@ -168,7 +241,7 @@
 
   &__products {
     background-color: $white-color;
-    box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
     padding: 20px 20px 25px;
     margin-top: 30px;
   }
@@ -249,6 +322,9 @@
       @media (max-width: 480px) {
         border: none;
         padding: 2px 0;
+      }
+      @media (max-width: $md-screen) and (min-width: 480px) {
+        position: relative;
       }
       padding: 15px 10px;
       border-top: 1px solid lighten($gray-color, 10%);
@@ -380,7 +456,7 @@
 
   &__news {
     background-color: $white-color;
-    box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
     padding: 20px 20px 25px;
     margin-top: 30px;
   }  
@@ -396,6 +472,7 @@
   // Account edit
 
   &__input-block {
+
 
     &--mb {
       margin-top: 10px;
@@ -424,10 +501,18 @@
     @include cf();
 
     .account__edit-name {
+      @media (max-width: $md-screen - 1) {
+        float: none;
+      }
       float: left;
     }
 
     .checkbox {
+      @media (max-width: $md-screen - 1) {
+        float: none;
+        padding-top: 0;
+        padding-bottom: 30px;
+      }
       float: right;
       padding-top: 10px;
     }
@@ -436,6 +521,9 @@
   &__edit-name,
   &__edit-name--md {
     @extend .account__block-name;
+    @media (max-width: $sm-screen - 1) {
+      margin-bottom: 20px;
+    }
     margin-top: 10px;
     margin-bottom: 30px;
   }
@@ -458,6 +546,8 @@
     padding-bottom: 20px;
 
     span {
+      display: inline-block;
+      padding-bottom: 5px;
       vertical-align: top;
     }
   }
@@ -471,6 +561,10 @@
   }
 
   &__edit-title {
+    @media (max-width: $sm-screen) {
+      font-size: 1.6rem;
+      margin-top: 15px;
+    }
     display: inline-block;
     font-size: 1.8rem;
     line-height: 1;
@@ -506,6 +600,9 @@
 .contractor-profile {
 
   .account__profile {
+    @media (max-width: $sm-screen - 1) {
+      text-align: center;
+    }
     text-align: left;  
   }
 
@@ -554,6 +651,9 @@
   }
 
   .button--green {
+    @media (max-width: $sm-screen - 1) {
+      max-width: none;
+    }
     height: 50px;
     max-width: 300px;
     line-height: 50px;

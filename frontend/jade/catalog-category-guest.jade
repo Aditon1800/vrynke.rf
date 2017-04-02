@@ -15,10 +15,8 @@ html(lang="en")
       .crumbs
         .container
           +crumbsLink("crumbs__link","index.html", "Главная", " /")
-          +crumbsLink("crumbs__link","index.html", "Поставщики по регионам", " /")
-          +crumbsLink("crumbs__link","index.html", "Москва", " /")
-          +crumbsLink("crumbs__link","index.html", "ООО Ромашка", " /")
-          +crumbsLink("crumbs__link","index.html", "Все предложения поставщика")
+          +crumbsLink("crumbs__link","regions-list.html", "Поставщик по регионам", " /")
+          +crumbsLink("crumbs__link","", "Категория товаров/услуг")
 
       .order.order--item-list
         section.main-content
@@ -29,19 +27,19 @@ html(lang="en")
               .subcat__list-block
                 ul.subcat__list
                    li.subcat__list-item
-                     a(href="catalog-category-guest-subcategory.html") Строительные материалы
+                     a(href="catalog-category-sub.html") Строительные материалы
                    li.subcat__list-item
-                     a(href="catalog-category-guest-subcategory.html") Отделочные материалы
+                     a(href="catalog-category-sub.html") Отделочные материалы
                    li.subcat__list-item
-                     a(href="catalog-category-guest-subcategory.html") Строительные техгника и оборудование
+                     a(href="catalog-category-sub.html") Строительные техгника и оборудование
                    li.subcat__list-item
-                     a(href="catalog-category-guest-subcategory.html") Вентиляционные системы
+                     a(href="catalog-category-sub.html") Вентиляционные системы
                    li.subcat__list-item
-                     a(href="catalog-category-guest-subcategory.html") Ландшафтные строения
+                     a(href="catalog-category-sub.html") Ландшафтные строения
                    li.subcat__list-item
-                     a(href="catalog-category-guest-subcategory.html") Строительный инструмент
+                     a(href="catalog-category-sub.html") Строительный инструмент
 
-            .order__table
+            .orable
               .table
                 .tr.title-tr
                   .order__table-title.order__table-title--number--mob Наименование / цена
@@ -59,7 +57,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon1.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Композитный состав CERAMET ANTICOR
+                    a(href="account-agent-item-page.html") Композитный состав CERAMET ANTICOR
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 600 &#8381;/кг
@@ -72,7 +70,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon2.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Опора деревянная пропитанная для ЛЭП
+                    a(href="account-agent-item-page.html") Опора деревянная пропитанная для ЛЭП
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 11%
                   .td.order__volume 1000 &#8381;/кг
@@ -85,7 +83,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon3.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Носилки строительные
+                    a(href="account-agent-item-page.html") Носилки строительные
                   .td.order__status Нижний Новгород
                   .td.order__reward.order__list-reward 3%
                   .td.order__volume 300 &#8381;/кг
@@ -99,7 +97,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon4.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Компенсатор усадки М30х300-100х100
+                    a(href="account-agent-item-page.html") Компенсатор усадки М30х300-100х100
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 150 &#8381;/кг
@@ -113,7 +111,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon5.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Встроенный сифон для сброса дренажа от кондиционеров HL 138
+                    a(href="account-agent-item-page.html") Встроенный сифон для сброса дренажа от кондиционеров HL 138
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 600 &#8381;/кг
@@ -126,7 +124,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon6.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Ведро строительное пластиковое с ручкой
+                    a(href="account-agent-item-page.html") Ведро строительное пластиковое с ручкой
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 11%
                   .td.order__volume 1 000 &#8381;/кг
@@ -139,7 +137,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon7.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Электроды ЛЭЗ, МР-3, Ф4
+                    a(href="account-agent-item-page.html") Электроды ЛЭЗ, МР-3, Ф4
                   .td.order__status Нижний Новгород
                   .td.order__reward.order__list-reward 3%
                   .td.order__volume 300 &#8381;/кг
@@ -153,7 +151,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon8.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Угловая насадка (сопло) Полинор
+                    a(href="account-agent-item-page.html") Угловая насадка (сопло) Полинор
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 150 &#8381;/кг
@@ -166,7 +164,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon1.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Плиты Quick Deck (Квик Дек) 16х2440х600
+                    a(href="account-agent-item-page.html") Плиты Quick Deck (Квик Дек) 16х2440х600
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 600 &#8381;/кг
@@ -179,7 +177,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon9.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Композитный состав CERAMET ANTICOR
+                    a(href="account-agent-item-page.html") Композитный состав CERAMET ANTICOR
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 11%
                   .td.order__volume 1 000 &#8381;/кг
@@ -192,7 +190,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon1.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Композитный состав CERAMET ANTICOR
+                    a(href="account-agent-item-page.html") Композитный состав CERAMET ANTICOR
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 600 &#8381;/кг
@@ -205,7 +203,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon2.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Опора деревянная пропитанная для ЛЭП
+                    a(href="account-agent-item-page.html") Опора деревянная пропитанная для ЛЭП
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 11%
                   .td.order__volume 1000 &#8381;/кг
@@ -218,7 +216,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon3.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Носилки строительные
+                    a(href="account-agent-item-page.html") Носилки строительные
                   .td.order__status Нижний Новгород
                   .td.order__reward.order__list-reward 3%
                   .td.order__volume 300 &#8381;/кг
@@ -232,7 +230,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon4.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Компенсатор усадки М30х300-100х100
+                    a(href="account-agent-item-page.html") Компенсатор усадки М30х300-100х100
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 150 &#8381;/кг
@@ -246,7 +244,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon5.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Встроенный сифон для сброса дренажа от кондиционеров HL 138
+                    a(href="account-agent-item-page.html") Встроенный сифон для сброса дренажа от кондиционеров HL 138
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 600 &#8381;/кг
@@ -259,7 +257,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon6.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Ведро строительное пластиковое с ручкой
+                    a(href="account-agent-item-page.html") Ведро строительное пластиковое с ручкой
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 11%
                   .td.order__volume 1 000 &#8381;/кг
@@ -272,7 +270,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon7.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Электроды ЛЭЗ, МР-3, Ф4
+                    a(href="account-agent-item-page.html") Электроды ЛЭЗ, МР-3, Ф4
                   .td.order__status Нижний Новгород
                   .td.order__reward.order__list-reward 3%
                   .td.order__volume 300 &#8381;/кг
@@ -286,7 +284,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon8.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Угловая насадка (сопло) Полинор
+                    a(href="account-agent-item-page.html") Угловая насадка (сопло) Полинор
                   .td.order__status Москва
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 150 &#8381;/кг
@@ -299,7 +297,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon1.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Плиты Quick Deck (Квик Дек) 16х2440х600
+                    a(href="account-agent-item-page.html") Плиты Quick Deck (Квик Дек) 16х2440х600
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 15%
                   .td.order__volume 600 &#8381;/кг
@@ -312,7 +310,7 @@ html(lang="en")
                   .td.order__img
                     img(src="img/account/list/list-group-icon9.png" alt=" product's img")
                   .td.order__name
-                    a(href="#~") Композитный состав CERAMET ANTICOR
+                    a(href="account-agent-item-page.html") Композитный состав CERAMET ANTICOR
                   .td.order__status Москва, Нижний Новгород, Екатеринбург
                   .td.order__reward.order__list-reward 11%
                   .td.order__volume 1 000 &#8381;/кг
@@ -325,6 +323,48 @@ html(lang="en")
             span.order__bottom-info ** - Процент вознаграждения за содействие в заключении договора с учетом налога на доходы физических лиц (13&#37; для резидентов РФ) или налога на доходы для ИП и юридических лиц.
 
           // Footer
-        include partials/footer
+        .prefooter
+          picture
+            source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
+            img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
+
+        footer.footer
+          .container
+            .row
+              .col
+                .footer__content-wrap
+                  h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
+                  ul.footer__list
+                    li.footer__list-item
+                      a.footer__list-link(href="privacy.html") Политика конфиденциальности
+                    li.footer__list-item
+                      a.footer__list-link(href="public-offer.html") Публичная оферта
+                    li.footer__list-item
+                      a.footer__list-link(href="news-list.html") Новости
+                    li.footer__list-item
+                      a.footer__list-link(href="contact-us.html") Связаться с нами
+              .col
+                .footer__content-wrap
+                  h2.footer__title.js-footer-title Врынке #[span.arrow]
+                  ul.footer__list
+                    li.footer__list-item
+                      a.footer__list-link(href="about.html") О платформе
+                    li.footer__list-item
+                      a.footer__list-link(href="careers-list.html") Работать у нас
+                    li.footer__list-item
+                      a.footer__list-link(href="partnership.html") Сотрудничать с нами
+                    li.footer__list-item
+                      a.footer__list-link(href="legal-info.html") Юридическая информация
+              .col
+                .footer__content-wrap
+                  .logo.footer__logo
+                    a(href="index.html")
+                      img(src="img/footer-logo.png" alt="врынке.рф")
+                  p.footer__copy &copy; Врынке, 2017. Все права защищены.
+                  .footer__social
+                    a.footer__social-icon.footer__social-vk(href="#~")
+                    a.footer__social-icon.footer__social-inst(href="#~")
+                    a.footer__social-icon.footer__social-facebook(href="#~")
+                  .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
         include partials/scripts
         script(src="js/project/button-flag.js")

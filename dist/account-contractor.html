@@ -24,24 +24,24 @@
           <div class="header__list js-header__list">
             <button class="button header__list-button js-list-button"></button>
             <div class="header__nav-list">
-              <div class="header__nav-item header__nav-item--active"><a href="#~">Я — агент</a></div>
-              <div class="header__nav-item"><a href="#~">Я — поставщик</a></div>
-              <div class="header__nav-item"><a href="#~">Каталог предложений</a></div>
-              <div class="header__nav-item"><a href="#~">Регионы</a></div>
+              <div class="header__nav-item header__nav-item--active"><a href="for-agent.html">Я — агент</a></div>
+              <div class="header__nav-item"><a href="for-contractor.html">Я — поставщик</a></div>
+              <div class="header__nav-item"><a href="catalog.html">Каталог предложений</a></div>
+              <div class="header__nav-item"><a href="regions-list.html">Регионы</a></div>
             </div>
             <div class="header__nav-list header__nav-list--mobile">
               <div class="header__nav-item"><a href="#~">О платформе</a></div>
               <div class="header__nav-item"><a href="#~">Работать у нас</a></div>
-              <div class="header__nav-item"><a href="#~">Новости</a></div>
+              <div class="header__nav-item"><a href="news.html">Новости</a></div>
               <div class="header__nav-item"><a href="#~">Связаться с нами</a></div>
             </div>
           </div>
           <div class="header__sign-in"><a href="#~" class="button header__button-account js-button-account"><img src="img/account-icon.png" alt="account-logo"/></a>
             <div class="header__account-block js-account-block">
               <ul class="header__account-list">
-                <li class="header__account-item"><a href="#~">Редактировать профиль</a></li>
-                <li class="header__account-item"><a href="#~">Сообщения</a></li>
-                <li class="header__account-item"><a href="#~">Выйти</a></li>
+                <li class="header__account-item"><a href="account-agent-edit-account.html">Редактировать профиль</a></li>
+                <li class="header__account-item"><a href="account-agent-message.html">Сообщения</a></li>
+                <li class="header__account-item"><a href="login.html">Выйти</a></li>
               </ul>
             </div>
           </div>
@@ -50,10 +50,10 @@
       <!-- Crumbs-->
       <div class="crumbs">
         <div class="container">
-              <div class="crumbs__nav-block crumbs__block--active"><a href="index.html" class="crumbs__nav-link crumbs__nav-link">Профиль</a></div>
-              <div class="crumbs__nav-block"><a href="index.html" class="crumbs__nav-link">Сообщения</a><span class="crumbs__nav-counter">25</span></div>
-              <div class="crumbs__nav-block"><a href="index.html" class="crumbs__nav-link">Избранное</a></div>
-              <div class="crumbs__nav-block"><a href="index.html" class="crumbs__nav-link crumbs__nav-link--training">Обучение</a></div>
+              <div class="crumbs__nav-block crumbs__block--active"><a href="" class="crumbs__nav-link crumbs__nav-link">Профиль</a></div>
+              <div class="crumbs__nav-block"><a href="account-agent-message.html" class="crumbs__nav-link">Сообщения</a><span class="crumbs__nav-counter">25</span></div>
+              <div class="crumbs__nav-block"><a href="account-agent-fi-list.html" class="crumbs__nav-link">Избранное</a></div>
+              <div class="crumbs__nav-block"><a href="training.html" class="crumbs__nav-link crumbs__nav-link--training">Обучение</a></div>
         </div>
       </div>
       <div class="account">
@@ -63,22 +63,31 @@
               <div class="col-md-3 col-sm-4">
                 <!-- Account profile-->
                 <div class="account__profile">
-                  <div class="account__img-block"><img src="img/account/account-plug.png"/></div><a href="#~" class="account__link-refresh">Обновить фото</a><a class="button button--green--md">Редактировать профиль</a>
+                  <div class="account__img-block"><img src="img/account/account-plug.png"/>
+                    <div class="account__check">
+                      <div class="check-circle"> 
+                        <div class="check-inner">
+                          <div class="check-content">не подтверждён
+                            <div class="question js-question">&#63;</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><a href="account-agent-edit-account.html" class="button button--green--md">Редактировать профиль</a>
                 </div>
                 <!-- Account action-->
                 <div class="account__action">
-                  <h4 class="account__action-title js-action-title">Другие действия</h4>
+                  <h4 class="account__action-title js-action-title">Другие действия <span class="arrow"></span></h4>
                   <ul class="account__action-list">
-                    <li class="account__action-item"><a href="#~">Пожаловаться на поставщика</a></li>
-                    <li class="account__action-item"><a href="#~">Получить статус подтвержденного агента</a></li>
-                    <li class="account__action-item"><a href="#~">Воспользоваться услугой гарантированного вознаграждения</a></li>
+                    <li class="account__action-item"><a href="#~" class="js-call-message">Пожаловаться на поставщика</a></li>
+                    <li class="account__action-item"><a href="account-agent-edit-account.html">Получить статус подтвержденного агента</a></li>
+                    <li class="account__action-item"><a href="guaranted.html">Воспользоваться услугой гарантированного вознаграждения</a></li>
                   </ul>
                 </div>
               </div>
               <div class="col-md-9 col-sm-8">
                 <!-- Account personal-->
-                <div class="account__personal">
-                  <button class="button button--edit"></button>
+                <div class="account__personal"><a href="account-agent-edit-account.html" class="button button--edit"></a>
                   <div class="account__block-name account__block-name--personal">Иванов Иван Иванович</div>
                   <div class="account__personal-id">ID-A000000000</div>
                   <div class="account__column-wrap">
@@ -120,154 +129,130 @@
                       </div>
                       <!-- Product line-->
                       <div class="tr">
-                        <div class="td account__name"><a href="#~">Композитный состав CERAMET ANTICOR</a></div>
+                        <div class="td account__name"><a href="account-contractor-item-page.html">Композитный состав CERAMET ANTICOR</a></div>
                         <div class="td account__status">Москва, Нижний Новгород, Екатеринбург</div>
                         <div class="td account__reward">15%</div>
                         <div class="td account__volume">600 &#8381;/кг</div>
                         <div class="td account__cost">5 000 кг</div>
-                        <div class="td account__edit">
-                          <button class="button button--edit"></button>
-                        </div>
+                        <div class="td account__edit"><a href="account-contractor-edit-item" class="button button--edit"></a></div>
                       </div>
                       <!-- Product line-->
                       <div class="tr">
-                        <div class="td account__name"><a href="#~">Профессиональные наколенники, RUBI</a></div>
+                        <div class="td account__name"><a href="account-contractor-item-page.html">Профессиональные наколенники, RUBI</a></div>
                         <div class="td account__status">Москва</div>
                         <div class="td account__reward">15%</div>
                         <div class="td account__volume">1000 &#8381;/кг</div>
                         <div class="td account__cost">20 шт</div>
-                        <div class="td account__edit">
-                          <button class="button button--edit"></button>
-                        </div>
+                        <div class="td account__edit"><a href="account-contractor-edit-item" class="button button--edit"></a></div>
                       </div>
                       <!-- Product line-->
                       <div class="tr">
-                        <div class="td account__name"><a href="#~">Носилки строительные</a></div>
+                        <div class="td account__name"><a href="account-contractor-item-page.html">Носилки строительные</a></div>
                         <div class="td account__status">Нижний Новгород</div>
                         <div class="td account__reward">3%</div>
                         <div class="td account__volume">300 &#8381;/кг</div>
                         <div class="td account__cost">11 000 кг</div>
-                        <div class="td account__edit">
-                          <button class="button button--edit"></button>
-                        </div>
+                        <div class="td account__edit"><a href="account-contractor-edit-item" class="button button--edit"></a></div>
                       </div>
                       <!-- Product line-->
                       <div class="tr">
-                        <div class="td account__name"><a href="#~">Встроенный сифон для сброса дренажа HL 138</a></div>
+                        <div class="td account__name"><a href="account-contractor-item-page.html">Встроенный сифон для сброса дренажа HL 138</a></div>
                         <div class="td account__status">Москва</div>
                         <div class="td account__reward">15%</div>
                         <div class="td account__volume">150 &#8381;/кг</div>
                         <div class="td account__cost">8 000 кг</div>
-                        <div class="td account__edit">
-                          <button class="button button--edit"></button>
-                        </div>
+                        <div class="td account__edit"><a href="account-contractor-edit-item" class="button button--edit"></a></div>
                       </div>
                       <!-- Product line-->
                       <div class="tr">
-                        <div class="td account__name"><a href="#~">Плиты Quick Deck (Квик Дек) 16х2440х600</a></div>
+                        <div class="td account__name"><a href="account-contractor-item-page.html">Плиты Quick Deck (Квик Дек) 16х2440х600</a></div>
                         <div class="td account__status">Москва, Нижний Новгород, Екатеринбург</div>
                         <div class="td account__reward">15%</div>
                         <div class="td account__volume">600 &#8381;/кг</div>
                         <div class="td account__cost">5 000 кг</div>
-                        <div class="td account__edit">
-                          <button class="button button--edit"></button>
-                        </div>
+                        <div class="td account__edit"><a href="account-contractor-edit-item" class="button button--edit"></a></div>
                       </div>
                       <!-- Product line-->
                       <div class="tr">
-                        <div class="td account__name"><a href="#~">Опора деревянная пропитанная для ЛЭП</a></div>
+                        <div class="td account__name"><a href="account-contractor-item-page.html">Опора деревянная пропитанная для ЛЭП</a></div>
                         <div class="td account__status">Москва</div>
                         <div class="td account__reward">11%</div>
                         <div class="td account__volume">1000 &#8381;/кг</div>
                         <div class="td account__cost">20 шт</div>
-                        <div class="td account__edit">
-                          <button class="button button--edit"></button>
-                        </div>
+                        <div class="td account__edit"><a href="account-contractor-edit-item" class="button button--edit"></a></div>
                       </div>
                       <!-- Product line-->
                       <div class="tr">
-                        <div class="td account__name"><a href="#~">Ведро строительное</a></div>
+                        <div class="td account__name"><a href="account-contractor-item-page.html">Ведро строительное</a></div>
                         <div class="td account__status">Нижний Новгород</div>
                         <div class="td account__reward">3%</div>
                         <div class="td account__volume">300 &#8381;/кг</div>
                         <div class="td account__cost">11 000 кг</div>
-                        <div class="td account__edit">
-                          <button class="button button--edit"></button>
-                        </div>
+                        <div class="td account__edit"><a href="account-contractor-edit-item" class="button button--edit"></a></div>
                       </div>
                       <!-- Product line-->
                       <div class="tr">
-                        <div class="td account__name"><a href="#~">Компенсатор усадки М30х300-100х100</a></div>
+                        <div class="td account__name"><a href="account-contractor-item-page.html">Компенсатор усадки М30х300-100х100</a></div>
                         <div class="td account__status">Москва</div>
                         <div class="td account__reward">15%</div>
                         <div class="td account__volume">150 &#8381;/кг</div>
                         <div class="td account__cost">8 000 кг</div>
-                        <div class="td account__edit">
-                          <button class="button button--edit"></button>
-                        </div>
+                        <div class="td account__edit"><a href="account-contractor-edit-item" class="button button--edit"></a></div>
                       </div>
                       <!-- Product line-->
                       <div class="tr">
-                        <div class="td account__name"><a href="#~">Электроды ЛЭЗ, МР-3, Ф4</a></div>
+                        <div class="td account__name"><a href="account-contractor-item-page.html">Электроды ЛЭЗ, МР-3, Ф4</a></div>
                         <div class="td account__status">Нижний Новгород</div>
                         <div class="td account__reward">3%</div>
                         <div class="td account__volume">300 &#8381;/кг</div>
                         <div class="td account__cost">11 000 кг</div>
-                        <div class="td account__edit">
-                          <button class="button button--edit"></button>
-                        </div>
+                        <div class="td account__edit"><a href="account-contractor-edit-item" class="button button--edit"></a></div>
                       </div>
                       <!-- Product line-->
                       <div class="tr">
-                        <div class="td account__name"><a href="#~">Угловая насадка (сопло) Полинор</a></div>
+                        <div class="td account__name"><a href="account-contractor-item-page.html">Угловая насадка (сопло) Полинор</a></div>
                         <div class="td account__status">Москва</div>
                         <div class="td account__reward">15%</div>
                         <div class="td account__volume">150 &#8381;/кг</div>
                         <div class="td account__cost">8 000 кг</div>
-                        <div class="td account__edit">
-                          <button class="button button--edit"></button>
-                        </div>
+                        <div class="td account__edit"><a href="account-contractor-edit-item" class="button button--edit"></a></div>
                       </div>
                     </div>
-                    <div class="account__button-block"><a href="#~" class="button button--more">Весь каталог</a></div>
+                    <div class="account__button-block"><a href="account-contractor-item-list.jade" class="button button--more">Весь каталог</a></div>
                   </div>
                 </div>
                 <div class="account__news news-block">
                   <h3 class="account__block-name account__news-title">Рекомендуем прочитать</h3>
                   <div class="row">
                     <div class="col-md-4 col-sm-4">
-                          <div class="news__block"><a href="#~" class="news__img-link">
-                              <div style="background-image: url('../img/news/news-img2.jpg');" class="news__img-block"></div></a>
-                            <div class="news__desc"><a href="#~" class="news__title">Большинство работодателей повысят зарплату сотрудникам</a>
+                          <div class="news__block"><a href="news-list.html" class="news__img-link"><img src="img/news/news-img2.jpg" alt="news" class="news__img-block"/></a>
+                            <div class="news__desc"><a href="news-list.html" class="news__title">Большинство работодателей повысят зарплату сотрудникам</a>
                               <titme class="news__date">12 декабря 2016</titme>
                             </div>
                           </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                          <div class="news__block"><a href="#~" class="news__img-link">
-                              <div style="background-image: url('../img/news/news-img3.jpg');" class="news__img-block"></div></a>
-                            <div class="news__desc"><a href="#~" class="news__title">Бедный мой бухгалтер</a>
+                          <div class="news__block"><a href="news-list.html" class="news__img-link"><img src="img/news/news-img3.jpg" alt="news" class="news__img-block"/></a>
+                            <div class="news__desc"><a href="news-list.html" class="news__title">Бедный мой бухгалтер</a>
                               <titme class="news__date">12 декабря 2016</titme>
                             </div>
                           </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                          <div class="news__block"><a href="#~" class="news__img-link">
-                              <div style="background-image: url('../img/news/news-img4.jpg');" class="news__img-block"></div></a>
-                            <div class="news__desc"><a href="#~" class="news__title">Пассажиров метро научать искать работу</a>
+                          <div class="news__block"><a href="news-list.html" class="news__img-link"><img src="img/news/news-img4.jpg" alt="news" class="news__img-block"/></a>
+                            <div class="news__desc"><a href="news-list.html" class="news__title">Пассажиров метро научать искать работу</a>
                               <titme class="news__date">12 декабря 2016</titme>
                             </div>
                           </div>
                     </div>
                   </div>
-                  <div class="account__button-block"><a href="#~" class="button button--more">Все новости</a></div>
+                  <div class="account__button-block"><a href="news-list.html" class="button button--more">Все новости</a></div>
                 </div>
               </div>
             </div>
           </div>
           <!-- Footer-->
         </section>
-        <!-- Footer-->
         <div class="prefooter">
           <picture>
             <source srcset="img/footer-img-main-mob.png" media="(max-width: 991px)" class="prefooter__img-block"/><img src="img/footer-img-main.png" alt="footer-img" class="prefooter__img-block"/>
@@ -276,39 +261,58 @@
         <footer class="footer">
           <div class="container">
             <div class="row">
-              <div class="col-sm-4">
+              <div class="col">
                 <div class="footer__content-wrap">
-                  <div class="logo footer__logo"><img src="img/footer-logo.png" alt="врынке.рф"/></div>
+                  <h2 class="footer__title js-footer-title">Информация и поддержка <span class="arrow"></span></h2>
+                  <ul class="footer__list">
+                    <li class="footer__list-item"><a href="privacy.html" class="footer__list-link">Политика конфиденциальности</a></li>
+                    <li class="footer__list-item"><a href="public-offer.html" class="footer__list-link">Публичная оферта</a></li>
+                    <li class="footer__list-item"><a href="news-list.html" class="footer__list-link">Новости</a></li>
+                    <li class="footer__list-item"><a href="contact-us.html" class="footer__list-link">Связаться с нами</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="footer__content-wrap">
+                  <h2 class="footer__title js-footer-title">Врынке <span class="arrow"></span></h2>
+                  <ul class="footer__list">
+                    <li class="footer__list-item"><a href="about.html" class="footer__list-link">О платформе</a></li>
+                    <li class="footer__list-item"><a href="careers-list.html" class="footer__list-link">Работать у нас</a></li>
+                    <li class="footer__list-item"><a href="partnership.html" class="footer__list-link">Сотрудничать с нами</a></li>
+                    <li class="footer__list-item"><a href="legal-info.html" class="footer__list-link">Юридическая информация</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="footer__content-wrap">
+                  <div class="logo footer__logo"><a href="index.html"><img src="img/footer-logo.png" alt="врынке.рф"/></a></div>
                   <p class="footer__copy">&copy; Врынке, 2017. Все права защищены.</p>
                   <div class="footer__social"><a href="#~" class="footer__social-icon footer__social-vk"></a><a href="#~" class="footer__social-icon footer__social-inst"></a><a href="#~" class="footer__social-icon footer__social-facebook"></a></div>
-                  <div class="footer__author-info">Проект создан - <a href="http://voidmedia.ru/" target="_blank" class="footer__author-link">Void media</a> </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="footer__content-wrap">
-                  <h2 class="footer__title js-footer-title">Врынке</h2>
-                  <ul class="footer__list">
-                    <li class="footer__list-item"><a href="#~" class="footer__list-link">О платформе</a></li>
-                    <li class="footer__list-item"><a href="#~" class="footer__list-link">Работать у нас</a></li>
-                    <li class="footer__list-item"><a href="#~" class="footer__list-link">Сотрудничать с нами</a></li>
-                    <li class="footer__list-item"><a href="#~" class="footer__list-link">Юридическая информация</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="footer__content-wrap">
-                  <h2 class="footer__title js-footer-title">Информация и поддержка</h2>
-                  <ul class="footer__list">
-                    <li class="footer__list-item"><a href="#~" class="footer__list-link">Политика конфиденциальности</a></li>
-                    <li class="footer__list-item"><a href="#~" class="footer__list-link">Публичная оферта</a></li>
-                    <li class="footer__list-item"><a href="#~" class="footer__list-link">Новости</a></li>
-                    <li class="footer__list-item"><a href="#~" class="footer__list-link">Связаться с нами</a></li>
-                  </ul>
+                  <div class="footer__author-info">Проект создан - <a href="http://voidmedia.ru/" target="_blank" class="footer__author-link">Void media</a></div>
                 </div>
               </div>
             </div>
           </div>
         </footer>
+        <!-- Question modal-->
+        <div class="modal modal--question">
+          <div class="modal__close modal__close--mes"></div>
+          <div class="modal__inner">
+            <p>После проверки данных специалистами врынке возле наименования вашей компании появится значок “подтверждено”. для получения статуса подтвержденного агента необходимо предоставить всю информацию и оплатить счет.</p>
+          </div>
+        </div>
+        <!-- Message modal-->
+        <div class="modal modal--mes">
+          <div class="modal__close modal__close--mes"></div>
+          <div class="modal__inner">
+            <div class="modal__mes-name">Пожаловаться на поставщика</div>
+            <input type="text" name="clientID" placeholder="Уникальный ID поставщика" class="input"/>
+            <textarea name="getProblem" placeholder="Описание проблемы..." class="textarea"></textarea>
+          </div>
+        </div>
+        <!-- Overlay-->
+        <div class="overlay"></div>
+        <!-- Scripts-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="js/script.js"></script>
         <script src="js/project/nav-toggle.js"></script>
@@ -316,6 +320,7 @@
         <script src="js/project/account-block.js"></script>
         <script src="js/project/action-title.js"></script>
         <script src="js/project/button-flag.js"></script>
+        <script src="js/project/modal.js"></script>
       </div>
     </div>
   </body>

@@ -6,8 +6,7 @@ html(lang="en")
     include helpers/mixin
     .container-fluid
       .container
-        //- Header
-        nav.header__nav
+         nav.header__nav
           .toggle.header__toggle.js-toggle
             span.toggle__line
             span.toggle__line
@@ -19,41 +18,41 @@ html(lang="en")
             button.button.header__list-button.js-list-button
             .header__nav-list
               .header__nav-item.header__nav-item--active
-                a(href="#~") Я — агент
+                a(href="for-agent.html") Я — агент
               .header__nav-item
-                a(href="#~") Я — поставщик
+                a(href="for-contractor.html") Я — поставщик
               .header__nav-item
-                a(href="#~") Каталог предложений
+                a(href="catalog.html") Каталог предложений
               .header__nav-item
-                a(href="#~") Регионы
-            .header__nav-list.header__nav-list--mobile
+                a(href="regions-list.html") Регионы
+             .header__nav-list.header__nav-list--mobile
               .header__nav-item
-                a(href="#~") О платформе
+                a(href="about.html") О платформе
               .header__nav-item
-                a(href="#~") Работать у нас
+                a(href="careers-list.html") Работать у нас
               .header__nav-item
-                a(href="#~") Новости
+                a(href="news.html") Новости
               .header__nav-item
-                a(href="#~") Связаться с нами
+                a(href="contact-us.html") Связаться с нами
           .header__sign-in
             a.button.header__button-account.js-button-account(href="#~")
                img(src="img/account-icon.png" alt="account-logo")
               .header__account-block.js-account-block
                 ul.header__account-list
                   li.header__account-item
-                    a(href="#~") Редактировать профиль
+                    a(href="account-agent-edit-account.html") Редактировать профиль
                   li.header__account-item
-                    a(href="#~") Сообщения
+                    a(href="account-agent-message.html") Сообщения
                   li.header__account-item
-                    a(href="#~") Выйти
+                    a(href="login.html") Выйти
 
       // Crumbs
       .crumbs
         .container
           +crumbsLink("crumbs__link","index.html", "Главная", " /")
-          +crumbsLink("crumbs__link","index.html", "Поставщик по регтонам", " /")
-          +crumbsLink("crumbs__link","index.html", "Москва", " /")
-          +crumbsLink("crumbs__link","index.html", "ООО Ромашка")
+          +crumbsLink("crumbs__link","regions-list.html", "Поставщик по регионам", " /")
+          +crumbsLink("crumbs__link","region-contractors-list.html", "Москва", " /")
+          +crumbsLink("crumbs__link","", "ООО Ромашка")
 
       .account
         section.main-content.contractor-profile
@@ -65,9 +64,13 @@ html(lang="en")
                 .account__profile
                   .account__img-block
                     img(src="img/account/account-plug.png")
-                  a.account__all-offers(href="#~") Все предложения #[span.offers-cont (45)]
-                  a.account__link-petition(href="#~") Пожаловаться на поставщика
-                  a.button.button--green--md Написать поставщику
+                    .account__check.check
+                      .check-circle 
+                        .check-inner
+                          .check-content Подтверждённый поставщик
+                  a.account__all-offers(href="contractor-list-item.html") Все предложения #[span.offers-cont (45)]
+                  a.account__link-petition.js-call-message(href="#~") Пожаловаться на поставщика
+                  a.button.button--green--md(href="account-agent-message.html") Написать поставщику
 
               .col-md-9.col-sm-8
 
@@ -111,7 +114,7 @@ html(lang="en")
                       // Product line
                       .tr
                         .td.account__name
-                          a(href="#~") Композитный состав CERAMET ANTICOR
+                          a(href="account-agent-item-page.html") Композитный состав CERAMET ANTICOR
                         .td.account__status Москва, Нижний Новгород, Екатеринбург
                         .td.account__reward 15%
                         .td.account__volume 600 &#8381;/кг
@@ -122,7 +125,7 @@ html(lang="en")
                       // Product line
                       .tr
                         .td.account__name
-                          a(href="#~") Профессиональные наколенники, RUBI
+                          a(href="account-agent-item-page.html") Профессиональные наколенники, RUBI
                         .td.account__status Москва
                         .td.account__reward 15%
                         .td.account__volume 1000 &#8381;/кг
@@ -133,7 +136,7 @@ html(lang="en")
                       // Product line
                       .tr
                         .td.account__name
-                          a(href="#~") Носилки строительные
+                          a(href="account-agent-item-page.html") Носилки строительные
                         .td.account__status Нижний Новгород
                         .td.account__reward 3%
                         .td.account__volume 300 &#8381;/кг
@@ -144,7 +147,7 @@ html(lang="en")
                       // Product line
                       .tr
                         .td.account__name
-                          a(href="#~") Встроенный сифон для сброса дренажа HL 138
+                          a(href="account-agent-item-page.html") Встроенный сифон для сброса дренажа HL 138
                         .td.account__status Москва
                         .td.account__reward 15%
                         .td.account__volume 150 &#8381;/кг
@@ -155,7 +158,7 @@ html(lang="en")
                       // Product line
                       .tr
                         .td.account__name
-                          a(href="#~") Плиты Quick Deck (Квик Дек) 16х2440х600
+                          a(href="account-agent-item-page.html") Плиты Quick Deck (Квик Дек) 16х2440х600
                         .td.account__status Москва, Нижний Новгород, Екатеринбург
                         .td.account__reward 15%
                         .td.account__volume 600 &#8381;/кг
@@ -166,7 +169,7 @@ html(lang="en")
                       // Product line
                       .tr
                         .td.account__name
-                          a(href="#~") Опора деревянная пропитанная для ЛЭП
+                          a(href="account-agent-item-page.html") Опора деревянная пропитанная для ЛЭП
                         .td.account__status Москва
                         .td.account__reward 11%
                         .td.account__volume 1000 &#8381;/кг
@@ -177,7 +180,7 @@ html(lang="en")
                       // Product line
                       .tr
                         .td.account__name
-                          a(href="#~") Ведро строительное
+                          a(href="account-agent-item-page.html") Ведро строительное
                         .td.account__status Нижний Новгород
                         .td.account__reward 3%
                         .td.account__volume 300 &#8381;/кг
@@ -188,7 +191,7 @@ html(lang="en")
                       // Product line
                       .tr
                         .td.account__name
-                          a(href="#~") Компенсатор усадки М30х300-100х100
+                          a(href="account-agent-item-page.html") Компенсатор усадки М30х300-100х100
                         .td.account__status Москва
                         .td.account__reward 15%
                         .td.account__volume 150 &#8381;/кг
@@ -199,7 +202,7 @@ html(lang="en")
                       // Product line
                       .tr
                         .td.account__name
-                          a(href="#~") Электроды ЛЭЗ, МР-3, Ф4
+                          a(href="account-agent-item-page.html") Электроды ЛЭЗ, МР-3, Ф4
                         .td.account__status Нижний Новгород
                         .td.account__reward 3%
                         .td.account__volume 300 &#8381;/кг
@@ -210,7 +213,7 @@ html(lang="en")
                       // Product line
                       .tr
                         .td.account__name
-                          a(href="#~") Угловая насадка (сопло) Полинор
+                          a(href="account-agent-item-page.html") Угловая насадка (сопло) Полинор
                         .td.account__status Москва
                         .td.account__reward 15%
                         .td.account__volume 150 &#8381;/кг
@@ -219,11 +222,61 @@ html(lang="en")
                           button.button.button-flag.button--flag--active
 
                     .account__button-block
-                      a.button.button--more(href="#~") Все предложения поставщика
+                      a.button.button--more(href="contractor-list-item.html") Все предложения поставщика
 
 
 
           // Footer
-        include partials/footer
+        .prefooter
+          picture
+            source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
+            img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
+
+        footer.footer
+          .container
+            .row
+              .col
+                .footer__content-wrap
+                  h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
+                  ul.footer__list
+                    li.footer__list-item
+                      a.footer__list-link(href="privacy.html") Политика конфиденциальности
+                    li.footer__list-item
+                      a.footer__list-link(href="public-offer.html") Публичная оферта
+                    li.footer__list-item
+                      a.footer__list-link(href="news-list.html") Новости
+                    li.footer__list-item
+                      a.footer__list-link(href="contact-us.html") Связаться с нами
+              .col
+                .footer__content-wrap
+                  h2.footer__title.js-footer-title Врынке #[span.arrow]
+                  ul.footer__list
+                    li.footer__list-item
+                      a.footer__list-link(href="about.html") О платформе
+                    li.footer__list-item
+                      a.footer__list-link(href="careers-list.html") Работать у нас
+                    li.footer__list-item
+                      a.footer__list-link(href="partnership.html") Сотрудничать с нами
+                    li.footer__list-item
+                      a.footer__list-link(href="legal-info.html") Юридическая информация
+              .col
+                .footer__content-wrap
+                  .logo.footer__logo
+                    a(href="index.html")
+                      img(src="img/footer-logo.png" alt="врынке.рф")
+                  p.footer__copy &copy; Врынке, 2017. Все права защищены.
+                  .footer__social
+                    a.footer__social-icon.footer__social-vk(href="#~")
+                    a.footer__social-icon.footer__social-inst(href="#~")
+                    a.footer__social-icon.footer__social-facebook(href="#~")
+                  .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media]
+        // Message modal
+        .modal.modal--mes
+          .modal__close.modal__close--mes
+          .modal__inner
+            .modal__mes-name Пожаловаться на поставщика
+            input.input(type="text" name="clientID" placeholder="Уникальный ID поставщика")
+            textarea.textarea(name="getProblem" placeholder="Описание проблемы...")
         include partials/scripts
         script(src="js/project/action-title.js")
+        script(src="js/project/modal.js")

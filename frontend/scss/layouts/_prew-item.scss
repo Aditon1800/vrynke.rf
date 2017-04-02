@@ -292,6 +292,9 @@
   }
 
   .search-form {
+    @media (max-width: $sm-screen - 1) {
+      margin-bottom: 30px;
+    }
     margin-top: 50px;
   }
 

@@ -1,6 +1,12 @@
 .order {
   background-color: rgba($gray-color, .1);
 
+  .main-content__link-back {
+    @media (max-width: $sm-screen - 1) {
+      display: none;
+    }
+  }
+
   &__title-block {
     @include cf();
 
@@ -25,7 +31,17 @@
       margin-top: 4px;
     }
 
+    .button--add {
+      @media (max-width: $sm-screen - 1) {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+    }
+
     .input {
+      @media (max-width: $sm-screen - 1) {
+        width: 100%;
+      }
       width: 270px;
       font-size: 1.3rem;
       background-color: transparent;
@@ -34,7 +50,7 @@
 
   &__table {
     background-color: $white-color;
-    box-shadow: 0 1px 6px 1px rgba($dark-gray-color, .25);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
     padding: 0 20px;
   }
 
@@ -97,6 +113,13 @@
 
     &:last-child {
       border-bottom: none;
+    }
+
+    &--th-border {
+
+      .th {
+        border-bottom: 1px solid $gray-color;
+      }
     }
   }
 
@@ -338,6 +361,13 @@
       max-width: 185px;
       vertical-align: top;
       margin-bottom: 15px;
+    }
+
+    .button--green {
+      @media (max-width: 480px) {
+        margin-right: 0;
+      }
+      margin-right: 20px;
     }
   }
 

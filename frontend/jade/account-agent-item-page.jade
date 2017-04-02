@@ -6,8 +6,7 @@ html(lang="en")
     include helpers/mixin
     .container-fluid
       .container
-        //- Header
-        nav.header__nav
+         nav.header__nav
           .toggle.header__toggle.js-toggle
             span.toggle__line
             span.toggle__line
@@ -19,42 +18,42 @@ html(lang="en")
             button.button.header__list-button.js-list-button
             .header__nav-list
               .header__nav-item.header__nav-item--active
-                a(href="#~") Я — агент
+                a(href="for-agent.html") Я — агент
               .header__nav-item
-                a(href="#~") Я — поставщик
+                a(href="for-contractor.html") Я — поставщик
               .header__nav-item
-                a(href="#~") Каталог предложений
+                a(href="catalog.html") Каталог предложений
               .header__nav-item
-                a(href="#~") Регионы
-            .header__nav-list.header__nav-list--mobile
+                a(href="regions-list.html") Регионы
+             .header__nav-list.header__nav-list--mobile
               .header__nav-item
-                a(href="#~") О платформе
+                a(href="about.html") О платформе
               .header__nav-item
-                a(href="#~") Работать у нас
+                a(href="careers-list.html") Работать у нас
               .header__nav-item
-                a(href="#~") Новости
+                a(href="news.html") Новости
               .header__nav-item
-                a(href="#~") Связаться с нами
+                a(href="contact-us.html") Связаться с нами
           .header__sign-in
             a.button.header__button-account.js-button-account(href="#~")
                img(src="img/account-icon.png" alt="account-logo")
               .header__account-block.js-account-block
                 ul.header__account-list
                   li.header__account-item
-                    a(href="#~") Редактировать профиль
+                    a(href="account-agent-edit-account.html") Редактировать профиль
                   li.header__account-item
-                    a(href="#~") Сообщения
+                    a(href="account-agent-message.html") Сообщения
                   li.header__account-item
-                    a(href="#~") Выйти
+                    a(href="login.html") Выйти
 
       // Crumbs
       .crumbs
         .container
           +crumbsLink("crumbs__link","index.html", "Главная", " /")
-          +crumbsLink("crumbs__link","index.html", "Каталог", " /")
-          +crumbsLink("crumbs__link","index.html", "Категория товаров/услуг", " /")
-          +crumbsLink("crumbs__link","index.html", "Подкатегория", " /")
-          +crumbsLink("crumbs__link","index.html", "Композитный состав CERAMET ANTICOR")
+          +crumbsLink("crumbs__link","catalog.html", "Каталог", " /")
+          +crumbsLink("crumbs__link","catalog-category.html", "Категория товаров/услуг", " /")
+          +crumbsLink("crumbs__link","catalog-category-sub.html", "Подкатегория", " /")
+          +crumbsLink("crumbs__link","", "Композитный состав CERAMET ANTICOR")
 
       section.main-content.item
         .container
@@ -80,7 +79,7 @@ html(lang="en")
                 .item__prew-desc
                   span.item__cost-name Цена для агентов
                   .question &#63;
-                    span.question__tooltip Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, illum ut ipsam quasi porro numquam aut ratione facilis eveniet, recusandae quia perspiciatis at dolorem aspernatur expedita earum eum, molestiae quidem.
+                    span.question__tooltip Цена с НДС. Без учёта доставки.
                   .item__cost 600 &#8381;/кг
                   .item__prew-category
                     span.item__prew-name Минимальный объём:
@@ -93,13 +92,13 @@ html(lang="en")
                     span.item__prew-name Регионы распространения:
                     span.item__prew-attr Москва, Нижний Новгород, Екатеринбург
                   .item__button-top
-                    a.button.button--green(href="#~") Заказать
+                    a.button.button--green(href="account-agent-new-order.html") Заказать
                     a.button.button--add-fav(href="#~") Добавить в избранное
                   .item__link-block
                     .item__link-inner
                       a(href="#~") Гарантированное вознаграждение
                       .question &#63;
-                          span.question__tooltip Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, illum ut ipsam quasi porro numquam aut ratione facilis eveniet, recusandae quia perspiciatis at dolorem aspernatur expedita earum eum, molestiae quidem.
+                          span.question__tooltip Краткие подробности об услуге.
 
 
                 // Main desc
@@ -124,12 +123,12 @@ html(lang="en")
                 .item__prew-category
                   span.item__prew-name Поставщик:
                   span.item__prew-attr
-                    a.green-check(href="#~") ООО Ромашка
+                    a.green-check(href="contractor-page.html") ООО Ромашка
 
                 .item__prew-category
                   span.item__prew-name Категория:
                   span.item__prew-attr
-                    a(href="#~") Строительные материалы
+                    a(href="catalog-category-sub.html") Строительные материалы
                 .item__prew-category
                   span.item__prew-name На портале:
                   span.item__prew-attr менее 1 года
@@ -139,12 +138,12 @@ html(lang="en")
                   span.item__prew-attr Москва
                 br
                 .item__prew-category
-                  a(href="#~") Все товары/услуги поставщика
+                  a(href="contractor-list-item.html") Все товары/услуги поставщика
                 br
                 .item__prew-category
                   span.item__prew-name Контактное лицо:
                   span.item__prew-attr Иванов Иван Иванович
-                a.button.button--blue--md Связаться с поставщиком
+                a.button.button--blue--md(href="account-agent-message.html") Связаться с поставщиком
               // Prew block
               .item__prew-info
                 h2.order__block-title Условия поставки
@@ -199,5 +198,47 @@ html(lang="en")
                     label.check-label(for="photo") с фото
 
           // Footer
-        include partials/footer
+        .prefooter
+          picture
+            source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
+            img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
+
+        footer.footer
+          .container
+            .row
+              .col
+                .footer__content-wrap
+                  h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
+                  ul.footer__list
+                    li.footer__list-item
+                      a.footer__list-link(href="privacy.html") Политика конфиденциальности
+                    li.footer__list-item
+                      a.footer__list-link(href="public-offer.html") Публичная оферта
+                    li.footer__list-item
+                      a.footer__list-link(href="news-list.html") Новости
+                    li.footer__list-item
+                      a.footer__list-link(href="contact-us.html") Связаться с нами
+              .col
+                .footer__content-wrap
+                  h2.footer__title.js-footer-title Врынке #[span.arrow]
+                  ul.footer__list
+                    li.footer__list-item
+                      a.footer__list-link(href="about.html") О платформе
+                    li.footer__list-item
+                      a.footer__list-link(href="careers-list.html") Работать у нас
+                    li.footer__list-item
+                      a.footer__list-link(href="partnership.html") Сотрудничать с нами
+                    li.footer__list-item
+                      a.footer__list-link(href="legal-info.html") Юридическая информация
+              .col
+                .footer__content-wrap
+                  .logo.footer__logo
+                    a(href="index.html")
+                      img(src="img/footer-logo.png" alt="врынке.рф")
+                  p.footer__copy &copy; Врынке, 2017. Все права защищены.
+                  .footer__social
+                    a.footer__social-icon.footer__social-vk(href="#~")
+                    a.footer__social-icon.footer__social-inst(href="#~")
+                    a.footer__social-icon.footer__social-facebook(href="#~")
+                  .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
         include partials/scripts

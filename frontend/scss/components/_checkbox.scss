@@ -17,7 +17,14 @@
     }
 
     &:not(checked) + label {
+      @media (max-width: $md-screen - 1) {
+        font-size: 1.4rem;
+      }
+      @media (max-width: $sm-screen - 1) {
+        padding-right: 25px;
+      }
       position: relative;
+      display: inline-block;
       font-family: inherit;
       font-size: 1.6rem;
       font-weight: 300;
@@ -30,7 +37,7 @@
       content: '';
       display: block;
       position: absolute;
-      top: 1px;
+      top: 3px;
       left: 2px;
       width: 36px;
       height: 14px;
@@ -43,7 +50,7 @@
     &:not(checked) + label:after {
       content: '';
       position: absolute;
-      top: -2px;
+      top: -1px;
       left: 1px;
       width: 20px;
       height: 20px;

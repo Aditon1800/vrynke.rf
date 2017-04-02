@@ -24,38 +24,39 @@ html(lang="en")
       footer.footer
         .container
           .row
-            .col-sm-4
+            .col
+              .footer__content-wrap
+                h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
+                ul.footer__list
+                  li.footer__list-item
+                    a.footer__list-link(href="privacy.html") Политика конфиденциальности
+                  li.footer__list-item
+                    a.footer__list-link(href="public-offer.html") Публичная оферта
+                  li.footer__list-item
+                    a.footer__list-link(href="news-list.html") Новости
+                  li.footer__list-item
+                    a.footer__list-link(href="contact-us.html") Связаться с нами
+            .col
+              .footer__content-wrap
+                h2.footer__title.js-footer-title Врынке #[span.arrow]
+                ul.footer__list
+                  li.footer__list-item
+                    a.footer__list-link(href="about.html") О платформе
+                  li.footer__list-item
+                    a.footer__list-link(href="careers-list.html") Работать у нас
+                  li.footer__list-item
+                    a.footer__list-link(href="partnership.html") Сотрудничать с нами
+                  li.footer__list-item
+                    a.footer__list-link(href="legal-info.html") Юридическая информация
+            .col
               .footer__content-wrap
                 .logo.footer__logo
-                  img(src="img/footer-logo.png" alt="врынке.рф")
+                  a(href="index.html")
+                    img(src="img/footer-logo.png" alt="врынке.рф")
                 p.footer__copy &copy; Врынке, 2017. Все права защищены.
                 .footer__social
                   a.footer__social-icon.footer__social-vk(href="#~")
                   a.footer__social-icon.footer__social-inst(href="#~")
                   a.footer__social-icon.footer__social-facebook(href="#~")
                 .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
-            .col-sm-4
-              .footer__content-wrap
-                h2.footer__title.js-footer-title Врынке
-                ul.footer__list
-                  li.footer__list-item
-                    a.footer__list-link(href="#~") О платформе
-                  li.footer__list-item
-                    a.footer__list-link(href="#~") Работать у нас
-                  li.footer__list-item
-                    a.footer__list-link(href="#~") Сотрудничать с нами
-                  li.footer__list-item
-                    a.footer__list-link(href="#~") Юридическая информация
-            .col-sm-4
-              .footer__content-wrap
-                h2.footer__title.js-footer-title Информация и поддержка
-                ul.footer__list
-                  li.footer__list-item
-                    a.footer__list-link(href="#~") Политика конфиденциальности
-                  li.footer__list-item
-                    a.footer__list-link(href="#~") Публичная оферта
-                  li.footer__list-item
-                    a.footer__list-link(href="#~") Новости
-                  li.footer__list-item
-                    a.footer__list-link(href="#~") Связаться с нами
       include partials/scripts
