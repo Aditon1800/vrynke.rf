@@ -18,12 +18,21 @@ html(lang="en")
           +crumbsLink("crumbs__link","regions-list.html", "Поставщик по регионам", " /")
           +crumbsLink("crumbs__link","", "Категория товаров/услуг")
 
-      .order.order--item-list
+      .order.order--item-list.gray-bg
         section.main-content
           .container
             h1.main-content__title Категория товаров / услуг *
+            .search-block--mob
+              span Сортировка:
+              select.input()
+                option(disable) Наименование
+                option Вознаграждение
+                option Цена
+
             .subcat
               span.subcat__name Подкатегории:
+              .dropdown-block
+                span.dropdown-value Подкатегории:
               .subcat__list-block
                 ul.subcat__list
                    li.subcat__list-item
@@ -368,3 +377,4 @@ html(lang="en")
                   .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
         include partials/scripts
         script(src="js/project/button-flag.js")
+        script(src="js/project/dropdown.js")

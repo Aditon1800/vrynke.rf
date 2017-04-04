@@ -12,7 +12,7 @@ html(lang="en")
       // Crumbs
       .crumbs
 
-      .order.order--item-list
+      .order.order--item-list.gray-bg
         section.main-content.contractor-list
           .container
             h1.main-content__title Поставщики в Москве *
@@ -22,6 +22,12 @@ html(lang="en")
                   input.input.input--search(type="text" name="search" placeholder="Поиск предложений...")
                   button.button.button--search
                 input.input.input--half-width.input--no-margin(type="text" name="categorySearch" placeholder="Искать во всех категориях")
+            .search-block--mob
+              span Сортировка:
+              select.input()
+                option(disable) Поставщик
+                option Категория товаров / услуг
+
             .order__table
               .table
                 .tr.title-tr

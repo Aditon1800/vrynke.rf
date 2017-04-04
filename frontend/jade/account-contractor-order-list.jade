@@ -31,7 +31,7 @@ html(lang="en")
               .header__nav-item
                 a(href="careers-list.html") Работать у нас
               .header__nav-item
-                a(href="news.html") Новости
+                a(href="news-list.html") Новости
               .header__nav-item
                 a(href="contact-us.html") Связаться с нами
           .header__sign-in
@@ -49,13 +49,13 @@ html(lang="en")
         // Crumbs
       .crumbs
         .container
-          +navLink("crumbs__nav-link crumbs__nav-link", "", "Профиль", "crumbs__block--active")
-          +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "account-agent-message.html", "Сообщения", '25')
-          +navLink("crumbs__nav-link", "account-agent-fi-list.html", "Избранное")
+          +navLink("crumbs__nav-link crumbs__nav-link--prof", "", "Профиль", "crumbs__block--active")
+          +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link crumbs__nav-link--mes", "account-agent-message.html", "Сообщения", '25')
+          +navLink("crumbs__nav-link crumbs__nav-link--fav", "account-agent-fi-list.html", "Избранное")
           +navLink("crumbs__nav-link crumbs__nav-link--training", "training.html", "Обучение")
-          +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "account-contractor-order-list.html", "Мои заказы", '10')
+          +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link crumbs__nav-link--order", "account-contractor-order-list.html", "Мои заказы", '10')
       
-      .order
+      .order.gray-bg
         section.main-content
           .container
             .main-content__title-block

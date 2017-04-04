@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+.gray-bg<!DOCTYPE html>
 html(lang="en")
   head
     include partials/meta
@@ -31,7 +31,7 @@ html(lang="en")
               .header__nav-item
                 a(href="careers-list.html") Работать у нас
               .header__nav-item
-                a(href="news.html") Новости
+                a(href="news-list.html") Новости
               .header__nav-item
                 a(href="contact-us.html") Связаться с нами
           .header__sign-in
@@ -53,10 +53,16 @@ html(lang="en")
           +crumbsLink("crumbs__link","regions-list.html", "Поставщик по регионам", " /")
           +crumbsLink("crumbs__link","region-contractors-list.html", "Москва", " /")
 
-      .order.order--item-list
+      .order.order--item-list.gray-bg
         section.main-content.contractor-list
           .container
             h1.main-content__title Поставщики в Москве *
+            .search-block--mob
+              span Сортировка:
+              select.input()
+                option(disable) Поставщик
+                option Категория товаров / услуг
+
             .order__table
               .table
                 .tr.title-tr

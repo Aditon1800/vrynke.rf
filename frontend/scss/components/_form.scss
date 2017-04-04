@@ -103,3 +103,22 @@
     margin-left: 10px;
   }
 }
+
+.search-block--mob {
+  @media (max-width: $sm-screen - 1) {
+    display: flex;
+    flex-wrap: no-wrap;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  @include cf();
+  display: none;
+
+  span {
+    display: inline-block;
+    float: left;
+    font-size: 1.4em;
+    color: #999999;
+    margin-right: 10px;
+  }
+}

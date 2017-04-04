@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 html(lang="en")
   head
+    link(rel="stylesheet", href="css/dtp/bootstrap.min.css")
     include partials/meta
+    link(rel="stylesheet", href="css/dtp/bootstrap-datetimepicker.min.css")
   body
     include helpers/mixin
     .container-fluid
@@ -32,7 +34,7 @@ html(lang="en")
               .header__nav-item
                 a(href="careers-list.html") Работать у нас
               .header__nav-item
-                a(href="news.html") Новости
+                a(href="news-list.html") Новости
               .header__nav-item
                 a(href="contact-us.html") Связаться с нами
           .header__sign-in
@@ -50,9 +52,9 @@ html(lang="en")
       // Crumbs
       .crumbs
         .container
-          +navLink("crumbs__nav-link crumbs__nav-link", "", "Профиль", "crumbs__block--active")
-          +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "account-agent-message.html", "Сообщения", '25')
-          +navLink("crumbs__nav-link", "account-agent-fi-list.html", "Избранное")
+          +navLink("crumbs__nav-link crumbs__nav-link--prof", "", "Профиль", "crumbs__block--active")
+          +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link crumbs__nav-link--mes", "account-agent-message.html", "Сообщения", '25')
+          +navLink("crumbs__nav-link crumbs__nav-link--fav", "account-agent-fi-list.html", "Избранное")
           +navLink("crumbs__nav-link crumbs__nav-link--training", "training.html", "Обучение")
 
       section.main-content.account--edit
@@ -65,21 +67,21 @@ html(lang="en")
             .row.account__input-block
               .col-lg-6
                 .account__edit-title Наименование товара или услуги *
-                +inputBlock("", "text", "title", "")
+                input.input(type="text" name="text")
               .col-lg-3
                 .account__edit-title Срок действия предложения *
-                +inputBlock("", "text", "dur", "")
+                input.input(type="text" name="date" id="datetimepicker4")
               .col-lg-12
                 .account__edit-title Регионы распространения *
-                +inputBlock("", "text", "region", "Начните вводить регион")
+                input.input(type="text" name="region" placeholder="Начните вводить регион")
               .col-lg-6
                 .account__edit-title Краткое описание *
-                textarea.textarea
+                textarea.textarea#editor1
               .col-lg-6
                 .account__edit-title Условия поставки / доставки или предоставления услуги *
                 textarea.textarea
               .col-sm-3
-                button.button.button--green--md Продолжить
+                a.button.button--green--md Продолжить
 
             //Pricing
             .account__line-title 2. Ценообразование
@@ -96,7 +98,7 @@ html(lang="en")
                   option куб.м
               .col-lg-3
                 .account__edit-title Минимальный объём *
-                +inputBlock("", "text", "minVol", "")
+                input.input(type="text" name="minVol")
               .col-lg-2
                 .account__edit-title(style="visibility: hidden;") Тип измерения
                 select.input
@@ -112,7 +114,7 @@ html(lang="en")
                 .account__edit-title Стоимость за единицу
                 .question &#63;
                   span.question__tooltip Без учёта доставки и НДС.
-                +inputBlock("", "text", "id")
+                input.input(type="text" name="id")
 
               .col-lg-2
                 .account__edit-title Ставка НДС *
@@ -125,10 +127,10 @@ html(lang="en")
                 .account__edit-title Цена
                 .question &#63;
                   span.question__tooltip Рассчитывается автоматически из стоимости за единицу и ставки НДС. Без учёта доставки.
-                +inputBlock("", "text", "id")
+                input.input(type="text"  name="id")
             .row.account__input-block
                 .col-sm-3
-                  button.button.button--green--md Продолжить
+                  a.button.button--green--md Продолжить
 
             // Agent info
             .account__line-title 3. Информация для агентов
@@ -143,10 +145,11 @@ html(lang="en")
                 span.input__span-procent &#37;
             .row.account__input-block
               .col-sm-6
-                textarea.textarea
+                .account__edit-title Требования к торговому агенту *
+                textarea.textarea#editor2
             .row.account__input-block
                 .col-sm-3
-                  button.button.button--green--md Продолжить
+                  a.button.button--green--md Продолжить
 
 
             // Downloads
@@ -170,7 +173,7 @@ html(lang="en")
 
               .col-sm-6
                 .account__edit-title Видеоролик
-                +inputBlock("", "text", "getVideo")
+                input.input(type="text" name="getVideo")
                 .input__important-info Ссылка на видеоролик
 
             .row.account__input-block
@@ -206,53 +209,62 @@ html(lang="en")
                   .input__fileform-button Обзор
                   input.input(type="file", name="other")
 
-            .input__bottom-block
-              button.button.button--green Предпросмотр и публикация
+              .input__bottom-block
+                button.button.button--green Предпросмотр и публикация
           .account__important-info
             span Поля, отмеченные звездочкой (*), обязательны к заполнению.
 
         // Footer
       .prefooter
-  picture
-    source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
-    img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
+        picture
+          source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
+          img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
 
-footer.footer
-  .container
-    .row
-      .col
-        .footer__content-wrap
-          h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
-          ul.footer__list
-            li.footer__list-item
-              a.footer__list-link(href="privacy.html") Политика конфиденциальности
-            li.footer__list-item
-              a.footer__list-link(href="public-offer.html") Публичная оферта
-            li.footer__list-item
-              a.footer__list-link(href="news-list.html") Новости
-            li.footer__list-item
-              a.footer__list-link(href="contact-us.html") Связаться с нами
-      .col
-        .footer__content-wrap
-          h2.footer__title.js-footer-title Врынке #[span.arrow]
-          ul.footer__list
-            li.footer__list-item
-              a.footer__list-link(href="about.html") О платформе
-            li.footer__list-item
-              a.footer__list-link(href="careers-list.html") Работать у нас
-            li.footer__list-item
-              a.footer__list-link(href="partnership.html") Сотрудничать с нами
-            li.footer__list-item
-              a.footer__list-link(href="legal-info.html") Юридическая информация
-      .col
-        .footer__content-wrap
-          .logo.footer__logo
-            a(href="index.html")
-              img(src="img/footer-logo.png" alt="врынке.рф")
-          p.footer__copy &copy; Врынке, 2017. Все права защищены.
-          .footer__social
-            a.footer__social-icon.footer__social-vk(href="#~")
-            a.footer__social-icon.footer__social-inst(href="#~")
-            a.footer__social-icon.footer__social-facebook(href="#~")
-          .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
+      footer.footer
+        .container
+          .row
+            .col
+              .footer__content-wrap
+                h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
+                ul.footer__list
+                  li.footer__list-item
+                    a.footer__list-link(href="privacy.html") Политика конфиденциальности
+                  li.footer__list-item
+                    a.footer__list-link(href="public-offer.html") Публичная оферта
+                  li.footer__list-item
+                    a.footer__list-link(href="news-list.html") Новости
+                  li.footer__list-item
+                    a.footer__list-link(href="contact-us.html") Связаться с нами
+            .col
+              .footer__content-wrap
+                h2.footer__title.js-footer-title Врынке #[span.arrow]
+                ul.footer__list
+                  li.footer__list-item
+                    a.footer__list-link(href="about.html") О платформе
+                  li.footer__list-item
+                    a.footer__list-link(href="careers-list.html") Работать у нас
+                  li.footer__list-item
+                    a.footer__list-link(href="partnership.html") Сотрудничать с нами
+                  li.footer__list-item
+                    a.footer__list-link(href="legal-info.html") Юридическая информация
+            .col
+              .footer__content-wrap
+                .logo.footer__logo
+                  a(href="index.html")
+                    img(src="img/footer-logo.png" alt="врынке.рф")
+                p.footer__copy &copy; Врынке, 2017. Все права защищены.
+                .footer__social
+                  a.footer__social-icon.footer__social-vk(href="#~")
+                  a.footer__social-icon.footer__social-inst(href="#~")
+                  a.footer__social-icon.footer__social-facebook(href="#~")
+                .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
       include partials/scripts
+      include partials/dtp
+      script(src="js/ckeditor/ckeditor.js")
+      script.
+        $(function () {
+            $('#datetimepicker4').datetimepicker();
+        });
+      script.
+            CKEDITOR.replace( 'editor1' );
+            CKEDITOR.replace( 'editor2' );

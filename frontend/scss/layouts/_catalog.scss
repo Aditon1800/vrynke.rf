@@ -20,18 +20,6 @@
     @extend .login-in__reg;
     @media (max-width: $sm-screen - 1) {
       border: none;
-      
-      &:after {
-        position: absolute;
-        content: '';
-        display: block;
-        top: 3px;
-        right: -18px;
-        width: 13px;
-        height: 7px;
-        background-image: url('../img/catalog-title-arrow.png');
-        background-repeat: no-repeat;
-      }
     }
     position: relative;
     font-size: 1.4rem;
@@ -59,6 +47,19 @@
         background-repeat: no-repeat;
       }
     }
+  }
+
+  .arrow {
+    @media (max-width: $sm-screen - 1) {
+      display: inline-block;
+    }
+    display: none;
+    width: 13px;
+    height: 7px;
+    background-image: url('../img/catalog-title-arrow.png');
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 5px;
   }
 
   // Title icon
@@ -270,5 +271,13 @@
         color: inherit;
       }
     }
+  }
+
+  &--show-elem + .catalog__list {
+    display: block;
+  }
+
+  &--show-elem .arrow {
+    transform: rotate(180deg);
   }
 }

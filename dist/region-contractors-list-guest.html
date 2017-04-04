@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<div class="gray-bg"><!DOCTYPE html></div>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -9,6 +10,7 @@
     <meta name="keywords" content=""/>
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <ink rel="icon" href="favicon.ico" type="image/x-icon"></ink>
     <!-- [if lt IE 9]>
     <script src="js/sctiptIE.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -32,7 +34,7 @@
             <div class="header__nav-list header__nav-list--mobile">
               <div class="header__nav-item"><a href="about.html">О платформе</a></div>
               <div class="header__nav-item"><a href="careers-list.html">Работать у нас</a></div>
-              <div class="header__nav-item"><a href="news.html">Новости</a></div>
+              <div class="header__nav-item"><a href="news-list.html">Новости</a></div>
               <div class="header__nav-item"><a href="contact-us.html">Связаться с нами</a></div>
             </div>
           </div>
@@ -50,15 +52,21 @@
       <!-- Crumbs-->
       <div class="crumbs">
         <div class="container">
-              <div class="crumbs__block"><a href="index.html" class="crumbs__link">Главная<span class="crumbs__link-slash"> /</span></a></div>
-              <div class="crumbs__block"><a href="regions-list.html" class="crumbs__link">Поставщик по регионам<span class="crumbs__link-slash"> /</span></a></div>
-              <div class="crumbs__block"><a href="region-contractors-list.html" class="crumbs__link">Москва<span class="crumbs__link-slash"> /</span></a></div>
+              <div class="crumbs__block"><a href="index.html" class="crumbs__link">Главная</a><span class="crumbs__link-slash"> /</span></div>
+              <div class="crumbs__block"><a href="regions-list.html" class="crumbs__link">Поставщик по регионам</a><span class="crumbs__link-slash"> /</span></div>
+              <div class="crumbs__block"><a href="region-contractors-list.html" class="crumbs__link">Москва</a><span class="crumbs__link-slash"> /</span></div>
         </div>
       </div>
-      <div class="order order--item-list">
+      <div class="order order--item-list gray-bg">
         <section class="main-content contractor-list">
           <div class="container">
             <h1 class="main-content__title">Поставщики в Москве *</h1>
+            <div class="search-block--mob"><span>Сортировка:</span>
+              <select class="input">
+                <option disable="disable">Поставщик</option>
+                <option>Категория товаров / услуг</option>
+              </select>
+            </div>
             <div class="order__table">
               <div class="table">
                 <div class="tr title-tr">
@@ -232,7 +240,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="js/script.js"></script>
         <script src="js/project/nav-toggle.js"></script>
-        <script src="js/project/footer-link.js"></script>
+        <script src="js/project/block-toggle.js"></script>
         <script src="js/project/account-block.js"></script>
       </div>
     </div>

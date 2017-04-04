@@ -9,11 +9,13 @@
     <meta name="keywords" content=""/>
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <ink rel="icon" href="favicon.ico" type="image/x-icon"></ink>
     <!-- [if lt IE 9]>
     <script src="js/sctiptIE.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     -->
     <!-- [endif]-->
+    <link rel="stylesheet" href="css/slick.css"/>
   </head>
   <body>
     <div class="container-fluid">
@@ -50,13 +52,13 @@
       <!-- Crumbs-->
       <div class="crumbs">
         <div class="container">
-              <div class="crumbs__nav-block crumbs__block--active"><a href="" class="crumbs__nav-link crumbs__nav-link">Профиль</a></div>
-              <div class="crumbs__nav-block"><a href="account-agent-message.html" class="crumbs__nav-link">Сообщения</a><span class="crumbs__nav-counter">25</span></div>
-              <div class="crumbs__nav-block"><a href="account-agent-fi-list.html" class="crumbs__nav-link">Избранное</a></div>
+              <div class="crumbs__nav-block crumbs__block--active"><a href="" class="crumbs__nav-link crumbs__nav-link--prof">Профиль</a></div>
+              <div class="crumbs__nav-block"><a href="account-agent-message.html" class="crumbs__nav-link crumbs__nav-link--mes">Сообщения</a><span class="crumbs__nav-counter">25</span></div>
+              <div class="crumbs__nav-block"><a href="account-agent-fi-list.html" class="crumbs__nav-link crumbs__nav-link--fav">Избранное</a></div>
               <div class="crumbs__nav-block"><a href="training.html" class="crumbs__nav-link crumbs__nav-link--training">Обучение</a></div>
         </div>
       </div>
-      <div class="account">
+      <div class="account gray-bg">
         <section class="main-content">
           <div class="container">
             <div class="row">
@@ -73,7 +75,7 @@
                         </div>
                       </div>
                     </div>
-                  </div><a href="account-agent-edit-account.html" class="button button--green--md">Редактировать профиль</a>
+                  </div><a href="#~" class="account__link-refresh">Обновить фото</a><a href="account-agent-edit-account.html" class="button button--green--md">Редактировать профиль</a>
                 </div>
                 <!-- Account action-->
                 <div class="account__action">
@@ -115,7 +117,7 @@
                 </div>
                 <div class="account__products">
                   <div class="account__title-block">
-                    <div class="account__block-name">Последние добавленные товары / услуги</div><a class="button button--add">Добавить заказ</a>
+                    <div class="account__block-name">Последние добавленные товары / услуги</div><a href="account-contractor-new-item.html" class="button button--add">Добавить заказ</a>
                   </div>
                   <div class="account__table">
                     <div class="table">
@@ -223,23 +225,26 @@
                 </div>
                 <div class="account__news news-block">
                   <h3 class="account__block-name account__news-title">Рекомендуем прочитать</h3>
-                  <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                          <div class="news__block"><a href="news-list.html" class="news__img-link"><img src="img/news/news-img2.jpg" alt="news" class="news__img-block"/></a>
+                  <div class="contractor-slider">
+                    <div class="news__slide">
+                          <div class="news__block"><a href="news-list.html" class="news__img-link">
+                              <div class="news__img-block"><img src="img/news/news-img2.jpg" alt="news"/></div></a>
                             <div class="news__desc"><a href="news-list.html" class="news__title">Большинство работодателей повысят зарплату сотрудникам</a>
                               <titme class="news__date">12 декабря 2016</titme>
                             </div>
                           </div>
                     </div>
-                    <div class="col-md-4 col-sm-4">
-                          <div class="news__block"><a href="news-list.html" class="news__img-link"><img src="img/news/news-img3.jpg" alt="news" class="news__img-block"/></a>
+                    <div class="news__slide">
+                          <div class="news__block"><a href="news-list.html" class="news__img-link">
+                              <div class="news__img-block"><img src="img/news/news-img3.jpg" alt="news"/></div></a>
                             <div class="news__desc"><a href="news-list.html" class="news__title">Бедный мой бухгалтер</a>
                               <titme class="news__date">12 декабря 2016</titme>
                             </div>
                           </div>
                     </div>
-                    <div class="col-md-4 col-sm-4">
-                          <div class="news__block"><a href="news-list.html" class="news__img-link"><img src="img/news/news-img4.jpg" alt="news" class="news__img-block"/></a>
+                    <div class="news__slide">
+                          <div class="news__block"><a href="news-list.html" class="news__img-link">
+                              <div class="news__img-block"><img src="img/news/news-img4.jpg" alt="news"/></div></a>
                             <div class="news__desc"><a href="news-list.html" class="news__title">Пассажиров метро научать искать работу</a>
                               <titme class="news__date">12 декабря 2016</titme>
                             </div>
@@ -316,10 +321,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="js/script.js"></script>
         <script src="js/project/nav-toggle.js"></script>
-        <script src="js/project/footer-link.js"></script>
+        <script src="js/project/block-toggle.js"></script>
         <script src="js/project/account-block.js"></script>
         <script src="js/project/action-title.js"></script>
         <script src="js/project/button-flag.js"></script>
+        <script src="js/project/slick.min.js"></script>
         <script src="js/project/modal.js"></script>
       </div>
     </div>

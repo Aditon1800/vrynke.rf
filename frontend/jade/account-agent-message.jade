@@ -31,7 +31,7 @@ html(lang="en")
               .header__nav-item
                 a(href="careers-list.html") Работать у нас
               .header__nav-item
-                a(href="news.html") Новости
+                a(href="news-list.html") Новости
               .header__nav-item
                 a(href="contact-us.html") Связаться с нами
           .header__sign-in
@@ -49,87 +49,88 @@ html(lang="en")
       //- Crumbs
       include components/crumbs
 
-      section.main-content.message
-        .container
-          .message__container
-            .message__left-block
-              .message__client-block
-                .message__client-img
-                  img(src="img/account/message/message-icon-1.png" alt="client icon")
-                .message__client-name
-                  | Миксим Иванов
+      .gray-bg
+        section.main-content.message
+          .container
+            .message__container
+              .message__left-block
+                .message__client-block
+                  .message__client-img
+                    img(src="img/account/message/message-icon-1.png" alt="client icon")
+                  .message__client-name
+                    | Миксим Иванов
 
-              .message__client-block.message__client-block--active
-                .message__client-img
-                  img(src="img/account/message/message-icon-2.png" alt="client icon")
-                .message__client-name
-                  | Павел Емельянов
+                .message__client-block.message__client-block--active
+                  .message__client-img
+                    img(src="img/account/message/message-icon-2.png" alt="client icon")
+                  .message__client-name
+                    | Павел Емельянов
 
-              .message__client-block
-                .message__client-img.green-check
-                  img(src="img/account/message/message-icon-3.png" alt="client icon")
-                .message__client-name
-                  | Андрей Андреев
+                .message__client-block
+                  .message__client-img.green-check
+                    img(src="img/account/message/message-icon-3.png" alt="client icon")
+                  .message__client-name
+                    | Андрей Андреев
 
-              .message__client-block
-                .message__client-img
-                  img(src="img/account/message/message-icon-4.png" alt="client icon")
-                .message__client-name
-                  | Ольга Михайлова
+                .message__client-block
+                  .message__client-img
+                    img(src="img/account/message/message-icon-4.png" alt="client icon")
+                  .message__client-name
+                    | Ольга Михайлова
 
-              .message__client-block
-                .message__client-img
-                  img(src="img/account/message/message-icon-5.png" alt="client icon")
-                .message__client-name
-                  | Администрация ВРЫНКЕ
+                .message__client-block
+                  .message__client-img
+                    img(src="img/account/message/message-icon-5.png" alt="client icon")
+                  .message__client-name
+                    | Администрация ВРЫНКЕ
 
-              .message__client-block
-                .message__client-img
-                  img(src="img/account/message/message-icon-6.png" alt="client icon")
-                .message__client-name
-                  | Роман Максимов
+                .message__client-block
+                  .message__client-img
+                    img(src="img/account/message/message-icon-6.png" alt="client icon")
+                  .message__client-name
+                    | Роман Максимов
 
-              .message__client-block
-                .message__client-img
-                  img(src="img/account/message/message-icon-8.png" alt="client icon")
-                .message__client-name
-                  | Ирина Николаева
+                .message__client-block
+                  .message__client-img
+                    img(src="img/account/message/message-icon-8.png" alt="client icon")
+                  .message__client-name
+                    | Ирина Николаева
 
-              .message__client-block
-                .message__client-img
-                  img(src="img/account/message/message-icon-7.png" alt="client icon")
-                .message__client-name
-                  | Дмитрий Васильев
+                .message__client-block
+                  .message__client-img
+                    img(src="img/account/message/message-icon-7.png" alt="client icon")
+                  .message__client-name
+                    | Дмитрий Васильев
 
-            .message__content-block
-              .message__client-info
-                .message__client-block-name Емельянов Павел владимирович
-                .message__client-id ID-A000000000
-                .message__info-block
-                  span.message__category Город:
-                  span.message__attr Москва
-                .message__info-block
-                  span.message__category Зарегестрирован:
-                  span.message__attr 25.12.2017
-              .message__chat-block
-                .message__chat-inner
-                  .message__get
-                    .message__frame
-                      .message__time-block
-                        span.message__date 01.01.2017
-                        span.message__time 22:35
-                      .message__mail Это сообщение от другого пользователя. Фильтруются сообщения с электронной почтой и номером телефона.
-                  .message__post
-                    .message__frame
-                      .message__time-block
-                        span.message__date 01.01.2017
-                        span.message__time 22:35
-                      .message__mail Это лучшее, что я видел!
-              .message__form
-                form(action="" method="" id="")
-                  textarea(name="mail-frame" class="textarea" placeholder="Напишите сообщение...")
-                  .message__button-block
-                    button.button.button--send Отправить
+              .message__content-block
+                .message__client-info
+                  .message__client-block-name Емельянов Павел владимирович
+                  .message__client-id ID-A000000000
+                  .message__info-block
+                    span.message__category Город:
+                    span.message__attr Москва
+                  .message__info-block
+                    span.message__category Зарегестрирован:
+                    span.message__attr 25.12.2017
+                .message__chat-block
+                  .message__chat-inner
+                    .message__get
+                      .message__frame
+                        .message__time-block
+                          span.message__date 01.01.2017
+                          span.message__time 22:35
+                        .message__mail Это сообщение от другого пользователя. Фильтруются сообщения с электронной почтой и номером телефона.
+                    .message__post
+                      .message__frame
+                        .message__time-block
+                          span.message__date 01.01.2017
+                          span.message__time 22:35
+                        .message__mail Это лучшее, что я видел!
+                .message__form
+                  form(action="" method="" id="")
+                    textarea(name="mail-frame" class="textarea" placeholder="Напишите сообщение...")
+                    .message__button-block
+                      button.button.button--send Отправить
 
 
 

@@ -9,6 +9,7 @@
     <meta name="keywords" content=""/>
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <ink rel="icon" href="favicon.ico" type="image/x-icon"></ink>
     <!-- [if lt IE 9]>
     <script src="js/sctiptIE.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -41,7 +42,7 @@
       </div>
       <!-- Crumbs-->
       <div class="crumbs"></div>
-      <div class="order order--item-list">
+      <div class="order order--item-list gray-bg">
         <section class="main-content contractor-list">
           <div class="container">
             <h1 class="main-content__title">Поставщики в Москве *</h1>
@@ -53,6 +54,12 @@
                 </div>
                 <input type="text" name="categorySearch" placeholder="Искать во всех категориях" class="input input--half-width input--no-margin"/>
               </form>
+            </div>
+            <div class="search-block--mob"><span>Сортировка:</span>
+              <select class="input">
+                <option disable="disable">Поставщик</option>
+                <option>Категория товаров / услуг</option>
+              </select>
             </div>
             <div class="order__table">
               <div class="table">
@@ -227,7 +234,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="js/script.js"></script>
         <script src="js/project/nav-toggle.js"></script>
-        <script src="js/project/footer-link.js"></script>
+        <script src="js/project/block-toggle.js"></script>
         <script src="js/project/account-block.js"></script>
       </div>
     </div>

@@ -1,0 +1,43 @@
+.dropdown-block {
+  @extend .input;
+  @media (max-width: 480px) {
+    display: block;  
+  }
+  display: none;
+  position: relative;
+  cursor: default;
+
+  &:after {
+    position: relative;
+    content: '';
+    display: block;
+    top: -12px;
+    left: 98%;
+    width: 8px;
+    border: 4px solid transparent;
+    border-top: 5px solid #000;
+  }
+
+  ul {
+    position: absolute;
+    display: none;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: $white-color;
+    outline:1px solid $gray-color;
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  ul li {
+    display: block;
+    margin-top: 0;
+    padding-left: 12px;
+  }
+}
+
+.dropdown-value {
+  font-weight: 700;
+}

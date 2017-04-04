@@ -1,3 +1,5 @@
+// Clicik account title function
+
 function clickTitle() {
   $('.js-action-title').each(function(index, elem) {
       $(elem).on('click',function() {
@@ -6,9 +8,11 @@ function clickTitle() {
   });
 }
 
+  // Function call
+
   clickTitle();
 
-
+// Windows width check
 $(window).resize(function() {
   if($(this).width() > 480) {
     $('.js-action-title').each(function(index, elem) {
@@ -22,11 +26,18 @@ var linkRefresh = $('.account__link-refresh'),
       actionList = $('.account__action-list'),
       itemClassName = actionList.children()[0].className;
 
-      function replaceLink() {
-        actionList.append('<li class="' + itemClassName + '"></li>');
-        linkRefresh.removeClass(linkRefresh[0].className).appendTo(actionList[0].lastElementChild);
-      }
+    // Get link in account 
+    function replaceLink() {
+      actionList.append('<li class="' + itemClassName + '"></li>');
+      linkRefresh.removeClass(linkRefresh[0].className).appendTo(actionList[0].lastElementChild); // replace link
+    }
 
+    if($(this).width() < 768) {
+      replaceLink();
+    }
+
+    $(window).resize(function() {
       if($(this).width() < 768) {
-        replaceLink();
+        replaceLink();   
       }
+    });

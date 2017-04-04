@@ -321,7 +321,7 @@
   &__news-block {
     @media (max-width: $md-screen - 1) and (min-width: $sm-screen) {
       .main__news-last {
-        display: none;
+        display: none!important;
       }
     }
     margin-bottom: 45px;

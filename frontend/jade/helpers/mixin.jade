@@ -12,7 +12,7 @@ mixin checkBox(checkboxId, text)
 mixin crumbsLink(crumbsLinkClass, crumbsAddress, crumbsTitle, crumbsSlash)
   .crumbs__block
     a(class=crumbsLinkClass, href=crumbsAddress)=crumbsTitle
-      span.crumbs__link-slash=crumbsSlash
+    span.crumbs__link-slash=crumbsSlash
 
 //- navLink
 mixin navLink(navLinkClass, navAddress, navTitle, navModActive)
@@ -29,7 +29,8 @@ mixin navLinkCounter(navCountClass, navLinkClass, navAddress, navTitle, navCount
 mixin newsBlock(imgUrl, title, date)
   .news__block
     a.news__img-link(href="news-list.html")
-      img.news__img-block(src="img/news/#{imgUrl}.jpg" alt="news" )
+      .news__img-block
+        img(src="img/news/#{imgUrl}.jpg" alt="news" )
     .news__desc
       a.news__title(href="news-list.html")=title
       titme.news__date=date

@@ -9,6 +9,7 @@
     <meta name="keywords" content=""/>
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <ink rel="icon" href="favicon.ico" type="image/x-icon"></ink>
     <!-- [if lt IE 9]>
     <script src="js/sctiptIE.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -32,7 +33,7 @@
             <div class="header__nav-list header__nav-list--mobile">
               <div class="header__nav-item"><a href="about.html">О платформе</a></div>
               <div class="header__nav-item"><a href="careers-list.html">Работать у нас</a></div>
-              <div class="header__nav-item"><a href="news.html">Новости</a></div>
+              <div class="header__nav-item"><a href="news-list.html">Новости</a></div>
               <div class="header__nav-item"><a href="contact-us.html">Связаться с нами</a></div>
             </div>
           </div>
@@ -49,84 +50,86 @@
       </div>
       <div class="crumbs">
         <div class="container">
-                  <div class="crumbs__nav-block crumbs__block--active"><a href="index.html" class="crumbs__nav-link crumbs__nav-link">Профиль</a></div>
-                  <div class="crumbs__nav-block"><a href="account-agent-message.html" class="crumbs__nav-link">Сообщения</a><span class="crumbs__nav-counter">25</span></div>
-                  <div class="crumbs__nav-block"><a href="account-agent-fi-list.html" class="crumbs__nav-link">Избранное</a></div>
-                  <div class="crumbs__nav-block"><a href="training.html" class="crumbs__nav-link">Обучения</a></div>
-                  <div class="crumbs__nav-block"><a href="account-contractor-order-list.html" class="crumbs__nav-link">Мои заказы</a><span class="crumbs__nav-counter">10</span></div>
+                  <div class="crumbs__nav-block crumbs__block--active"><a href="index.html" class="crumbs__nav-link crumbs__nav-link--prof">Профиль</a></div>
+                  <div class="crumbs__nav-block"><a href="account-agent-message.html" class="crumbs__nav-link  crumbs__nav-link--mes">Сообщения</a><span class="crumbs__nav-counter">25</span></div>
+                  <div class="crumbs__nav-block"><a href="account-agent-fi-list.html" class="crumbs__nav-link crumbs__nav-link--fav">Избранное</a></div>
+                  <div class="crumbs__nav-block"><a href="training.html" class="crumbs__nav-link crumbs__nav-link--trai">Обучения</a></div>
+                  <div class="crumbs__nav-block"><a href="account-contractor-order-list.html" class="crumbs__nav-link crumbs__nav-link--order">Мои заказы</a><span class="crumbs__nav-counter">10</span></div>
         </div>
       </div>
-      <section class="main-content message">
-        <div class="container">
-          <div class="message__container">
-            <div class="message__left-block">
-              <div class="message__client-block">
-                <div class="message__client-img"><img src="img/account/message/message-icon-1.png" alt="client icon"/></div>
-                <div class="message__client-name">Миксим Иванов</div>
+      <div class="gray-bg">
+        <section class="main-content message">
+          <div class="container">
+            <div class="message__container">
+              <div class="message__left-block">
+                <div class="message__client-block">
+                  <div class="message__client-img"><img src="img/account/message/message-icon-1.png" alt="client icon"/></div>
+                  <div class="message__client-name">Миксим Иванов</div>
+                </div>
+                <div class="message__client-block message__client-block--active">
+                  <div class="message__client-img"><img src="img/account/message/message-icon-2.png" alt="client icon"/></div>
+                  <div class="message__client-name">Павел Емельянов</div>
+                </div>
+                <div class="message__client-block">
+                  <div class="message__client-img green-check"><img src="img/account/message/message-icon-3.png" alt="client icon"/></div>
+                  <div class="message__client-name">Андрей Андреев</div>
+                </div>
+                <div class="message__client-block">
+                  <div class="message__client-img"><img src="img/account/message/message-icon-4.png" alt="client icon"/></div>
+                  <div class="message__client-name">Ольга Михайлова</div>
+                </div>
+                <div class="message__client-block">
+                  <div class="message__client-img"><img src="img/account/message/message-icon-5.png" alt="client icon"/></div>
+                  <div class="message__client-name">Администрация ВРЫНКЕ</div>
+                </div>
+                <div class="message__client-block">
+                  <div class="message__client-img"><img src="img/account/message/message-icon-6.png" alt="client icon"/></div>
+                  <div class="message__client-name">Роман Максимов</div>
+                </div>
+                <div class="message__client-block">
+                  <div class="message__client-img"><img src="img/account/message/message-icon-8.png" alt="client icon"/></div>
+                  <div class="message__client-name">Ирина Николаева</div>
+                </div>
+                <div class="message__client-block">
+                  <div class="message__client-img"><img src="img/account/message/message-icon-7.png" alt="client icon"/></div>
+                  <div class="message__client-name">Дмитрий Васильев</div>
+                </div>
               </div>
-              <div class="message__client-block message__client-block--active">
-                <div class="message__client-img"><img src="img/account/message/message-icon-2.png" alt="client icon"/></div>
-                <div class="message__client-name">Павел Емельянов</div>
-              </div>
-              <div class="message__client-block">
-                <div class="message__client-img green-check"><img src="img/account/message/message-icon-3.png" alt="client icon"/></div>
-                <div class="message__client-name">Андрей Андреев</div>
-              </div>
-              <div class="message__client-block">
-                <div class="message__client-img"><img src="img/account/message/message-icon-4.png" alt="client icon"/></div>
-                <div class="message__client-name">Ольга Михайлова</div>
-              </div>
-              <div class="message__client-block">
-                <div class="message__client-img"><img src="img/account/message/message-icon-5.png" alt="client icon"/></div>
-                <div class="message__client-name">Администрация ВРЫНКЕ</div>
-              </div>
-              <div class="message__client-block">
-                <div class="message__client-img"><img src="img/account/message/message-icon-6.png" alt="client icon"/></div>
-                <div class="message__client-name">Роман Максимов</div>
-              </div>
-              <div class="message__client-block">
-                <div class="message__client-img"><img src="img/account/message/message-icon-8.png" alt="client icon"/></div>
-                <div class="message__client-name">Ирина Николаева</div>
-              </div>
-              <div class="message__client-block">
-                <div class="message__client-img"><img src="img/account/message/message-icon-7.png" alt="client icon"/></div>
-                <div class="message__client-name">Дмитрий Васильев</div>
-              </div>
-            </div>
-            <div class="message__content-block">
-              <div class="message__client-info">
-                <div class="message__client-block-name">Емельянов Павел владимирович</div>
-                <div class="message__client-id">ID-A000000000</div>
-                <div class="message__info-block"><span class="message__category">Город:</span><span class="message__attr">Москва</span></div>
-                <div class="message__info-block"><span class="message__category">Зарегестрирован:</span><span class="message__attr">25.12.2017</span></div>
-              </div>
-              <div class="message__chat-block">
-                <div class="message__chat-inner">
-                  <div class="message__get">
-                    <div class="message__frame">
-                      <div class="message__time-block"><span class="message__date">01.01.2017</span><span class="message__time">22:35</span></div>
-                      <div class="message__mail">Это сообщение от другого пользователя. Фильтруются сообщения с электронной почтой и номером телефона.</div>
+              <div class="message__content-block">
+                <div class="message__client-info">
+                  <div class="message__client-block-name">Емельянов Павел владимирович</div>
+                  <div class="message__client-id">ID-A000000000</div>
+                  <div class="message__info-block"><span class="message__category">Город:</span><span class="message__attr">Москва</span></div>
+                  <div class="message__info-block"><span class="message__category">Зарегестрирован:</span><span class="message__attr">25.12.2017</span></div>
+                </div>
+                <div class="message__chat-block">
+                  <div class="message__chat-inner">
+                    <div class="message__get">
+                      <div class="message__frame">
+                        <div class="message__time-block"><span class="message__date">01.01.2017</span><span class="message__time">22:35</span></div>
+                        <div class="message__mail">Это сообщение от другого пользователя. Фильтруются сообщения с электронной почтой и номером телефона.</div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="message__post">
-                    <div class="message__frame">
-                      <div class="message__time-block"><span class="message__date">01.01.2017</span><span class="message__time">22:35</span></div>
-                      <div class="message__mail">Это лучшее, что я видел!</div>
+                    <div class="message__post">
+                      <div class="message__frame">
+                        <div class="message__time-block"><span class="message__date">01.01.2017</span><span class="message__time">22:35</span></div>
+                        <div class="message__mail">Это лучшее, что я видел!</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="message__form">
-                <form action="" method="" id="">
-                  <textarea name="mail-frame" placeholder="Напишите сообщение..." class="textarea"></textarea>
-                  <div class="message__button-block">
-                    <button class="button button--send">Отправить</button>
-                  </div>
-                </form>
+                <div class="message__form">
+                  <form action="" method="" id="">
+                    <textarea name="mail-frame" placeholder="Напишите сообщение..." class="textarea"></textarea>
+                    <div class="message__button-block">
+                      <button class="button button--send">Отправить</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!-- Footer-->
         <footer class="footer">
           <div class="container">
@@ -164,14 +167,14 @@
             </div>
           </div>
         </footer>
-      </section>
+      </div>
       <!-- Overlay-->
       <div class="overlay"></div>
       <!-- Scripts-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="js/script.js"></script>
       <script src="js/project/nav-toggle.js"></script>
-      <script src="js/project/footer-link.js"></script>
+      <script src="js/project/block-toggle.js"></script>
       <script src="js/project/account-block.js"></script>
     </div>
   </body>

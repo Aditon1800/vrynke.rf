@@ -21,7 +21,7 @@
 
         // Show/hide closed-button
         $(window).resize(function() {
-          if($(this).width()>992) {
+          if($(this).width() >= 992) {
           listButton.hide();
           }
         else {

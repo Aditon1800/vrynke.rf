@@ -1,9 +1,8 @@
 .crumbs
   include ../helpers/mixin
   .container
-
-    +navLink("crumbs__nav-link crumbs__nav-link", "index.html", "Профиль", "crumbs__block--active")
-    +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "account-agent-message.html", "Сообщения", '25')
-    +navLink("crumbs__nav-link", "account-agent-fi-list.html", "Избранное")
-    +navLink("crumbs__nav-link", "training.html", "Обучения")
-    +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link", "account-contractor-order-list.html", "Мои заказы", '10')
+    +navLink("crumbs__nav-link crumbs__nav-link--prof", "index.html", "Профиль", "crumbs__block--active")
+    +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link  crumbs__nav-link--mes", "account-agent-message.html", "Сообщения", '25')
+    +navLink("crumbs__nav-link crumbs__nav-link--fav", "account-agent-fi-list.html", "Избранное")
+    +navLink("crumbs__nav-link crumbs__nav-link--trai", "training.html", "Обучения")
+    +navLinkCounter("crumbs__nav-counter", "crumbs__nav-link crumbs__nav-link--order", "account-contractor-order-list.html", "Мои заказы", '10')

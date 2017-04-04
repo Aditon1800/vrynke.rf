@@ -260,12 +260,20 @@
     background-color: $button-blue-color;
     color: $white-color;
 
-    &:after {
+    span {
+      display: inline-block;
       width: 18px;
       height: 18px;
       left: 28px;
       background-image: url('../img/account/blue-edit.png');
       background-position: center top;
+      background-repeat: no-repeat;
+      vertical-align: sub;
+      margin-right: 3px;
+    }
+
+    &:after {
+      display: none;
     }
   }
 
@@ -287,22 +295,16 @@
     width: 100%;
     background-color: #ff1c49;
     font-size: 1.3rem;
-    padding-left: 20px;
 
-    &:after {
-      @media (max-width: 480px) {
-        left: 60px;
-      }
-      position: absolute;
-      content: '';
-      display: block;
-      top: 50%;
-      left: 13%;
-      transform: translateY(-50%);
+    span {
+      display: inline-block;
       width: 14px;
       height: 18px;
       background-image: url('../img/account/ribbon.png');
       background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      margin-right: 5px;
+      vertical-align: middle;
     }
   }
 }

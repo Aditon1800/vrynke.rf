@@ -31,7 +31,7 @@ html(lang="en")
               .header__nav-item
                 a(href="careers-list.html") Работать у нас
               .header__nav-item
-                a(href="news.html") Новости
+                a(href="news-list.html") Новости
               .header__nav-item
                 a(href="contact-us.html") Связаться с нами
           .header__sign-in
@@ -54,10 +54,16 @@ html(lang="en")
           +crumbsLink("crumbs__link","region-contractors-list.html", "Москва", " /")
           +crumbsLink("crumbs__link","", "Все предложения поставщика")
 
-      .order.order--item-list
+      .order.order--item-list.gray-bg
         section.main-content
           .container
             h1.main-content__title Все предложения поставщика: #[span ООО Ромашка]
+            .search-block--mob
+              span Сортировка:
+              select.input()
+                option(disable) Наименование
+                option Вознаграждение
+                option Цена
             .order__table
               .table
                 .tr.title-tr

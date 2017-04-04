@@ -14,6 +14,8 @@ html(lang="en")
       section.main-content.training
         .container
           h1.main-content__title Обучение
+          .dropdown-block
+            span.dropdown-value Все материалы
           ul.training__tab-list
             li.training__tab-item.js-tab-item.training__tab-item--active Все материалы 
             li.training__tab-item.js-tab-item Семинары
@@ -22,22 +24,25 @@ html(lang="en")
             li.training__tab-item.js-tab-item Презентации
             li.training__tab-item.js-tab-item Статьи
           .row
-              .col-md-3.col-sm-4
+            .news__line-wrap
+              .col-md-3.col-sm-4.col-xs-6
                 .training__block
                   a.training__img-link(href="#~")
-                    .training__img-block(style="background-image: url('../img/training/training-img1.jpg');")
+                    .training__img-block
+                      img(src="img/training/training-img1.jpg" alt="training-img")
                     .training__category-block
                       span.training__category.training__category--web Вэбинар
                       span.training__category.training__category--free Бесплатно
                     
                   .training__desc
-                    a.training__title(href="#~") Активные продажи по телефону и холожные звонки
+                    a.training__title(href="#~") Активные продажи по телефону и холодные звонки
                     titme.training__date Начало: 12.12.2016 17:00
 
-              .col-md-3.col-sm-4
+              .col-md-3.col-sm-4.col-xs-6
                 .training__block
                   a.training__img-link(href="#~")
-                    .training__img-block(style="background-image: url('../img/training/training-img2.jpg');")
+                    .training__img-block
+                      img(src="img/training/training-img2.jpg" alt="training-img")
                     .training__category-block
                       span.training__category.training__category--sem Семинар
                     
@@ -46,10 +51,11 @@ html(lang="en")
                     titme.training__date Начало: 12.12.2016 17:00
 
 
-              .col-md-3.col-sm-4
+              .col-md-3.col-sm-4.col-xs-6
                 .training__block
                   a.training__img-link(href="#~")
-                    .training__img-block(style="background-image: url('../img/training/training-img3.jpg');")
+                    .training__img-block
+                      img(src="img/training/training-img3.jpg" alt="training-img")
                     .training__category-block
                       span.training__category.training__category--sec Статьи
                     
@@ -58,10 +64,11 @@ html(lang="en")
                     titme.training__date 12.12.2016
 
 
-              .col-md-3.col-sm-4
+              .col-md-3.col-sm-4.col-xs-6
                 .training__block
                   a.training__img-link(href="#~")
-                    .training__img-block(style="background-image: url('../img/training/training-img4.jpg');")
+                    .training__img-block
+                      img(src="img/training/training-img4.jpg" alt="training-img")
                     .training__category-block
                       span.training__category.training__category--pres Презентиция
                     
@@ -71,10 +78,11 @@ html(lang="en")
 
               // =================
 
-              .col-md-3.col-sm-4
+              .col-md-3.col-sm-4.col-xs-6
                 .training__block
                   a.training__img-link(href="#~")
-                    .training__img-block(style="background-image: url('../img/training/training-img5.jpg');")
+                    .training__img-block
+                      img(src="img/training/training-img5.jpg" alt="training-img")
                     .training__category-block
                       span.training__category.training__category--pres Презентация
                     
@@ -82,10 +90,11 @@ html(lang="en")
                     a.training__title(href="#~") VIII ежегодная конференция B2B basis
                     titme.training__date Начало: 12.12.2016 17:00
 
-              .col-md-3.col-sm-4
+              .col-md-3.col-sm-4.col-xs-6
                 .training__block
                   a.training__img-link(href="#~")
-                    .training__img-block(style="background-image: url('../img/training/training-img6.jpg');")
+                    .training__img-block
+                      img(src="img/training/training-img6.jpg" alt="training-img")
                     .training__category-block
                       span.training__category.training__category--sem Семинар
                     
@@ -94,10 +103,11 @@ html(lang="en")
                     titme.training__date 12.12.2016
 
 
-              .col-md-3.col-sm-4
+              .col-md-3.col-sm-4.col-xs-6
                 .training__block
                   a.training__img-link(href="#~")
-                    .training__img-block(style="background-image: url('../img/training/training-img7.jpg');")
+                    .training__img-block
+                      img(src="img/training/training-img7.jpg" alt="training-img")
                     .training__category-block
                       span.training__category.training__category--web Вебинар
                     
@@ -106,10 +116,11 @@ html(lang="en")
                     titme.training__date 12.12.2016
 
 
-              .col-md-3.col-sm-4
+              .col-md-3.col-sm-4.col-xs-6
                 .training__block
                   a.training__img-link(href="#~")
-                    .training__img-block(style="background-image: url('../img/training/training-img8.jpg');")
+                    .training__img-block
+                      img(src="img/training/training-img8.jpg" alt="training-img")
                     .training__category-block
                       span.training__category.training__category--web Вебинар
                     
@@ -117,56 +128,82 @@ html(lang="en")
                     a.training__title(href="#~") Как увеличить продажи с сайта
                     titme.training__date 12.12.2016
 
+          include components/paginator
 
+          // Archive block
+          .training__archive-block
+            h2.training__archive-title Архив учебных материалов
+            .training__archive-inner
+              .col-md-6
+                ul.training__archive-list
+                  li.training__archive-item
+                    a(href="") Активные продажи по телефону и холодные звонки
+                  li.training__archive-item
+                    a(href="") Организация отдела продаж
+                  li.training__archive-item
+                    a(href="") Выгоды и недостатки отдела продаж
+                  li.training__archive-item
+                    a(href="") 5 секретов успехов для собственников
+
+              .col-md-6
+                ul.training__archive-list
+                  li.training__archive-item
+                    a(href="") VIII ежегодная конференция B2B basis
+                  li.training__archive-item
+                    a(href="") 4 системы найма и подбора персонала
+                  li.training__archive-item
+                    a(href="") Как внедрить CRM самостоятельно
+                  li.training__archive-item
+                    a(href="") Как увеличить продажи с сайта
 
           include components/paginator
 
       // Footer
       .prefooter
-  picture
-    source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
-    img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
+        picture
+          source.prefooter__img-block(srcset="img/footer-img-main-mob.png" media="(max-width: 991px)")
+          img.prefooter__img-block(src="img/footer-img-main.png", alt="footer-img")
 
-footer.footer
-  .container
-    .row
-      .col
-        .footer__content-wrap
-          h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
-          ul.footer__list
-            li.footer__list-item
-              a.footer__list-link(href="privacy.html") Политика конфиденциальности
-            li.footer__list-item
-              a.footer__list-link(href="public-offer.html") Публичная оферта
-            li.footer__list-item
-              a.footer__list-link(href="news-list.html") Новости
-            li.footer__list-item
-              a.footer__list-link(href="contact-us.html") Связаться с нами
-      .col
-        .footer__content-wrap
-          h2.footer__title.js-footer-title Врынке #[span.arrow]
-          ul.footer__list
-            li.footer__list-item
-              a.footer__list-link(href="about.html") О платформе
-            li.footer__list-item
-              a.footer__list-link(href="careers-list.html") Работать у нас
-            li.footer__list-item
-              a.footer__list-link(href="partnership.html") Сотрудничать с нами
-            li.footer__list-item
-              a.footer__list-link(href="legal-info.html") Юридическая информация
-      .col
-        .footer__content-wrap
-          .logo.footer__logo
-            a(href="index.html")
-              img(src="img/footer-logo.png" alt="врынке.рф")
-          p.footer__copy &copy; Врынке, 2017. Все права защищены.
-          .footer__social
-            a.footer__social-icon.footer__social-vk(href="#~")
-            a.footer__social-icon.footer__social-inst(href="#~")
-            a.footer__social-icon.footer__social-facebook(href="#~")
-          .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
+      footer.footer
+        .container
+          .row
+            .col
+              .footer__content-wrap
+                h2.footer__title.js-footer-title Информация и поддержка #[span.arrow]
+                ul.footer__list
+                  li.footer__list-item
+                    a.footer__list-link(href="privacy.html") Политика конфиденциальности
+                  li.footer__list-item
+                    a.footer__list-link(href="public-offer.html") Публичная оферта
+                  li.footer__list-item
+                    a.footer__list-link(href="news-list.html") Новости
+                  li.footer__list-item
+                    a.footer__list-link(href="contact-us.html") Связаться с нами
+            .col
+              .footer__content-wrap
+                h2.footer__title.js-footer-title Врынке #[span.arrow]
+                ul.footer__list
+                  li.footer__list-item
+                    a.footer__list-link(href="about.html") О платформе
+                  li.footer__list-item
+                    a.footer__list-link(href="careers-list.html") Работать у нас
+                  li.footer__list-item
+                    a.footer__list-link(href="partnership.html") Сотрудничать с нами
+                  li.footer__list-item
+                    a.footer__list-link(href="legal-info.html") Юридическая информация
+            .col
+              .footer__content-wrap
+                .logo.footer__logo
+                  a(href="index.html")
+                    img(src="img/footer-logo.png" alt="врынке.рф")
+                p.footer__copy &copy; Врынке, 2017. Все права защищены.
+                .footer__social
+                  a.footer__social-icon.footer__social-vk(href="#~")
+                  a.footer__social-icon.footer__social-inst(href="#~")
+                  a.footer__social-icon.footer__social-facebook(href="#~")
+                .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
       include partials/scripts
-
+      script(src="js/project/dropdown.js")
       script.
         $('.js-tab-item').each(function(index, elem) {
             $(elem).on('click',function() {

@@ -7,6 +7,9 @@
   }
 
   &__name {
+    @media (max-width: 480px) {
+      display: none;
+    }
     display: inline-block;
     width: 120px;
     font-size: 1.4rem;
@@ -21,11 +24,20 @@
   }
 
   &__list-item {
+    @media (max-width: 480px) {
+      float: none;
+    }
     float: left;
     margin-right: 10px;
     margin-bottom: 15px;
 
     a {
+      @media (max-width: 480px) {
+        background-color: transparent;
+        color: $black-color;
+        font-weight: 600;
+        padding-left: 0px;
+      }
       background-color: $dark-blue-color;
       border-radius: 4px;
       font-size: 1.4rem;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+.gray-bg<!DOCTYPE html>
 html(lang="en")
   head
     include partials/meta
@@ -32,7 +32,7 @@ html(lang="en")
               .header__nav-item
                 a(href="careers-list.html") Работать у нас
               .header__nav-item
-                a(href="news.html") Новости
+                a(href="news-list.html") Новости
               .header__nav-item
                 a(href="contact-us.html") Связаться с нами
           .header__sign-in
@@ -55,7 +55,7 @@ html(lang="en")
           +crumbsLink("crumbs__link","catalog-category.html", "Каталог товаров/услуг", " /")
           +crumbsLink("crumbs__link","", "Подкатегория", " /")
 
-      .order.order--item-list
+      .order.order--item-list.gray-bg
         section.main-content
           .container
             h1.main-content__title Подкатегория
@@ -80,6 +80,14 @@ html(lang="en")
                 .search-block
                   input.check(type="checkbox" id="photo")
                   label.check-label(for="photo") с фото
+
+            .search-block--mob
+              span Сортировка:
+              select.input()
+                option(disable) Наименование
+                option Вознаграждение
+                option Цена
+
 
             .order__table
               .table
