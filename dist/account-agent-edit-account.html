@@ -94,7 +94,7 @@
                 <div class="col-md-4 col-sm-6">
                       <input type="text" name="city" placeholder="Московская область" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
                 </div>
-                <div class="col-md-12">
+                <div class="col-sm-12">
                       <input type="text" name="address" placeholder="Московская область" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
                 </div>
               </div>
@@ -102,8 +102,8 @@
               <div class="account__check-title">
                 <h3 class="account__edit-name account__edit-name--md">Фактический адрес (для направления корреспонденции)</h3>
                     <div class="checkbox">
-                      <input type="checkbox" id="firstCheckbox" class="checkbox__input"/>
-                      <label for="firstCheckbox" class="checkbox__label">Соответствует адресу регистрации</label>
+                      <input type="checkbox" id="address" class="checkbox__input"/>
+                      <label for="address" class="checkbox__label">Соответствует адресу регистрации</label>
                     </div>
               </div>
               <div class="row account__input-block">
@@ -116,7 +116,7 @@
                 <div class="col-md-4 col-sm-6">
                       <input type="text" name="city" placeholder="Московская область" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
                 </div>
-                <div class="col-md-12">
+                <div class="col-sm-12">
                       <input type="text" name="address" placeholder="Московская область" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
                 </div>
               </div>
@@ -133,30 +133,28 @@
               <div class="account__check-wrap">
                 <div class="account__input-block account__input-block--mb">
                       <div class="checkbox">
-                        <input type="checkbox" id="secondCheckbox" class="checkbox__input"/>
-                        <label for="secondCheckbox" class="checkbox__label">Получить статус подтверждённого агента</label>
+                        <input type="checkbox" id="js-check-status" class="checkbox__input"/>
+                        <label for="js-check-status" class="checkbox__label">Получить статус подтверждённого агента</label>
                       </div>
                   <div class="question">&#63;<span class="question__tooltip">После проверки данных специалистами врынке возле наименования вашей компании появится значок “подтверждено”. для получения статуса подтвержденного агента необходимо предоставить всю информацию и оплатить счет.</span></div>
                   <div class="account__input-block__info">Стоимость услуги – <span class="account__check-get">0</span> рублей</div>
                 </div>
               </div>
-              <div class="row account__input-block">
+              <div class="row account__input-block js-let-status">
                 <div class="col-md-4 col-sm-6">
-                      <input type="text" name="inn" placeholder="40702810638050013199" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
+                  <input type="text" name="inn" placeholder="40702810638050013199" disabled="disabled" class="input"/>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                      <input type="text" name="bank" placeholder="ПАО &quot;Сбербанк России&quot;" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
-                </div>
-              </div>
-              <div class="row account__input-block">
-                <div class="col-md-4 col-sm-6">
-                      <input type="text" name="name" placeholder="Иванов Иван Иванович" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
+                  <input type="text" name="bank" placeholder="ПАО &quot;Сбербанк России&quot;" disabled="disabled" class="input"/>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                      <input type="text" name="id" placeholder="656565654654" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
+                  <input type="text" name="name" placeholder="Иванов Иван Иванович" disabled="disabled" class="input"/>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                      <input type="text" name="id" placeholder="656565654654" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input"/>
+                  <input type="text" name="id" placeholder="656565654654" disabled="disabled" class="input"/>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <input type="text" name="id" placeholder="656565654654" disabled="disabled" class="input"/>
                 </div>
               </div>
               <div class="row account__input-block">
@@ -213,7 +211,7 @@
         <div class="overlay"></div>
         <!-- Scripts-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="js/script.js"></script>
+        <script src="js/project/script.js"></script>
         <script src="js/project/nav-toggle.js"></script>
         <script src="js/project/block-toggle.js"></script>
         <script src="js/project/account-block.js"></script>

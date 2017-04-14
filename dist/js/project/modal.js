@@ -12,6 +12,11 @@ getModal('.js-modal-pers', '.modal--pers');
 getModal('.js-call-message', '.modal--mes');
 getModal('.js-question', '.modal--question');
 
+$('.js-send').click(function(){
+  $('.modal--mes').hide();
+  $('.modal--feedback').show();
+});
+
 // close Modal
 $('.modal__close, .overlay, modal__close--mes').click(function() {
     $('.overlay').fadeOut('fast');

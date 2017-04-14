@@ -63,7 +63,7 @@
         <div class="container">
           <h1 class="main-content__title">Новый заказ</h1>
           <div class="accountn__edit-block">
-            <form action="" method="" id="">
+            <form action="account-contractor-order-success.html" method="" id="">
               <div class="row account__block-category">
                 <div class="col-sm-3"><span class="account__input-category">Товар / услуга:</span></div>
                 <div class="col-sm-9"><span class="account__input-attr">Композитный состав CERAMET ANTICOR <span>ID-P000000001-00123</span></span></div>
@@ -81,7 +81,7 @@
               <div class="row account__block-category">
                 <div class="col-sm-3"><span class="account__input-category">Дополнительная<br/>информация:</span></div>
                 <div class="col-sm-8 col-md-8 col-lg-6">
-                          <input type="textarea" name="moreInfo" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input textarea"/>
+                  <textarea id="moreInfo" class="textarea"></textarea>
                           <div class="checkbox">
                             <input type="checkbox" id="firstCheckbox" class="checkbox__input"/>
                             <label for="firstCheckbox" class="checkbox__label">Воспользоваться гарантированным вознаграждением</label>
@@ -95,16 +95,16 @@
               <h2 class="account__edit-name">Плательщик / Покупатель</h2>
               <div class="row account__input-block">
                 <div class="col-sm-4">
-                          <input type="text" name="name" placeholder="Наименования *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
+                          <input type="text" name="name" placeholder="Наименования *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-1check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="inn" placeholder="ИНН *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
+                          <input type="text" name="inn" placeholder="ИНН *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-1check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="kpp" placeholder="КПП *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
+                          <input type="text" name="kpp" placeholder="КПП *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-1check"/>
                 </div>
                 <div class="col-sm-4">
-                          <input type="text" name="code" placeholder="Код ОКПО" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-check"/>
+                          <input type="text" name="code" placeholder="Код ОКПО" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-let-1check"/>
                 </div>
               </div>
               <!-- Registered address-->
@@ -144,38 +144,40 @@
               </div>
               <div class="account__input-block account__input-block--sm">
                         <div class="checkbox">
-                          <input type="checkbox" id="secondCheckbox" class="checkbox__input"/>
-                          <label for="secondCheckbox" class="checkbox__label">Требуется доставка</label>
+                          <input type="checkbox" id="js-check-status" class="checkbox__input"/>
+                          <label for="js-check-status" class="checkbox__label">Требуется доставка</label>
                         </div>
               </div>
               <!-- Contact info-->
-              <div class="account__check-title">
-                <h3 class="account__edit-name">Грузополучатель</h3>
-                        <div class="checkbox">
-                          <input type="checkbox" id="thirdCheckbox" class="checkbox__input"/>
-                          <label for="thirdCheckbox" class="checkbox__label">Соответствует плательщику / получателю *</label>
-                        </div>
-              </div>
-              <div class="row account__input-block">
-                <div class="col-sm-4">
-                          <input type="text" name="name" placeholder="Наименования *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
+              <div class="account__input-block js-let-status">
+                <div class="account__check-title">
+                  <h3 class="account__edit-name">Грузополучатель</h3>
+                          <div class="checkbox">
+                            <input type="checkbox" id="consignee" class="checkbox__input"/>
+                            <label for="consignee" class="checkbox__label">Соответствует плательщику / получателю *</label>
+                          </div>
                 </div>
-                <div class="col-sm-4">
-                          <input type="text" name="inn" placeholder="ИНН *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
-                </div>
-                <div class="col-sm-4">
-                          <input type="text" name="kpp" placeholder="КПП *" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
-                </div>
-                <div class="col-sm-4">
-                          <input type="text" name="code" placeholder="Код ОКПО" required="required" oninvalid="this.setCustomValidity('undefined')" oninput="setCustomValidity('')" class="input js-get-check"/>
+                <div class="row account__input-block">
+                  <div class="col-sm-4">
+                    <input type="text" name="name" placeholder="Наименования *" disabled="disabled" class="input js-get-1check"/>
+                  </div>
+                  <div class="col-sm-4">
+                    <input type="text" name="inn" placeholder="ИНН *" disabled="disabled" class="input js-get-1check"/>
+                  </div>
+                  <div class="col-sm-4">
+                    <input type="text" name="kpp" placeholder="КПП *" disabled="disabled" class="input js-get-1check"/>
+                  </div>
+                  <div class="col-sm-4">
+                    <input type="text" name="code" placeholder="Код ОКПО" disabled="disabled" class="input js-get-1check"/>
+                  </div>
                 </div>
               </div>
               <!-- Delivery address-->
               <div class="account__check-title">
                 <h3 class="account__edit-name account__edit-name--md">Адрес доставки</h3>
                         <div class="checkbox">
-                          <input type="checkbox" id="fourthCheckbox" class="checkbox__input"/>
-                          <label for="fourthCheckbox" class="checkbox__label">Соответствует адресу плательщика / получателя *</label>
+                          <input type="checkbox" id="address" class="checkbox__input"/>
+                          <label for="address" class="checkbox__label">Соответствует адресу плательщика / получателя *</label>
                         </div>
               </div>
               <div class="row account__input-block">
@@ -193,7 +195,9 @@
                 </div>
               </div>
               <div class="row account__input-block">
-                <div class="col-sm-6 col-md-4"><a href="account-contractor-order-success.html" class="button button--green">Отправить заявку на заказ</a></div>
+                <div class="col-sm-6 col-md-4">
+                  <button class="button button--green">Отправить заявку на заказ</button>
+                </div>
               </div>
               <div class="account__important-info"><span>Поля, отмеченные звездочкой (*), обязательны к заполнению.</span></div>
             </form>
@@ -245,10 +249,21 @@
         <div class="overlay"></div>
         <!-- Scripts-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="js/script.js"></script>
+        <script src="js/project/script.js"></script>
         <script src="js/project/nav-toggle.js"></script>
         <script src="js/project/block-toggle.js"></script>
         <script src="js/project/account-block.js"></script>
+        <script>
+          var checkConsignee = document.getElementById('consignee'),
+            copyCons = document.getElementsByClassName('js-let-1check'),
+            pasteToCons = document.getElementsByClassName('js-get-1check');
+          
+          checkConsignee.onchange = function() {
+            if (this.checked) {
+              getCheck(copyCons, pasteToCons);
+            }
+          }
+        </script>
       </section>
     </div>
   </body>

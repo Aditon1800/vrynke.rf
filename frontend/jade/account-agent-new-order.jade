@@ -54,7 +54,7 @@ html(lang="en")
         .container
           h1.main-content__title Новый заказ
           .accountn__edit-block
-            form(action="" method="" id="")
+            form(action="account-contractor-order-success.html" method="" id="" )
 
               .row.account__block-category
                 .col-sm-3
@@ -78,7 +78,7 @@ html(lang="en")
                     br
                     | информация:
                 .col-sm-8.col-md-8.col-lg-6
-                  +inputBlock('textarea', 'textarea', 'moreInfo')
+                  textarea.textarea(id='moreInfo')
                   +checkBox('firstCheckbox', 'Воспользоваться гарантированным вознаграждением')
                   .question &#63;
                     .question__tooltip Краткие подробности об услуге.
@@ -87,13 +87,13 @@ html(lang="en")
               h2.account__edit-name Плательщик / Покупатель
               .row.account__input-block
                 .col-sm-4
-                  +inputBlock("js-let-check","text", "name", "Наименования *")
+                  +inputBlock("js-let-1check","text", "name", "Наименования *")
                 .col-sm-4
-                  +inputBlock("js-let-check","text", "inn", "ИНН *")
+                  +inputBlock("js-let-1check","text", "inn", "ИНН *")
                 .col-sm-4
-                  +inputBlock("js-let-check","text", "kpp", "КПП *")
+                  +inputBlock("js-let-1check","text", "kpp", "КПП *")
                 .col-sm-4
-                  +inputBlock("js-let-check","text", "code", "Код ОКПО")
+                  +inputBlock("js-let-1check","text", "code", "Код ОКПО")
 
               // Registered address
               h3.account__edit-name.account__edit-name--md Адрес места нахождения (юридический адрес)
@@ -121,26 +121,27 @@ html(lang="en")
                 .col-sm-4
                   +inputBlock("","text", "bik", "БИК *")
               .account__input-block.account__input-block--sm
-                  +checkBox('secondCheckbox', 'Требуется доставка')
+                  +checkBox('js-check-status', 'Требуется доставка')
 
               // Contact info
-              .account__check-title
-                h3.account__edit-name Грузополучатель
-                +checkBox('thirdCheckbox', 'Соответствует плательщику / получателю *')
-              .row.account__input-block
-                .col-sm-4
-                  +inputBlock("js-get-check","text", "name", "Наименования *")
-                .col-sm-4
-                  +inputBlock("js-get-check","text", "inn", "ИНН *")
-                .col-sm-4
-                  +inputBlock("js-get-check","text", "kpp", "КПП *")
-                .col-sm-4
-                  +inputBlock("js-get-check","text", "code", "Код ОКПО")
+              .account__input-block.js-let-status
+                .account__check-title
+                  h3.account__edit-name Грузополучатель
+                  +checkBox('consignee', 'Соответствует плательщику / получателю *')
+                .row.account__input-block
+                  .col-sm-4
+                    input.input.js-get-1check(type="text" name="name" placeholder="Наименования *" disabled)
+                  .col-sm-4
+                    input.input.js-get-1check(type="text" name="inn" placeholder="ИНН *" disabled)
+                  .col-sm-4
+                    input.input.js-get-1check(type="text" name="kpp" placeholder="КПП *" disabled)
+                  .col-sm-4
+                    input.input.js-get-1check(type="text" name="code" placeholder="Код ОКПО" disabled)
 
               // Delivery address
               .account__check-title
                 h3.account__edit-name.account__edit-name--md Адрес доставки
-                +checkBox('fourthCheckbox', 'Соответствует адресу плательщика / получателя *')
+                +checkBox('address', 'Соответствует адресу плательщика / получателя *')
               .row.account__input-block
                 .col-sm-4
                   +inputBlock("js-get-check","text", "index", "Индекс *")
@@ -153,7 +154,7 @@ html(lang="en")
 
               .row.account__input-block
                 .col-sm-6.col-md-4
-                  a.button.button--green(href="account-contractor-order-success.html") Отправить заявку на заказ
+                  button.button.button--green Отправить заявку на заказ
               .account__important-info
                 span Поля, отмеченные звездочкой (*), обязательны к заполнению.
 
@@ -202,4 +203,14 @@ html(lang="en")
                     a.footer__social-icon.footer__social-facebook(href="#~")
                   .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
         include partials/scripts
+        script.
+          var checkConsignee = document.getElementById('consignee'),
+            copyCons = document.getElementsByClassName('js-let-1check'),
+            pasteToCons = document.getElementsByClassName('js-get-1check');
+
+          checkConsignee.onchange = function() {
+            if (this.checked) {
+              getCheck(copyCons, pasteToCons);
+            }
+          }
 

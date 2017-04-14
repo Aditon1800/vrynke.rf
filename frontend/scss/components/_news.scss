@@ -239,8 +239,16 @@ button.slick-prev {
   display: none!important;
 }
 
-.contractor-slider .slick-next {
+.account-slider .slick-next {
   @media (max-width: $md-screen - 1) {
     display: block!important;
+    background-size: contain;
+    right: -24px;
+    height: 70%;
+  }
+  @media (max-width: $sm-screen - 1) {
+    background-size: cover;
+    right: 0;
+    height: 88%;
   }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 html(lang="en")
   head
-    link(rel="stylesheet", href="css/dtp/bootstrap.min.css")
+    link(rel="stylesheet", href="css/dtp/bootstrap.custom.css")
     include partials/meta
     link(rel="stylesheet", href="css/dtp/bootstrap-datetimepicker.min.css")
   body
@@ -59,7 +59,7 @@ html(lang="en")
 
       section.main-content.account--edit
         .container
-          h1.main-content__title Добавить новый товар / услугу
+          h1.main-content__title Редактировать товар / услугу
 
           form(action="account-contractor-preview-item.html" method="" id="")
             // Main info
@@ -179,16 +179,20 @@ html(lang="en")
             .row.account__input-block
               .col-sm-6
                 .account__edit-title Форма договора на поставку товара или оказание услуг *
+                .account__dl-block
+                  .account__dl Загруежен:
                 .input__fileform
-                  .input__filefield
+                  //- .input__filefield
                   .input__fileform-button Обзор
                   input.input(type="file", name="contract")
                 .input__important-info Размер файла не должен превышать 2Мб. Разерешённые форматы: DOC, DOCX, ODT, RTF, PDF
 
               .col-sm-6
                 .account__edit-title Прайс-лист *
+                .account__dl-block
+                  .account__dl Загруежен:
                 .input__fileform
-                  .input__filefield
+                  //- .input__filefield
                   .input__fileform-button Обзор
                   input.input(type="file", name="priceList")
                 .input__important-info Размер файла не должен превышать 2Мб. Разерешённые форматы: DOC, DOCX, ODT, RTF, PDF
@@ -196,6 +200,8 @@ html(lang="en")
             .row.account__input-block
               .col-sm-6
                 .account__edit-title Презентация (PDF)
+
+                .account__dl-block
                 .input__fileform
                   .input__filefield
                   .input__fileform-button Обзор
@@ -204,8 +210,11 @@ html(lang="en")
 
               .col-sm-6
                 .account__edit-title Другие материалы
+                .account__dl-block
+                  .account__dl Загруежено:
+
                 .input__fileform
-                  .input__filefield
+                  //- .input__filefield
                   .input__fileform-button Обзор
                   input.input(type="file", name="other")
 

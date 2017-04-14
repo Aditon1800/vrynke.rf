@@ -230,3 +230,6 @@ html(lang="en")
                   a.footer__social-icon.footer__social-facebook(href="#~")
                 .footer__author-info Проект создан - #[a.footer__author-link(href="http://voidmedia.ru/" target="_blank") Void media] 
       include partials/scripts
+      script(src="js/sticky.js")
+      script.
+        jQuery('.person__img-block').stickyfloat({ duration: 200 });

@@ -131,6 +131,10 @@
         color: $red-color;
         border-bottom: 5px solid $red-color;
       }
+
+      &:visited {
+        color: inherit;
+      }
     }
   }
 
@@ -139,6 +143,14 @@
     font-size: 1.4em;
     text-transform: uppercase;
     margin-right: -15px;
+
+    a:visited {
+      color: black;
+    }
+
+    a:last-child:visited {
+      color: $white-color;
+    }
   }
 
   &__mob-reg {
@@ -150,6 +162,7 @@
     height: 55px;
     font-size: 1.4rem;
     text-transform: uppercase;
+    border-radius: 3px;
   }
 
   &__desc-reg {
@@ -242,18 +255,34 @@
       padding-top: 18px;
       padding-bottom: 18px;
       padding-left: 35px;
+
+      &:visited {
+        color: inherit;
+      }
     }
 
     &:first-child a {
       background-position: left 20px;
+
+      &:visited {
+        color: inherit;
+      }
     }
 
     &:nth-child(2) a {
       background-position: left -30px;
+
+      &:visited {
+        color: inherit;
+      }
     }
 
     &:last-child a {
       background-position: left -82px;
+
+      &:visited {
+        color: inherit;
+      }
     }
   }
 }

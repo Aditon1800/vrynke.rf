@@ -86,13 +86,13 @@ html(lang="en")
                   +inputBlock("js-let-check","text", "region", "Московская область")
                 .col-md-4.col-sm-6
                   +inputBlock("js-let-check","text", "city", "Московская область")
-                .col-md-12
+                .col-sm-12
                   +inputBlock("js-let-check","text", "address", "Московская область")
 
               // The actual address
               .account__check-title
                 h3.account__edit-name.account__edit-name--md Фактический адрес (для направления корреспонденции)
-                +checkBox('firstCheckbox', 'Соответствует адресу регистрации')
+                +checkBox('address', 'Соответствует адресу регистрации')
               .row.account__input-block
                 .col-md-4.col-sm-6
                   +inputBlock("js-get-check","text", "index", "125000")
@@ -100,7 +100,7 @@ html(lang="en")
                   +inputBlock("js-get-check","text", "region", "Московская область")
                 .col-md-4.col-sm-6
                   +inputBlock("js-get-check","text", "city", "Московская область")
-                .col-md-12
+                .col-sm-12
                   +inputBlock("js-get-check","text", "address", "Московская область")
 
               // Contact info
@@ -113,24 +113,22 @@ html(lang="en")
 
               .account__check-wrap
                 .account__input-block.account__input-block--mb
-                  +checkBox('secondCheckbox', 'Получить статус подтверждённого агента')
+                  +checkBox('js-check-status', 'Получить статус подтверждённого агента')
                   .question &#63;
                     span.question__tooltip После проверки данных специалистами врынке возле наименования вашей компании появится значок “подтверждено”. для получения статуса подтвержденного агента необходимо предоставить всю информацию и оплатить счет.
                   .account__input-block__info Стоимость услуги – #[span.account__check-get 0] рублей
 
-              .row.account__input-block
+              .row.account__input-block.js-let-status
                 .col-md-4.col-sm-6
-                  +inputBlock("","text", "inn", "40702810638050013199")
+                  input.input(type="text" name="inn" placeholder="40702810638050013199" disabled)
                 .col-md-4.col-sm-6
-                  +inputBlock("","text", "bank", "ПАО \"Сбербанк России\"")
-
-              .row.account__input-block
+                  input.input(type="text" name="bank" placeholder="ПАО \"Сбербанк России\"" disabled)
                 .col-md-4.col-sm-6
-                  +inputBlock("","text", "name", "Иванов Иван Иванович")
+                  input.input(type="text" name="name" placeholder="Иванов Иван Иванович" disabled)
                 .col-md-4.col-sm-6
-                  +inputBlock("","text", "id", "656565654654")
+                  input.input(type="text" name="id" placeholder="656565654654" disabled)
                 .col-md-4.col-sm-6
-                  +inputBlock("","text", "id", "656565654654")
+                  input.input(type="text" name="id" placeholder="656565654654" disabled)
 
               .row.account__input-block
                 .col-sm-4

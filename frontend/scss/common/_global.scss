@@ -80,6 +80,10 @@ body {
     color: lighten($dark-gray-color, 42%);
     padding-left: 25px;
     padding-top: 8px;
+
+    &:visited {
+      color: lighten($dark-gray-color, 42%);
+    }
   }
 
   &__success {

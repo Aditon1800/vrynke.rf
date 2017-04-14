@@ -203,6 +203,10 @@
   &__name {
     font-weight: 700!important;
     color: #35a3d8!important;
+
+    a:hover {
+      color: $black-color;
+    }
   }
 
   &__volume,

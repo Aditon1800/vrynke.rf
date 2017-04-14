@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 html(lang="en")
   head
-    link(rel="stylesheet", href="css/dtp/bootstrap.min.css")
+    link(rel="stylesheet", href="css/dtp/bootstrap.custom.css")
     include partials/meta
     link(rel="stylesheet", href="css/dtp/bootstrap-datetimepicker.min.css")
   body
@@ -81,138 +81,150 @@ html(lang="en")
                 .account__edit-title Условия поставки / доставки или предоставления услуги *
                 textarea.textarea
               .col-sm-3
-                a.button.button--green--md Продолжить
+                a.button.button--green--md.js-unwrap Продолжить
 
             //Pricing
             .account__line-title 2. Ценообразование
-            .row.account__input-block
-              .col-lg-3
-                .account__edit-title Единица измерения *
-                select.input()
-                  option(disable) Выберите
-                  option шт
-                  option кг
-                  option т
-                  option п.м
-                  option кв.м
-                  option куб.м
-              .col-lg-3
-                .account__edit-title Минимальный объём *
-                input.input(type="text" name="minVol")
-              .col-lg-2
-                .account__edit-title(style="visibility: hidden;") Тип измерения
-                select.input
-                  option(disable) В единицах
-                  option В валюте
-              .col-lg-2
-                .account__edit-title Валюта *
-                select.input
-                  option(disable) &#8381; (рубль)
-                  option &#36; (доллар)
-                  option  &#8364; (евро)
-              .col-lg-3
-                .account__edit-title Стоимость за единицу
-                .question &#63;
-                  span.question__tooltip Без учёта доставки и НДС.
-                input.input(type="text" name="id")
+            .account__unwrap
+              .row.account__input-block
+                .col-lg-3
+                  .account__edit-title Единица измерения *
+                  select.input()
+                    option(disable) Выберите
+                    option шт
+                    option кг
+                    option т
+                    option п.м
+                    option кв.м
+                    option куб.м
+                .col-lg-3
+                  .account__edit-title Минимальный объём *
+                  input.input(type="text" name="minVol")
+                .col-lg-2
+                  .account__edit-title(style="visibility: hidden;") Тип измерения
+                  select.input
+                    option(disable) В единицах
+                    option В валюте
+                .col-lg-2
+                  .account__edit-title Валюта *
+                  select.input
+                    option(disable) &#8381; (рубль)
+                    option &#36; (доллар)
+                    option  &#8364; (евро)
+                .col-lg-3
+                  .account__edit-title Стоимость за единицу
+                  .question &#63;
+                    span.question__tooltip Без учёта доставки и НДС.
+                  input.input(type="text" name="id")
 
-              .col-lg-2
-                .account__edit-title Ставка НДС *
-                select.input
-                  option(disable) Без НДС
-                  option 10&#37;
-                  option 18&#37;
+                .col-lg-2
+                  .account__edit-title Ставка НДС *
+                  select.input
+                    option(disable) Без НДС
+                    option 10&#37;
+                    option 18&#37;
 
-              .col-lg-3
-                .account__edit-title Цена
-                .question &#63;
-                  span.question__tooltip Рассчитывается автоматически из стоимости за единицу и ставки НДС. Без учёта доставки.
-                input.input(type="text"  name="id")
-            .row.account__input-block
-                .col-sm-3
-                  a.button.button--green--md Продолжить
+                .col-lg-3
+                  .account__edit-title Цена
+                  .question &#63;
+                    span.question__tooltip Рассчитывается автоматически из стоимости за единицу и ставки НДС. Без учёта доставки.
+                  input.input(type="text"  name="id")
+              .row.account__input-block
+                  .col-sm-3
+                    a.button.button--green--md.js-unwrap Продолжить
 
             // Agent info
             .account__line-title 3. Информация для агентов
-            .row.account__input-block
-              .col-sm-3
-                .account__edit-title Вознаграждение *
-                .question &#63;
-                  span.question__tooltip Процент от суммы продажи с учётом НДС. Без учёта доставки.
-            .account__input-block
-              .input__procent-block
-                input.input(type="text" name="procent")
-                span.input__span-procent &#37;
-            .row.account__input-block
-              .col-sm-6
-                .account__edit-title Требования к торговому агенту *
-                textarea.textarea#editor2
-            .row.account__input-block
-                .col-sm-3
-                  a.button.button--green--md Продолжить
+            .account__unwrap
+              .row.account__input-block
+                .col-sm-4.col-md-3
+                  .account__edit-title Вознаграждение *
+                  .question &#63;
+                    span.question__tooltip Процент от суммы продажи с учётом НДС. Без учёта доставки.
+              .account__input-block
+                .input__procent-block
+                  input.input(type="text" name="procent")
+                  span.input__span-procent &#37;
+              .row.account__input-block
+                .col-sm-6
+                  .account__edit-title Требования к торговому агенту *
+                  textarea.textarea#editor2
+              .row.account__input-block
+                  .col-sm-3
+                    a.button.button--green--md.js-unwrap Продолжить
 
 
             // Downloads
             .account__line-title 4. Загрузки
-            .row.account__input-block
-              .col-sm-6
-                .account__edit-title Загрузить фото *
-                .input__photo-block
-                  .input__photo
-                    img(src="img/account/input-photo.png")
-                  .input__photo
-                    img(src="img/account/input-photo.png")
-                  .input__photo
-                    img(src="img/account/input-photo.png")
-                  .input__photo
-                    img(src="img/account/input-photo.png")
-                .input__important-info Перетащите фото на значёк камеры или #[a выберите на компьютере.]
-                  br
-                  | Размер одного файла не должен превышать 2Мб. Разерешённые форматы: JPG, PNG, GIF.
+            .account__unwrap
+              .row.account__input-block
+                .col-sm-6
+                  .account__edit-title Загрузить фото *
+                  .input__photo-block
+                    .input__photo
+                      img(src="img/account/input-photo.png")
+                    .input__photo
+                      img(src="img/account/input-photo.png")
+                    .input__photo
+                      img(src="img/account/input-photo.png")
+                    .input__photo
+                      img(src="img/account/input-photo.png")
+                  .input__important-info Перетащите фото на значёк камеры или #[a выберите на компьютере.]
+                    br
+                    | Размер одного файла не должен превышать 2Мб. Разерешённые форматы: JPG, PNG, GIF.
 
 
-              .col-sm-6
-                .account__edit-title Видеоролик
-                input.input(type="text" name="getVideo")
-                .input__important-info Ссылка на видеоролик
+                .col-sm-6
+                  .account__edit-title Видеоролик
+                  input.input(type="text" name="getVideo")
+                  .input__important-info Ссылка на видеоролик
 
-            .row.account__input-block
-              .col-sm-6
-                .account__edit-title Форма договора на поставку товара или оказание услуг *
-                .input__fileform
-                  .input__filefield
-                  .input__fileform-button Обзор
-                  input.input(type="file", name="contract")
-                .input__important-info Размер файла не должен превышать 2Мб. Разерешённые форматы: DOC, DOCX, ODT, RTF, PDF
+              .row.account__input-block
+                .col-sm-6
+                  .account__edit-title Форма договора на поставку товара или оказание услуг *
+                  .account__dl-block
+                    .account__dl Загруежен:
+                  .input__fileform
+                    //- .input__filefield
+                    .input__fileform-button Обзор
+                    input.input(type="file", name="contract")
+                  .input__important-info Размер файла не должен превышать 2Мб. Разерешённые форматы: DOC, DOCX, ODT, RTF, PDF
 
-              .col-sm-6
-                .account__edit-title Прайс-лист *
-                .input__fileform
-                  .input__filefield
-                  .input__fileform-button Обзор
-                  input.input(type="file", name="priceList")
-                .input__important-info Размер файла не должен превышать 2Мб. Разерешённые форматы: DOC, DOCX, ODT, RTF, PDF
+                .col-sm-6
+                  .account__edit-title Прайс-лист *
+                  .account__dl-block
+                    .account__dl Загруежен:
+                  .input__fileform
+                    //- .input__filefield
+                    .input__fileform-button Обзор
+                    input.input(type="file", name="priceList")
+                  .input__important-info Размер файла не должен превышать 2Мб. Разерешённые форматы: DOC, DOCX, ODT, RTF, PDF
 
-            .row.account__input-block
-              .col-sm-6
-                .account__edit-title Презентация (PDF)
-                .input__fileform
-                  .input__filefield
-                  .input__fileform-button Обзор
-                  input.input(type="file", name="pdf")
-                .input__important-info
+              .row.account__input-block
+                .col-sm-6
+                  .account__edit-title Презентация (PDF)
 
-              .col-sm-6
-                .account__edit-title Другие материалы
-                .input__fileform
-                  .input__filefield
-                  .input__fileform-button Обзор
-                  input.input(type="file", name="other")
+                  .account__dl-block
+                  .input__fileform
+                    .input__filefield
+                    .input__fileform-button Обзор
+                    input.input(type="file", name="pdf")
+                  .input__important-info
 
-              .input__bottom-block
-                button.button.button--green Предпросмотр и публикация
-          .account__important-info
-            span Поля, отмеченные звездочкой (*), обязательны к заполнению.
+                .col-sm-6
+                  .account__edit-title Другие материалы
+                  .account__dl-block
+                    .account__dl Загруежено:
+
+                  .input__fileform
+                    //- .input__filefield
+                    .input__fileform-button Обзор
+                    input.input(type="file", name="other")
+
+                .input__bottom-block
+                  button.button.button--green Предпросмотр и публикация
+            .account__important-info
+              span Поля, отмеченные звездочкой (*), обязательны к заполнению.
 
         // Footer
       .prefooter
@@ -265,6 +277,13 @@ html(lang="en")
         $(function () {
             $('#datetimepicker4').datetimepicker();
         });
-      script.
             CKEDITOR.replace( 'editor1' );
             CKEDITOR.replace( 'editor2' );
+      script.
+        $('.js-unwrap').each(function(index, elem){
+          var unwrap = $('.account__unwrap')
+                                    .each(function(){});
+          $(elem).on('click',function(){
+            unwrap.eq(index).show()
+          });
+        });

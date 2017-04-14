@@ -249,7 +249,7 @@ html(lang="en")
                   
                   h3.account__block-name.account__news-title Рекомендуем прочитать
 
-                  .contractor-slider
+                  .account-slider
                     .news__slide
                       +newsBlock('news-img2', 'Большинство работодателей повысят зарплату сотрудникам', '12 декабря 2016')
                     .news__slide
@@ -312,13 +312,28 @@ html(lang="en")
           .modal__inner
             p После проверки данных специалистами врынке возле наименования вашей компании появится значок “подтверждено”. для получения статуса подтвержденного агента необходимо предоставить всю информацию и оплатить счет.
 
+        // Question modal
+        .modal.modal--feedback
+          .modal__close.modal__close--mes
+          .modal__inner
+            h2 Пожаловаться на поставщика
+
+            p Ваш запрос успешно отправлен и будет рассмотрен администрацией сайта в ближайшее время. О результатах проверки мы уведомим вас по эл. почте и личным сообщением в системе.
+
+            p Спасибо за ваше сообщение.
+
+            p С уважением, Администрация платформы #[span.logo-text #[span.logo-text__char В]РЫНКЕ].
+
         // Message modal
         .modal.modal--mes
           .modal__close.modal__close--mes
           .modal__inner
             .modal__mes-name Пожаловаться на поставщика
+            form(action="" method="" id="")
             input.input(type="text" name="clientID" placeholder="Уникальный ID поставщика")
             textarea.textarea(name="getProblem" placeholder="Описание проблемы...")
+            .modal__button-block
+                button.button.button--blue--md.js-send Отправить
         include partials/scripts
         script(src="js/project/action-title.js")
         script(src="js/project/button-flag.js")

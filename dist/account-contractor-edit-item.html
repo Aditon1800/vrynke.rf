@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="css/dtp/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/dtp/bootstrap.custom.css"/>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compitable" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -61,7 +61,7 @@
       </div>
       <section class="main-content account--edit">
         <div class="container">
-          <h1 class="main-content__title">Добавить новый товар / услугу</h1>
+          <h1 class="main-content__title">Редактировать товар / услугу</h1>
           <form action="account-contractor-preview-item.html" method="" id="">
             <!-- Main info-->
             <div class="account__line-title">1. Основная информация</div>
@@ -188,8 +188,10 @@
             <div class="row account__input-block">
               <div class="col-sm-6">
                 <div class="account__edit-title">Форма договора на поставку товара или оказание услуг *</div>
+                <div class="account__dl-block">
+                  <div class="account__dl">Загруежен:</div>
+                </div>
                 <div class="input__fileform">
-                  <div class="input__filefield"></div>
                   <div class="input__fileform-button">Обзор</div>
                   <input type="file" name="contract" class="input"/>
                 </div>
@@ -197,8 +199,10 @@
               </div>
               <div class="col-sm-6">
                 <div class="account__edit-title">Прайс-лист *</div>
+                <div class="account__dl-block">
+                  <div class="account__dl">Загруежен:</div>
+                </div>
                 <div class="input__fileform">
-                  <div class="input__filefield"></div>
                   <div class="input__fileform-button">Обзор</div>
                   <input type="file" name="priceList" class="input"/>
                 </div>
@@ -208,6 +212,7 @@
             <div class="row account__input-block">
               <div class="col-sm-6">
                 <div class="account__edit-title">Презентация (PDF)</div>
+                <div class="account__dl-block"></div>
                 <div class="input__fileform">
                   <div class="input__filefield"></div>
                   <div class="input__fileform-button">Обзор</div>
@@ -217,8 +222,10 @@
               </div>
               <div class="col-sm-6">
                 <div class="account__edit-title">Другие материалы</div>
+                <div class="account__dl-block">
+                  <div class="account__dl">Загруежено:</div>
+                </div>
                 <div class="input__fileform">
-                  <div class="input__filefield"></div>
                   <div class="input__fileform-button">Обзор</div>
                   <input type="file" name="other" class="input"/>
                 </div>
@@ -277,7 +284,7 @@
       <div class="overlay"></div>
       <!-- Scripts-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script src="js/script.js"></script>
+      <script src="js/project/script.js"></script>
       <script src="js/project/nav-toggle.js"></script>
       <script src="js/project/block-toggle.js"></script>
       <script src="js/project/account-block.js"></script>

@@ -2,6 +2,7 @@
 html(lang="en")
   head
     include partials/meta
+    link(rel="stylesheet", href="css/slick.css")
   body
     include helpers/mixin
     .container-fluid
@@ -246,12 +247,12 @@ html(lang="en")
                   
                   h3.account__block-name.account__news-title Рекомендуем прочитать
 
-                  .row
-                    .col-md-4.col-sm-4
+                  .account-slider
+                    .news__slide
                       +newsBlock('news-img2', 'Большинство работодателей повысят зарплату сотрудникам', '12 декабря 2016')
-                    .col-md-4.col-sm-4
+                    .news__slide
                       +newsBlock('news-img3', 'Бедный мой бухгалтер', '12 декабря 2016')
-                    .col-md-4.col-sm-4
+                    .news__slide
                       +newsBlock('news-img4', 'Пассажиров метро научать искать работу', '12 декабря 2016')
                   .account__button-block
                     a.button.button--more(href="news.html") Все новости
@@ -309,16 +310,34 @@ html(lang="en")
           .modal__inner
             p После проверки данных специалистами врынке возле наименования вашей компании появится значок “подтверждено”. для получения статуса подтвержденного агента необходимо предоставить всю информацию и оплатить счет.
 
+
+        // Question modal
+        .modal.modal--feedback
+          .modal__close.modal__close--mes
+          .modal__inner
+            h2 Пожаловаться на агента
+
+            p Ваш запрос успешно отправлен и будет рассмотрен администрацией сайта в ближайшее время. О результатах проверки мы уведомим вас по эл. почте и личным сообщением в системе.
+
+            p Спасибо за ваше сообщение.
+
+            p С уважением, Администрация платформы #[span.logo-text #[span.logo-text__char В]РЫНКЕ].
+
+
         // Message modal
         .modal.modal--mes
           .modal__close.modal__close--mes
           .modal__inner
             .modal__mes-name Пожаловаться на агента
-            input.input(type="text" name="clientID" placeholder="Уникальный ID агента")
-            textarea.textarea(name="getProblem" placeholder="Описание проблемы...")
+            form(action="" method="" id="")
+              input.input(type="text" name="clientID" placeholder="Уникальный ID агента")
+              textarea.textarea(name="getProblem" placeholder="Описание проблемы...")
+              .modal__button-block
+                button.button.button--blue--md.js-send Отправить
         include partials/scripts
         script(src="js/project/action-title.js")
         script(src="js/project/button-flag.js")
+        script(src="js/project/slick.min.js")
         script(src="js/project/modal.js")
 
 

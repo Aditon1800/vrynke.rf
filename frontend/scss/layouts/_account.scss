@@ -23,10 +23,10 @@
 
   &__img-block {
     @media (max-width: $sm-screen - 1) {
-      float: left;
-      width: 50px;
+      width: 52px;
       height: 50px;
       margin-bottom: 0;
+      margin-right: 12px;
     }
     position: relative;
     margin-bottom: 15px;
@@ -58,11 +58,15 @@
     min-height: 50px;
     height: auto;
     line-height: 1.2;
-    padding: 15px 0;
+    padding: 15px 4px;
   }
 
 &__profile {
     @include cf();
+    @media (max-width: $sm-screen - 1){
+      display: table;
+      width: 100%;
+    }
     background-color: $white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -70,13 +74,11 @@
 
     .button--green--md {
       @media (max-width: $sm-screen - 1) {
-        float: right;
+        display: table-cell;
         max-width: 85%;
       }
 
       @media (max-width: 480px) {
-        float: right;
-        width: 77%;
         font-size: 1.4rem;
       }
     }
@@ -88,6 +90,13 @@
     padding: 20px 10px 15px 20px;
     margin-top: 30px;
     margin-bottom: 30px;
+
+    &--contractor-page {
+      @media (max-width: $sm-screen - 1){
+        display: block;
+      }
+      display: none;
+    }
   }
 
   &__action-list {
@@ -95,6 +104,12 @@
       display: none;
     }
     margin-top: 25px;
+
+    &--contractor-page {
+      @media (max-width: $sm-screen - 1){
+        display: none;
+      }
+    }
   }
 
   &__action-title {
@@ -558,6 +573,7 @@
     font-size: 1.8rem;
     line-height: 1;
     color: $white-color;
+    border-bottom: 1px solid $white-color;
   }
 
   &__edit-title {
@@ -571,6 +587,48 @@
     color: $dark-gray-color;
     margin-top: 30px;
     margin-bottom: 15px;
+  }
+
+  &__dl-block {
+    display: none;
+    margin-bottom: 10px;
+  }
+
+  &__dl {
+    display: inline-block;
+    width: 70px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+
+  &__dl-in {
+    position: relative;
+    display: inline-block;
+    padding-right: 12px;
+    margin-right: 10px;
+
+    a {
+      @extend .login-in__reg;
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+
+    .dl-in--reset {
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      font-size: .9em;
+      color: $red-color;
+      cursor: pointer;
+    }
+  }
+
+  &__unwrap {
+    display: none;
+    // height: 0;
+    // overflow: hidden;
   }
 }
 
@@ -658,5 +716,9 @@
     max-width: 300px;
     line-height: 50px;
     text-transform: none;
+  }
+
+  .cke_contents {
+    height: 126px!important;
   }
 }

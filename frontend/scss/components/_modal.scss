@@ -40,7 +40,7 @@
     }
     width: 600px;
     height: auto;
-    padding: 25px 25px 0;
+    padding: 25px 25px 15px;
 
     .modal__inner {
       padding: 0;
@@ -91,6 +91,17 @@
     max-width: 420px;
   }
 
+  &--feedback {
+    @extend .modal--mes;
+    max-width: 600px;
+    height: auto;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+
   // Close modal
   &__close {
     position: absolute;
@@ -112,5 +123,19 @@
     background-image: url('../img/header/header__list-button.png');
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  &__button-block {
+    @include cf();
+
+    .button.button--blue--md {
+      @media(max-width: $sm-screen - 1){
+        float: none;
+        width: 100%;
+      }
+      float: right;
+      width: 220px;
+      margin-top: 0;
+    }
   }
 }

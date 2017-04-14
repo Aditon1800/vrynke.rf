@@ -52,6 +52,10 @@ a:focus {
   text-decoration: none;
   outline: 0;
 }
+
+a:visited {
+  color: #23527c;
+}
 abbr[title] {
   border-bottom: 1px dotted;
 }
