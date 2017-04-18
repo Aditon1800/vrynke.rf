@@ -1,3 +1,73 @@
+(function(){
+    var itemMain = document.querySelector('.item__main-prew__img-block'),
+          itemPrewMini = document.getElementsByClassName('item__prew-mini__block');
+    for (var i =  0; i < itemPrewMini.length; i++) {
+        itemPrewMini[i].onclick = function() {
+           itemMain.innerHTML = this.innerHTML;
+        }
+      }
+}());
+
+// Tooltips
+(function(){
+ var $parent,
+     windowWidth,
+     windowHeight;
+  
+  //get actual window size
+  function winSize() {
+     windowWidth = $(window).width(),
+     windowHeight = $(window).height();
+  }
+  winSize();
+  $(window).resize(winSize);
+ //tooltip fadeIn and fadeOut on hover  
+ $('.question__tooltip').each(function() {
+   
+    $(this).parent().hover(function() {
+      $(this).find('.question__tooltip').fadeIn(100);
+    }, function() {
+       $(this).find('.question__tooltip').fadeOut(100);
+    });
+ 
+ });
+  
+  
+//tooltip position
+  $(document).mousemove(function(e) {
+    var mouseY = e.clientY,
+        mouseX = e.clientX,
+        tooltipHeight,
+        tooltipWidth;
+    
+    $('.question__tooltip').each(function() {
+      var $tooltip = $(this);
+      tooltipHeight = $tooltip.outerHeight();
+      tooltipWidth = $tooltip.width();
+      $parent = $tooltip.parent();
+     
+      $tooltip.css({
+        'left':mouseX,
+        'top':mouseY+20
+       });
+      
+      //reposition
+      if (tooltipWidth + mouseX+ 20> windowWidth) {
+       $tooltip.css({
+        'left':mouseX-tooltipWidth-20
+       });
+      }
+    
+      if (tooltipHeight + mouseY +20 > windowHeight) {
+        $tooltip.css({
+        'top':mouseY-20-tooltipHeight
+       }); 
+      }
+    });//end each
+ });//tooltip positio
+}());
+
+
 (function() {
   $('.input__fileform input').each(function(index,elem) {
     // Element onchange

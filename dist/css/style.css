@@ -3013,10 +3013,8 @@ button.slick-prev {
 }
 
 .question__tooltip {
-  position: absolute;
+  position: fixed;
   display: none;
-  top: 0;
-  left: 20px;
   min-width: 280px;
   max-width: 420px;
   background-color: #fff;
@@ -3027,10 +3025,6 @@ button.slick-prev {
   font-weight: 400;
   padding: 20px;
   z-index: 50;
-}
-
-.question:hover .question__tooltip {
-  display: block;
 }
 
 .check .check-circle {
@@ -6227,6 +6221,11 @@ button.slick-prev {
   width: 100%;
   max-width: 300px;
   margin-right: 15px;
+}
+
+.item__main-prew {
+  width: 100%;
+  max-width: 300px;
 }
 
 .item__main-prew img {
